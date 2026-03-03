@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export default function Hero() {
@@ -12,7 +12,6 @@ export default function Hero() {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const { innerWidth, innerHeight } = window;
-      // Normaliza entre -1 e 1
       setMousePos({
         x: (e.clientX / innerWidth - 0.5) * 2,
         y: (e.clientY / innerHeight - 0.5) * 2,
@@ -22,7 +21,6 @@ export default function Hero() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  // Lerp suave para não ficar brusco
   useEffect(() => {
     const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
     const animate = () => {
@@ -36,9 +34,6 @@ export default function Hero() {
     return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
   }, [mousePos]);
 
-  // Camadas com intensidades diferentes
-  const bgX = smoothPos.x * -12;
-  const bgY = smoothPos.y * -8;
   const imgX = smoothPos.x * -20;
   const imgY = smoothPos.y * -14;
   const contentX = smoothPos.x * 6;
@@ -48,15 +43,10 @@ export default function Hero() {
     <section ref={sectionRef} className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-0 overflow-hidden">
       <div className="relative w-full">
 
-        {/* Imagem de fundo com parallax mais intenso */}
+        {/* Imagem com parallax */}
         <motion.div
           className="w-full"
-          style={{
-            x: imgX,
-            y: imgY,
-            scale: 1.06, // escala levemente para não mostrar bordas no movimento
-          }}
-          transition={{ type: "tween", duration: 0 }}
+          style={{ x: imgX, y: imgY, scale: 1.06 }}
         >
           <Image
             src="/images/outdoor5.jpg"
@@ -69,20 +59,17 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Gradiente esquerda */}
-        <motion.div
-          className="absolute inset-0"
-          style={{ x: bgX, y: bgY }}
-        >
+        {/* Gradiente esquerda - ESTÁTICO */}
+        <div className="absolute inset-0">
           <div
             className="absolute left-0 top-0 w-full md:w-3/4 h-full"
             style={{
               background: 'radial-gradient(ellipse 100% 300% at -10% 50%, rgba(168, 201, 60, 1) 0%, rgba(61, 151, 98, 1) 25%, rgba(0, 104, 105, 1) 50%, rgba(0, 0, 0, 0) 75%)'
             }}
           />
-        </motion.div>
+        </div>
 
-        {/* Conteúdo com parallax inverso leve (flutua "na frente") */}
+        {/* Conteúdo com parallax inverso */}
         <motion.div
           className="absolute inset-0 flex items-center"
           style={{ x: contentX, y: contentY }}
