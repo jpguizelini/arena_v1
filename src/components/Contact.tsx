@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 
 export default function Contact() {
@@ -52,16 +53,26 @@ export default function Contact() {
 
             {/* Side Buttons */}
             <div className="flex flex-col gap-8 w-full md:w-1/3 pt-19.5">
-                <button className="flex items-center justify-center w-full max-w-[300px] mx-auto md:w-full md:max-w-none md:mx-0 px-10 py-5 rounded-2xl bg-gradient-to-tr from-[#c3d33f] to-[#079c9e] hover:scale-105 transition-transform duration-300 shadow-lg group">
+                <motion.button 
+                    className="flex items-center justify-center w-full max-w-[300px] mx-auto md:w-full md:max-w-none md:mx-0 px-10 py-5 rounded-2xl bg-gradient-to-tr from-[#c3d33f] to-[#079c9e] hover:scale-105 transition-transform duration-300 shadow-lg group"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                >
                     <span className="font-bebas text-4xl leading-none text-white text-[35.04px] uppercase tracking-tight">
                         Baixar Mídia Kit
                     </span>
-                </button>
-                <button className="flex items-center justify-center w-full max-w-[300px] mx-auto md:w-full md:max-w-none md:mx-0 px-10 py-5 mt-[-4px] rounded-2xl bg-gradient-to-tr from-[#c3d33f] to-[#079c9e] hover:scale-105 transition-transform duration-300 shadow-lg group">
+                </motion.button>
+                <motion.button 
+                    className="flex items-center justify-center w-full max-w-[300px] mx-auto md:w-full md:max-w-none md:mx-0 px-10 py-5 mt-[-4px] rounded-2xl bg-gradient-to-tr from-[#c3d33f] to-[#079c9e] hover:scale-105 transition-transform duration-300 shadow-lg group"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                >
                     <span className="font-bebas text-2xl leading-none text-white sm:text-[35.04px] uppercase tracking-tight">
                         Calendário de Bi-semana
                     </span>
-                </button>
+                </motion.button>
             </div>
         </section>
     );

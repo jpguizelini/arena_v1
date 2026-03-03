@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import Card3D from "@/components/ui/Card3D";
+import { motion } from "framer-motion";
 
 export default function Coverage() {
     return (
         <div className="w-full flex flex-col items-center justify-center">
-            <h1 className="
+            <motion.h1 
+                className="
             text-[45.07px] 
             font-bebas
             font-bold 
@@ -18,12 +20,21 @@ export default function Coverage() {
             from-[#c3d33f] 
             to-[#079c9e]
             bg-clip-text
-            text-transparent">NOSSA COBERTURA</h1>
+            text-transparent"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+            >NOSSA COBERTURA</motion.h1>
 
-            <p className="text-[19.94px] font-goldplay text-white text-center px-4 sm:px-0">
+            <motion.p 
+                className="text-[19.94px] font-goldplay text-white text-center px-4 sm:px-0"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+            >
                 A maior em número de cidades atendidas por<br />
                 uma empresa de OOH no interior e litora de São Paulo
-            </p>
+            </motion.p>
 
             <Card3D className="group relative mx-[57px] mt-[15px]" glowClassName="pointer-events-none absolute inset-0 -z-10 opacity-0">
                 <div className="relative px-8 pt-8 pb-10 text-center transition-shadow duration-200 group-hover:shadow-[0_0_28px_rgba(195,211,63,0.28),0_0_28px_rgba(7,156,158,0.22)] bg-black rounded-xl">

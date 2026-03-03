@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 export default function Transformando() {
     return (
@@ -8,7 +9,7 @@ export default function Transformando() {
             <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 md:grid-cols-2">
                 {/* Lado esquerdo - Texto */}
                 <div className="flex flex-col justify-center px-14 sm:px-12 md:px-10 lg:pl-10 xl:pl-30 py-[82px]">
-                    <h1
+                    <motion.h1
                         className="
                         text-[53.09px] 
                         font-bebas
@@ -22,11 +23,19 @@ export default function Transformando() {
                         text-transparent
                         text-center sm:text-left
                     "
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
                     >
                         TRANSFORMANDO ESPAÇOS EM OPORTUNIDADES
-                    </h1>
+                    </motion.h1>
 
-                    <p className="text-[16px] font-goldplay text-white text-left sm:text-left md:text-left leading-snug pr-0 sm:pr-18 mb-8 text-center sm:text-left">
+                    <motion.p 
+                        className="text-[16px] font-goldplay text-white text-left sm:text-left md:text-left leading-snug pr-0 sm:pr-18 mb-8 text-center sm:text-left"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
+                    >
                         A Inteligência de Mídia é um grupo de empresas
                         de Mídia OOH (Out Of Home). Somos uma força
                         criativa que ilumina o cenário publicitário.
@@ -41,16 +50,21 @@ export default function Transformando() {
                         Com mais de 20 anos de experiência no mercado, nosso
                         compromisso é ajudar as marcas a se destacarem de forma
                         cativante, tornando sua marca uma referência no mercado.
-                    </p>
+                    </motion.p>
 
-                    <div className="text-center sm:text-left">
+                    <motion.div 
+                        className="text-center sm:text-left"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.7 }}
+                    >
                         <Button
                             variant="outline"
                             className="text-primary bg-white font-bebas text-[25.55px] hover:bg-accent hover:text-dark px-6 py-6 rounded-lg"
                         >
                             DÚVIDAS E INFORMAÇÕES
                         </Button>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Lado direito - Imagem */}

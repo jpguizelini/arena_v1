@@ -1,10 +1,12 @@
 import Image from "next/image"
 import Card3D from "@/components/ui/Card3D"
+import { motion } from "framer-motion"
 
 export default function EmpresasGrupo() {
     return (
         <div className="w-full flex flex-col items-center justify-center">
-            <h1 className="
+            <motion.h1 
+                className="
             text-[53.15px] 
             font-bebas
             font-bold 
@@ -14,7 +16,11 @@ export default function EmpresasGrupo() {
             from-[#c3d33f] 
             to-[#079c9e]
             bg-clip-text
-            text-transparent">EMPRESAS DO GRUPO</h1>
+            text-transparent"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+            >EMPRESAS DO GRUPO</motion.h1>
 
             <Card3D
                 className="group mt-10"
