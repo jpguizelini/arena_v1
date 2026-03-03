@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from 'next/font/local';
 import Navbar from "@/components/Navbar";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const bebas = localFont({
   src: '../assets/fonts/BebasNeue-Regular.ttf',
@@ -44,6 +45,7 @@ export default function RootLayout({
         <main className="pt-[60px]">
           {children}
         </main>
+        <WhatsAppButton />
       </body>
     </html>
   );

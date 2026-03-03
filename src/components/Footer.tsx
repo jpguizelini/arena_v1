@@ -75,18 +75,6 @@ export default function Footer() {
                         CONTATO
                     </div>
                 </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.6 }}
-                    className="absolute -top-15 sm:-top-16 right-4 sm:right-10 z-20"
-                >
-                    <Link href="https://wa.me/5516999723939" target="_blank" rel="noreferrer">
-                        <img src="/images/icons/wpp.png" alt="WhatsApp" className="h-26 w-26 sm:h-30 sm:w-30" />
-                    </Link>
-                </motion.div>
             </footer>
         </>
     );
