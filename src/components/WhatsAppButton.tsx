@@ -12,7 +12,7 @@ export default function WhatsAppButton() {
             className="fixed bottom-6 right-6 z-50 lg:bottom-8 lg:right-8"
         >
             <Link 
-                href="https://wa.me/5516999723939" 
+                href="https://wa.me/" 
                 target="_blank" 
                 rel="noreferrer"
                 className="block hover:scale-110 transition-transform duration-300"
