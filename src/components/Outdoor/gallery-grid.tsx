@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 const galleryItems = [
   {
@@ -30,6 +31,23 @@ const galleryItems = [
 ]
 
 export default function GalleryGrid() {
+  const [selected, setSelected] = useState<{ img: string; title: string } | null>(null)
+
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') setSelected(null)
+    }
+
+    if (selected) {
+      window.addEventListener('keydown', onKeyDown)
+      document.body.style.overflow = 'hidden'
+    }
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+      document.body.style.overflow = ''
+    }
+  }, [selected])
   return (
     <section className="w-full py-16 pb-30">
       <motion.div
@@ -55,7 +73,13 @@ export default function GalleryGrid() {
               duration: 0.6, 
               delay: index * 0.1 
             }}
-            className="group relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105"
+            className="group relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer"
+            onClick={() => setSelected({ img: item.image, title: `Galeria outdoor ${item.id}` })}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') setSelected({ img: item.image, title: `Galeria outdoor ${item.id}` })
+            }}
           >
             <img
               src={item.image}
@@ -72,6 +96,33 @@ export default function GalleryGrid() {
           </motion.div>
         ))}
       </div>
+
+      {selected ? (
+        <div
+          className="fixed inset-0 z-9999 bg-black/70 flex items-center justify-center p-4"
+          onClick={() => setSelected(null)}
+        >
+          <div
+            className="relative w-full max-w-5xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              aria-label="Fechar"
+              onClick={() => setSelected(null)}
+              className="absolute -top-3 -right-3 w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center shadow"
+            >
+              ×
+            </button>
+
+            <img
+              src={selected.img}
+              alt={selected.title}
+              className="w-full h-auto max-h-[80vh] object-contain"
+            />
+          </div>
+        </div>
+      ) : null}
     </section>
   )
 }

@@ -131,7 +131,7 @@ export default function FormatosMidia() {
             font-bold 
             mt-[122px]
             pb-[-10px]
-            bg-gradient-to-r 
+            bg-linear-to-r 
             from-[#c3d33f] 
             to-[#079c9e]
             bg-clip-text
