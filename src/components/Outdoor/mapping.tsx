@@ -1,12 +1,17 @@
 'use client'
 
 import { Button } from "@/components/ui/button";
+import Card3D from "@/components/ui/Card3D";
 import { motion } from 'framer-motion';
 
 export default function MappingSection() {
     return (
         <div className="w-full flex flex-col py-16">
-            <div className="relative mx-4 sm:mx-8 md:mx-16 lg:mx-[200px] mt-6 px-4 sm:px-6 md:px-8 pt-8 pb-10 text-center">
+            <Card3D
+                className="group relative mx-4 sm:mx-8 md:mx-16 lg:mx-[200px] mt-6"
+                glowClassName="pointer-events-none absolute inset-0 -z-10 opacity-0"
+            >
+                <div className="relative px-4 sm:px-6 md:px-8 pt-8 pb-10 text-center bg-black rounded-xl transition-shadow duration-200 group-hover:shadow-[0_0_28px_rgba(195,211,63,0.28),0_0_28px_rgba(7,156,158,0.22)]">
                 {/* Borda SVG - sempre acompanha o tamanho do container */}
                 <svg
                     className="absolute inset-0 w-full h-full"
@@ -92,6 +97,7 @@ export default function MappingSection() {
                     </Button>
                 </motion.div>
             </div>
+            </Card3D>
         </div>
     );
 }
