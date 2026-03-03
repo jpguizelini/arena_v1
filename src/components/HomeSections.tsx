@@ -1,3 +1,5 @@
+'use client'
+
 import Hero from "@/components/Hero"
 import Coverage from "@/components/Coverage"
 import Oportunities from "@/components/Oportunities"

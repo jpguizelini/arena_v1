@@ -49,6 +49,16 @@ export default function Navbar() {
         { label: 'Nossos Materiais', href: '/nossos-materiais' },
     ]
 
+    const navLinksAdmin = [
+        { label: 'Home', href: '/admin' },
+        { label: 'Outdoor', href: 'admin/outdoor' },
+        { label: "Imídia Painéis", href: 'admin/imidia-paineis' },
+        { label: 'Imídia Litoral', href: 'admin/imidia-litoral' },
+        { label: 'Imídia Live LED', href: 'admin/imidia-live-led' },
+        { label: 'Formatos de Mídia', href: 'admin/formatos-de-midia' },
+        { label: 'Nossos Materiais', href: 'admin/nossos-materiais' },   
+    ]
+
     return (
         <header className="fixed z-50 h-[60px] w-full bg-primary flex justify-end py-[21px]">
             <nav className="w-full flex items-center justify-between">
@@ -62,7 +72,7 @@ export default function Navbar() {
                 </div>
 
                 <ul className="hidden md:flex items-center gap-[38px] justify-end pr-[40px] font-bebas">
-                    {navLinks.map((link) => (
+                    {(isAuthenticated ? navLinksAdmin : navLinks).map((link) => (
                         <li key={link.href} className="whitespace-nowrap">
                             <Link
                                 href={link.href}
@@ -92,7 +102,7 @@ export default function Navbar() {
                                 {pathname === '/' && <AdminEditButton />}
                             </li>
                         ) : null}
-                        {navLinks.map((link) => (
+                        {(isAuthenticated ? navLinksAdmin : navLinks).map((link) => (
                             <li key={link.href} className="w-full text-center border-b border-white/10">
                                 <Link
                                     href={link.href}
