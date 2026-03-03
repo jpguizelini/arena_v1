@@ -51,12 +51,12 @@ export default function Navbar() {
 
     const navLinksAdmin = [
         { label: 'Home', href: '/admin' },
-        { label: 'Outdoor', href: 'admin/outdoor' },
-        { label: "Imídia Painéis", href: 'admin/imidia-paineis' },
-        { label: 'Imídia Litoral', href: 'admin/imidia-litoral' },
-        { label: 'Imídia Live LED', href: 'admin/imidia-live-led' },
-        { label: 'Formatos de Mídia', href: 'admin/formatos-de-midia' },
-        { label: 'Nossos Materiais', href: 'admin/nossos-materiais' },   
+        { label: 'Outdoor', href: '/admin/outdoor' },
+        { label: "Imídia Painéis", href: '/admin/imidia-paineis' },
+        { label: 'Imídia Litoral', href: '/admin/imidia-litoral' },
+        { label: 'Imídia Live LED', href: '/admin/imidia-live-led' },
+        { label: 'Formatos de Mídia', href: '/admin/formatos-de-midia' },
+        { label: 'Nossos Materiais', href: '/admin/nossos-materiais' },   
     ]
 
     return (
