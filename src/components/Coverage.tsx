@@ -22,15 +22,17 @@ export default function Coverage() {
             bg-clip-text
             text-transparent"
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true, amount: 0.3 }}
             >NOSSA COBERTURA</motion.h1>
 
             <motion.p 
                 className="text-[19.94px] font-goldplay text-white text-center px-4 sm:px-0"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true, amount: 0.3 }}
             >
                 A maior em número de cidades atendidas por<br />
                 uma empresa de OOH no interior e litora de São Paulo

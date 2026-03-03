@@ -18,8 +18,9 @@ export default function EmpresasGrupo() {
             bg-clip-text
             text-transparent"
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true, amount: 0.3 }}
             >EMPRESAS DO GRUPO</motion.h1>
 
             <Card3D

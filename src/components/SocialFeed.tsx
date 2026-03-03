@@ -30,8 +30,9 @@ export default function SocialFeed() {
           text-transparent uppercase text-left
         "
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true, amount: 0.3 }}
       >
         SIGA NOSSO INSTAGRAM
       </motion.h1>
@@ -40,8 +41,9 @@ export default function SocialFeed() {
           <motion.div 
             className="pointer-events-none absolute right-8 sm:right-[100px] md:right-[200px] lg:right-[250px] top-[-80px] sm:top-[-152px] z-10 block sm:block md:block lg:block"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <div className="relative w-[120px] h-[87px] sm:w-[180px] sm:h-[131px] md:w-[210px] md:h-[153px] lg:w-[240px] lg:h-[175px]">
               <Image

@@ -24,8 +24,9 @@ export default function Transformando() {
                         text-center sm:text-left
                     "
                         initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true, amount: 0.3 }}
                     >
                         TRANSFORMANDO ESPAÇOS EM OPORTUNIDADES
                     </motion.h1>
@@ -33,8 +34,9 @@ export default function Transformando() {
                     <motion.p 
                         className="text-[16px] font-goldplay text-white text-left sm:text-left md:text-left leading-snug pr-0 sm:pr-18 mb-8 text-center sm:text-left"
                         initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.5 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        viewport={{ once: true, amount: 0.3 }}
                     >
                         A Inteligência de Mídia é um grupo de empresas
                         de Mídia OOH (Out Of Home). Somos uma força
@@ -55,8 +57,9 @@ export default function Transformando() {
                     <motion.div 
                         className="text-center sm:text-left"
                         initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.7 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        viewport={{ once: true, amount: 0.3 }}
                     >
                         <Button
                             variant="outline"
