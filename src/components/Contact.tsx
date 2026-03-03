@@ -18,34 +18,34 @@ export default function Contact() {
                 </div>
 
 
-                <p className="text-xl font-medium mb-5 mt-2 ml-5 w-[300px] text-white/90">
+                <p className="font-inter text-white/80 text-base px-4 py-4">
                     Preencha o formulário e vamos conversar sobre o seu projeto.
                 </p>
 
                 {/* Form Grid */}
-                <div className="border-t-2 border-white bg-neutral-900 overflow-hidden rounded-b-[2.5rem]  ">
-                    <div className="grid grid-cols-3 border-b-2 border-white min-h-[70px]">
-                        <div className="col-span-1 border-r-2 border-white flex items-center bg-transparent h-full">
-                            <label className="font-bebas text-[29px] uppercase tracking-wider text-white px-6 py-6">Nome:</label>
+                <div className="border-t-2 border-white bg-neutral-900 overflow-hidden rounded-b-[2.5rem]">
+                    <div className="grid border-b-2 border-white min-h-[50px]" style={{gridTemplateColumns: '120px 1fr'}}>
+                        <div className="border-r-2 border-white flex items-center bg-transparent h-full">
+                            <label className="font-bebas text-[25px] uppercase tracking-wider text-white px-4 py-3">Nome:</label>
                         </div>
-                        <div className="col-span-2 h-full">
-                            <input type="text" className="w-full h-full bg-transparent outline-none text-white text-xl placeholder:text-white/30 px-6 py-6" />
-                        </div>
-                    </div>
-                    <div className="grid grid-cols-3 border-b-2 border-white min-h-[70px]">
-                        <div className="col-span-1 border-r-2 border-white flex items-center bg-transparent h-full">
-                            <label className="font-bebas text-[29px] uppercase tracking-wider text-white px-6 py-6">Email:</label>
-                        </div>
-                        <div className="col-span-2 h-full">
-                            <input type="email" className="w-full h-full bg-transparent outline-none text-white text-xl placeholder:text-white/30 px-6 py-6" />
+                        <div className="h-full">
+                            <input type="text" className="w-full h-full bg-transparent outline-none text-white text-xl placeholder:text-white/30 px-4 py-3" />
                         </div>
                     </div>
-                    <div className="grid grid-cols-3 min-h-[70px]">
-                        <div className="col-span-1 border-r-2 border-white flex items-center bg-transparent h-full">
-                            <label className="font-bebas text-[29px] uppercase tracking-wider text-white px-6 py-6">Telefone:</label>
+                    <div className="grid border-b-2 border-white min-h-[50px]" style={{gridTemplateColumns: '120px 1fr'}}>
+                        <div className="border-r-2 border-white flex items-center bg-transparent h-full">
+                            <label className="font-bebas text-[25px] uppercase tracking-wider text-white px-4 py-3">Email:</label>
                         </div>
-                        <div className="col-span-2 h-full">
-                            <input type="tel" className="w-full h-full bg-transparent outline-none text-white text-xl placeholder:text-white/30 px-6 py-6" />
+                        <div className="h-full">
+                            <input type="email" className="w-full h-full bg-transparent outline-none text-white text-xl placeholder:text-white/30 px-4 py-3" />
+                        </div>
+                    </div>
+                    <div className="grid min-h-[50px]" style={{gridTemplateColumns: '120px 1fr'}}>
+                        <div className="border-r-2 border-white flex items-center bg-transparent h-full">
+                            <label className="font-bebas text-[25px] uppercase tracking-wider text-white px-4 py-3">Telefone:</label>
+                        </div>
+                        <div className="h-full">
+                            <input type="tel" className="w-full h-full bg-transparent outline-none text-white text-xl placeholder:text-white/30 px-4 py-3" />
                         </div>
                     </div>
                 </div>
