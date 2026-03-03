@@ -1,27 +1,32 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const gridItems = [
   {
     id: 1,
     title: 'PAINEL FRONT LIGHT',
-    image: '/images/outdoor/painel-front-light.png'
+    image: '/images/outdoor/painel-front-light.png',
+    href: '/frontlight'
   },
   {
     id: 2,
     title: 'PAINEL MEGA LIGHT',
-    image: '/images/outdoor/painel-mega-light.png'
+    image: '/images/outdoor/painel-mega-light.png',
+    href: '/mega-light'
   },
   {
     id: 3,
     title: 'PAINEL DE RODOVIA',
-    image: '/images/outdoor/painel-rodovia.png'
+    image: '/images/outdoor/painel-rodovia.png',
+    href: '/rodovia'
   },
   {
     id: 4,
     title: 'PAINEL DIGITAL',
-    image: '/images/outdoor/painel-digital.png'
+    image: '/images/outdoor/painel-digital.png',
+    href: '/painel-digital'
   }
 ]
 
@@ -49,8 +54,9 @@ export default function OutdoorGrid() {
 
       <div className="grid w-full grid-cols-1 gap-0 md:grid-cols-2">
         {gridItems.map((item) => (
-          <div
+          <Link
             key={item.id}
+            href={item.href}
             className="group relative overflow-hidden transition-all duration-300 ease-in-out"
           >
             <img
@@ -60,7 +66,7 @@ export default function OutdoorGrid() {
               height={0}
               sizes="50vw"
               className={`w-full h-auto object-cover transition-all duration-300 ease-in-out ${
-               item.id === 1 ? 'scale-125' : item.id === 4 ? 'scale-150' : ''
+                item.id === 1 ? 'scale-125' : item.id === 4 ? 'scale-150' : ''
               } group-hover:scale-110`}
               style={{
                 objectPosition: item.id === 1 ? '60% 35%' : item.id === 2 ? '50% 10%' : item.id === 3 ? '60% 40%' : item.id === 4 ? '50% -60%' : 'center'
@@ -76,7 +82,7 @@ export default function OutdoorGrid() {
                 </h3>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
