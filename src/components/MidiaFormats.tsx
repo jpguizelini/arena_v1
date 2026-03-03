@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL
 const BUCKET = 'arena-fotos'
@@ -10,83 +11,53 @@ function getSupabaseUrl(fileName: string) {
 }
 
 export default function FormatosMidia() {
-    const [selected, setSelected] = useState<{ img: string; title: string } | null>(null)
     const [formatos, setFormatos] = useState([
-        { img: getSupabaseUrl('foto-formato-midia-1'), title: "OUTDOOR" },
-        { img: getSupabaseUrl('foto-formato-midia-2'), title: "FRONT LIGHT" },
-        { img: getSupabaseUrl('foto-formato-midia-3'), title: "RODOVIA" },
-        { img: getSupabaseUrl('foto-formato-midia-4'), title: "MOBILIÁRIO URBANO" },
-        { img: getSupabaseUrl('foto-formato-midia-5'), title: "PAINEL DIGITAL" },
-        { img: getSupabaseUrl('foto-formato-midia-6'), title: "MEGA PAINEL" },
-        { img: getSupabaseUrl('foto-formato-midia-7'), title: "MEGA LIGHT" },
-        { img: getSupabaseUrl('foto-formato-midia-8'), title: "BANCA 3D" },
+        { img: getSupabaseUrl('foto-formato-midia-1'), title: "OUTDOOR", href: "/outdoor" },
+        { img: getSupabaseUrl('foto-formato-midia-2'), title: "FRONT LIGHT", href: "/frontlight" },
+        { img: getSupabaseUrl('foto-formato-midia-3'), title: "RODOVIA", href: "/rodovia" },
+        { img: getSupabaseUrl('foto-formato-midia-4'), title: "MOBILIARIO URBANO", href: "/mobiliario-urbano" },
+        { img: getSupabaseUrl('foto-formato-midia-5'), title: "PAINEL DIGITAL", href: "/painel-digital" },
+        { img: getSupabaseUrl('foto-formato-midia-6'), title: "MEGA PAINEL", href: "/mega-painel" },
+        { img: getSupabaseUrl('foto-formato-midia-7'), title: "MEGA LIGHT", href: "/mega-light" },
+        { img: getSupabaseUrl('foto-formato-midia-8'), title: "BANCA 3D", href: "/banca-3d" },
     ])
 
-    // Força atualização das imagens a cada 5 segundos para pegar mudanças do Supabase
     useEffect(() => {
         const updateImages = () => {
             const timestamp = Date.now()
-            setFormatos([
-                { img: getSupabaseUrl('foto-formato-midia-1') + `?t=${timestamp}`, title: "OUTDOOR" },
-                { img: getSupabaseUrl('foto-formato-midia-2') + `?t=${timestamp}`, title: "FRONT LIGHT" },
-                { img: getSupabaseUrl('foto-formato-midia-3') + `?t=${timestamp}`, title: "RODOVIA" },
-                { img: getSupabaseUrl('foto-formato-midia-4') + `?t=${timestamp}`, title: "MOBILIÁRIO URBANO" },
-                { img: getSupabaseUrl('foto-formato-midia-5') + `?t=${timestamp}`, title: "PAINEL DIGITAL" },
-                { img: getSupabaseUrl('foto-formato-midia-6') + `?t=${timestamp}`, title: "MEGA PAINEL" },
-                { img: getSupabaseUrl('foto-formato-midia-7') + `?t=${timestamp}`, title: "MEGA LIGHT" },
-                { img: getSupabaseUrl('foto-formato-midia-8') + `?t=${timestamp}`, title: "BANCA 3D" },
-            ])
+            setFormatos(prev => prev.map((formato, index) => ({
+                ...formato,
+                img: getSupabaseUrl('foto-formato-midia-' + (index + 1)) + '?t=' + timestamp,
+            })))
         }
 
-        // Atualiza a cada 5 segundos
         const interval = setInterval(updateImages, 5000)
-        
-        // Atualização inicial
         updateImages()
-        
-        // Atualiza quando a página ganha foco (usuário volta da aba admin)
+
         const handleVisibilityChange = () => {
-            if (!document.hidden) {
-                updateImages()
-            }
-        }
-        
-        const handleFocus = () => {
-            updateImages()
+            if (!document.hidden) updateImages()
         }
 
-        // Listener para evento customizado do admin
+        const handleFocus = () => updateImages()
+
         const handleMidiaImageUpdated = (event: any) => {
             const { fotoId, timestamp } = event.detail
-            
             const fotoIndex = parseInt(fotoId.replace('foto-formato-midia-', '')) - 1
-            
             setFormatos(prev => prev.map((formato, index) => {
                 if (index === fotoIndex) {
-                    const newImg = getSupabaseUrl(fotoId) + `?t=${timestamp}`
-                    return {
-                        ...formato,
-                        img: newImg
-                    }
+                    return { ...formato, img: getSupabaseUrl(fotoId) + '?t=' + timestamp }
                 }
                 return formato
             }))
         }
 
-        // Listener para localStorage (entre abas)
         const handleStorageChange = (e: StorageEvent) => {
             if (e.key === 'midiaImageUpdate' && e.newValue) {
                 const data = JSON.parse(e.newValue)
-                
                 const fotoIndex = parseInt(data.fotoId.replace('foto-formato-midia-', '')) - 1
-                
                 setFormatos(prev => prev.map((formato, index) => {
                     if (index === fotoIndex) {
-                        const newImg = data.url + `?t=${data.timestamp}`
-                        return {
-                            ...formato,
-                            img: newImg
-                        }
+                        return { ...formato, img: data.url + '?t=' + data.timestamp }
                     }
                     return formato
                 }))
@@ -107,47 +78,18 @@ export default function FormatosMidia() {
         }
     }, [])
 
-    useEffect(() => {
-        function onKeyDown(e: KeyboardEvent) {
-            if (e.key === 'Escape') setSelected(null)
-        }
-
-        if (selected) {
-            window.addEventListener('keydown', onKeyDown)
-            document.body.style.overflow = 'hidden'
-        }
-
-        return () => {
-            window.removeEventListener('keydown', onKeyDown)
-            document.body.style.overflow = ''
-        }
-    }, [selected])
-
     return (
         <div className="w-full flex flex-col items-center justify-center">
-            <h1 className="
-            text-[40px] sm:text-[60px] md:text-[83.04px] 
-            font-bebas
-            font-bold 
-            mt-[122px]
-            pb-[-10px]
-            bg-linear-to-r 
-            from-[#c3d33f] 
-            to-[#079c9e]
-            bg-clip-text
-            text-transparent uppercase text-center">Nossos Formatos de Mídia</h1>
+            <h1 className="text-[40px] sm:text-[60px] md:text-[83.04px] font-bebas font-bold mt-[122px] pb-[-10px] bg-linear-to-r from-[#c3d33f] to-[#079c9e] bg-clip-text text-transparent uppercase text-center">
+                Nossos Formatos de Midia
+            </h1>
 
             <div className="w-fit mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
                 {formatos.map((formato, index) => (
-                    <div
+                    <Link
                         key={index}
-                        className="relative w-[271.25px] h-[297px] overflow-hidden group cursor-pointer"
-                        onClick={() => setSelected(formato)}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(e) => {
-                            if (e.key === 'Enter' || e.key === ' ') setSelected(formato)
-                        }}
+                        href={formato.href}
+                        className="relative w-[271.25px] h-[297px] overflow-hidden group"
                     >
                         <img
                             src={formato.img}
@@ -164,37 +106,9 @@ export default function FormatosMidia() {
                                 </h3>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
-
-            {selected ? (
-                <div
-                    className="fixed inset-0 z-9999 bg-black/70 flex items-center justify-center p-4"
-                    onClick={() => setSelected(null)}
-                >
-                    <div
-                        className="relative w-full max-w-5xl"
-                        onClick={(e) => e.stopPropagation()}
-                    >
-
-                        <button
-                            type="button"
-                            aria-label="Fechar"
-                            onClick={() => setSelected(null)}
-                            className="absolute -top-3 -right-3 w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center shadow"
-                        >
-                            ×
-                        </button>
-
-                        <img
-                            src={selected.img}
-                            alt={selected.title}
-                            className="w-full h-auto max-h-[80vh] object-contain"
-                        />
-                    </div>
-                </div>
-            ) : null}
         </div>
     )
 }

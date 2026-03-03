@@ -63,7 +63,7 @@ export default function Navbar() {
         <header className="fixed z-50 h-[60px] w-full bg-primary flex justify-end py-[21px]">
             <nav className="w-full flex items-center justify-between">
                 <div className="hidden md:flex items-center pl-[40px]">
-                    {isAuthenticated && (pathname === '/' || pathname === '/admin') ? (
+                    {isAuthenticated ? (
                         <>
                             <AdminLogoutButton />
                             {pathname === '/' && <AdminEditButton />}
@@ -96,7 +96,7 @@ export default function Navbar() {
 
                 <div className={`md:hidden fixed top-[60px] left-0 w-full bg-primary transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                     <ul className="flex flex-col items-center py-4 font-bebas">
-                        {isAuthenticated && (pathname === '/' || pathname === '/admin') ? (
+                        {isAuthenticated ? (
                             <li className="w-full text-center border-b border-white/10 py-3 flex justify-center gap-2">
                                 <AdminLogoutButton />
                                 {pathname === '/' && <AdminEditButton />}
