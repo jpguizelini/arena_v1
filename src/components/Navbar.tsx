@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import AdminLogoutButton from '@/components/AdminLogoutButton'
 import AdminEditButton from '@/components/AdminEditButton'
@@ -60,8 +61,23 @@ export default function Navbar() {
     ]
 
     return (
-        <header className="fixed z-50 h-[60px] w-full bg-primary flex justify-end py-[21px]">
+        <header className="fixed z-50 h-[60px] w-full bg-primary flex justify-between items-center py-[21px]">
             <nav className="w-full flex items-center justify-between">
+                <div className="flex items-center pl-[20px] md:pl-[40px]">
+                    <Link href="/" className="flex items-center">
+                        <div className="bg-white rounded-lg p-1 shadow-md">
+                            <Image 
+                                src="/images/logo.png" 
+                                alt="I'mídia Arena" 
+                                width={100}
+                                height={35}
+                                className="h-[35px] md:h-[40px] w-auto object-contain"
+                                priority
+                            />
+                        </div>
+                    </Link>
+                </div>
+
                 <div className="hidden md:flex items-center pl-[40px]">
                     {isAuthenticated ? (
                         <>
