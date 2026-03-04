@@ -43,9 +43,9 @@ export default function Navbar() {
     const navLinks = [
         { label: 'Home', href: '/' },
         { label: 'Outdoor', href: '/outdoor' },
-        { label: "Imídia Painéis", href: '/imidia-paineis' },
-        { label: 'Imídia Litoral', href: '/imidia-litoral' },
-        { label: 'Imídia Live LED', href: '/imidia-live-led' },
+        { label: "I'mídia Painéis", href: '/imidia-paineis' },
+        { label: "I'mídia Litoral", href: '/imidia-litoral' },
+        { label: "I'mídia Live LED", href: '/imidia-live-led' },
         { label: 'Formatos de Mídia', href: '/formatos-de-midia' },
         { label: 'Nossos Materiais', href: '/nossos-materiais' },
     ]
