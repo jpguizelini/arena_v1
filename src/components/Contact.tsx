@@ -66,9 +66,21 @@ export default function Contact() {
                                 transition={{ duration: 0.3 }}
                                 className="overflow-hidden"
                             >
-                                <button className="w-full py-4 bg-gradient-to-tr from-[#c3d33f] to-[#079c9e] font-bebas text-[28px] uppercase tracking-wider text-white hover:opacity-90 transition-opacity">
+                                <motion.button
+                                    className="relative w-full py-4 bg-gradient-to-tr from-[#c3d33f] to-[#079c9e] font-bebas text-[28px] uppercase tracking-wider text-white overflow-hidden"
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    transition={{ duration: 0.2 }}
+                                >
+                                    {/* Efeito brilho passando */}
+                                    <motion.span
+                                        className="absolute inset-0 w-[60px] h-full bg-white/30 skew-x-[-20deg] blur-sm"
+                                        initial={{ x: '-100px' }}
+                                        whileHover={{ x: '120%' }}
+                                        transition={{ duration: 0.5, ease: 'easeInOut' }}
+                                    />
                                     Enviar
-                                </button>
+                                </motion.button>
                             </motion.div>
                         )}
                     </AnimatePresence>
