@@ -24,13 +24,10 @@ function useCounter(target: number, duration: number = 2000, startCounting: bool
 
 const CAROUSEL_IMAGES = [
   "/images/home/outdoor5.jpg",
-  "/images/home/painel-digital-bauru3.jpg",
-
-
-  
+  "/images/home/painel-digital-bauru3.jpg"
 ];
 
-const SLIDE_DURATION = 10000;
+const SLIDE_DURATION = 5000;
 
 export default function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
