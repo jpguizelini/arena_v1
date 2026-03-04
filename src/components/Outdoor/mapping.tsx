@@ -59,7 +59,7 @@ export default function MappingSection() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
-                    >MAPEAMENTO</motion.h1>
+                    >Conheça nosso estudo de geomarketing</motion.h1>
 
                     <motion.p 
                         className="font-goldplay text-white text-[18px] sm:text-[22px] md:text-[28px] leading-relaxed mb-8 break-words"
@@ -78,7 +78,7 @@ export default function MappingSection() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6, delay: 0.8 }}
                     >
-                        Acesse nosso <span className="font-bebas text-[24px] sm:text-[30px] md:text-[38px] font-regular uppercase">mapeamento</span> e descubra<br className="hidden md:inline" />as opções de impacto que a I'mídia oferece!
+                        Acesse nosso <span className="font-bebas text-[24px] sm:text-[30px] md:text-[38px] font-regular uppercase">modelo de estudo</span> e descubra<br className="hidden md:inline" />as opções de impacto que a I'mídia oferece!
                     </motion.p>
                 </motion.div>
                 

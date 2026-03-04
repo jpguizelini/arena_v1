@@ -10,19 +10,19 @@ const galleryItems = [
   },
   {
     id: 2,
-    image: '/images/outdoor/bras olaia-2.png'
+    image: '/images/outdoor/bras-olaia-2.png'
   },
   {
     id: 3,
-    image: '/images/outdoor/maurilio biagi-3.png'
+    image: '/images/outdoor/maurilio-biagi-3.png'
   },
   {
     id: 4,
-    image: '/images/outdoor/maria de jesus-4.png'
+    image: '/images/outdoor/maria-de-jesus-4.png'
   },
   {
     id: 5,
-    image: '/images/outdoor/Outdoor  Iluminado-5.png'
+    image: '/images/outdoor/Outdoor-Iluminado-5.png'
   },
   {
     id: 6,

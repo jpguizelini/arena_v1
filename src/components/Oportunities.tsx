@@ -73,7 +73,7 @@ export default function Transformando() {
                 {/* Lado direito - Imagem */}
                 <div className="relative min-h-[400px] w-full h-full md:min-h-full overflow-visible">
                     <Image
-                        src="/images/img_transformando.jpg"
+                        src="/images/home/nova-foto-oportunidades.jpeg"
                         alt="Transformando"
                         fill
                         className="object-contain object-center md:object-center md:ml-3"

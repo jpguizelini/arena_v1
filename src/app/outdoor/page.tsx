@@ -17,10 +17,12 @@ export default function Outdoor() {
                 <OutdoorDescription />
                 <ImpactSection />
                 <div className="h-16 md:h-24"></div>
-                <OutdoorGrid />
-                <MappingSection />
                 <GalleryGrid />
+                <MappingSection />
+                <OutdoorGrid />
+                <div className="h-16 md:h-48"></div>
                 <Footer />
+
             </div>
         </div>
     );

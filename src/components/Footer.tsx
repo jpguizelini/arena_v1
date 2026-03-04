@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 type FooterColumn = {
     title: string;
@@ -32,6 +33,9 @@ const columns: FooterColumn[] = [
 ];
 
 export default function Footer() {
+    const pathname = usePathname();
+    const isHome = pathname === '/';
+    
     return (
         <>
             <footer className="relative">
@@ -51,7 +55,7 @@ export default function Footer() {
                         ))}
                     </div>
 
-                    <div className="mt-8 sm:mt-10 flex justify-center">
+                    <div className="mt-8 sm:mt-10 flex justify-center gap-4">
                         <Link
                             href="https://www.linkedin.com"
                             target="_blank"
@@ -61,6 +65,17 @@ export default function Footer() {
                             <img src="/images/icons/linkedin.png" alt="LinkedIn" className="h-6 w-6 sm:h-7 sm:w-7" />
                             <span className="tracking-wide font-bebas text-[20px] sm:text-[28px]">SIGA NOSSO LINKEDIN</span>
                         </Link>
+                        {!isHome && (
+                            <Link
+                                href="https://www.instagram.com"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="group inline-flex items-center gap-2 sm:gap-3 rounded-md border-2 border-white/60 px-4 sm:px-5 py-2 sm:py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                            >
+                                <img src="/images/icons/instagram.png" alt="Instagram" className="h-6 w-6 sm:h-7 sm:w-7" />
+                                <span className="tracking-wide font-bebas text-[20px] sm:text-[28px]">SIGA NOSSO INSTAGRAM</span>
+                            </Link>
+                        )}
                     </div>
                 </div>
                 
