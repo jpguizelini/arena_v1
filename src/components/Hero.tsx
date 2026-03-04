@@ -114,16 +114,34 @@ export default function Hero() {
               <motion.h1
                 className="font-bebas text-accent font-bold text-[48px] sm:text-[68px] md:text-[89px] leading-none"
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
+                animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: 0.7,
+                  y: {
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0
+                  }
+                }}
               >
                 +{cidades} CIDADES
               </motion.h1>
               <motion.h1
                 className="font-bebas text-accent font-bold text-[48px] sm:text-[68px] md:text-[89px] leading-none"
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
+                animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: 0.9,
+                  y: {
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.3
+                  }
+                }}
               >
                 +{milhoes} MILHÕES
               </motion.h1>
