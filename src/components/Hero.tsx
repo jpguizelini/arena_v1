@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 function useCounter(target: number, duration: number = 2000, startCounting: boolean = false) {
   const [count, setCount] = useState(0);
@@ -23,6 +23,13 @@ function useCounter(target: number, duration: number = 2000, startCounting: bool
   return count;
 }
 
+// ⚠️  Adicione aqui os caminhos das suas imagens no carrossel
+const CAROUSEL_IMAGES = [
+  "/images/home/outdoor5.jpg"
+];
+
+const SLIDE_DURATION = 5000; // ms entre cada transição
+
 export default function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [smoothPos, setSmoothPos] = useState({ x: 0, y: 0 });
@@ -30,6 +37,26 @@ export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const numbersRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(numbersRef, { once: true, margin: "-100px" });
+
+  // Carrossel
+  const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const goTo = useCallback((index: number) => {
+    setCurrent((index + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length);
+  }, []);
+
+  const next = useCallback(() => goTo(current + 1), [current, goTo]);
+  const prev = useCallback(() => goTo(current - 1), [current, goTo]);
+
+  useEffect(() => {
+    if (paused) return;
+    intervalRef.current = setInterval(() => {
+      setCurrent(c => (c + 1) % CAROUSEL_IMAGES.length);
+    }, SLIDE_DURATION);
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, [paused, current]);
 
   const cidades = useCounter(30, 2800, isInView);
   const milhoes = useCounter(240, 3500, isInView);
@@ -66,24 +93,42 @@ export default function Hero() {
   const contentY = smoothPos.y * 4;
 
   return (
-    <section ref={sectionRef} className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-0 overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-0 overflow-hidden"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <div className="relative w-full">
 
+        {/* ── Carrossel de imagens ── */}
         <motion.div
-          className="w-full"
+          className="w-full relative"
           style={{ x: imgX, y: imgY, scale: 1.06 }}
         >
-          <Image
-            src="/images/outdoor5.jpg"
-            alt="Outdoor Imídia"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-full h-auto min-h-[500px] sm:min-h-[600px] md:min-h-0 object-cover md:object-contain"
-            priority
-          />
+          <AnimatePresence mode="sync">
+            <motion.div
+              key={current}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.9, ease: "easeInOut" }}
+              className="w-full"
+            >
+              <Image
+                src={CAROUSEL_IMAGES[current]}
+                alt={`Outdoor Imídia ${current + 1}`}
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full h-auto min-h-[500px] sm:min-h-[600px] md:min-h-0 object-cover md:object-contain"
+                priority={current === 0}
+              />
+            </motion.div>
+          </AnimatePresence>
         </motion.div>
 
+        {/* ── Gradiente overlay ── */}
         <div className="absolute inset-0">
           <div
             className="absolute left-0 top-0 w-full md:w-3/4 h-full"
@@ -93,6 +138,7 @@ export default function Hero() {
           />
         </div>
 
+        {/* ── Conteúdo ── */}
         <motion.div
           className="absolute inset-0 flex items-center"
           style={{ x: contentX, y: contentY }}
@@ -115,15 +161,10 @@ export default function Hero() {
                 className="font-bebas text-accent font-bold text-[48px] sm:text-[68px] md:text-[89px] leading-none"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
-                transition={{ 
-                  duration: 0.6, 
+                transition={{
+                  duration: 0.6,
                   delay: 0.7,
-                  y: {
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 0
-                  }
+                  y: { duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0 }
                 }}
               >
                 +{cidades} CIDADES
@@ -132,15 +173,10 @@ export default function Hero() {
                 className="font-bebas text-accent font-bold text-[48px] sm:text-[68px] md:text-[89px] leading-none"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
-                transition={{ 
-                  duration: 0.6, 
+                transition={{
+                  duration: 0.6,
                   delay: 0.9,
-                  y: {
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 0.3
-                  }
+                  y: { duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }
                 }}
               >
                 +{milhoes} MILHÕES
@@ -155,6 +191,7 @@ export default function Hero() {
             >
               DE PESSOAS IMPACTADAS <span className="block sm:inline">MENSALMENTE</span>
             </motion.p>
+
             <motion.button
               className="mt-2 w-fit border-2 text-primary bg-white font-bebas text-[18px] sm:text-[22px] md:text-[25.55px] px-4 sm:px-5 md:px-6 py-2 hover:bg-accent hover:text-dark rounded-2xl"
               initial={{ opacity: 0, y: 20 }}
@@ -167,6 +204,55 @@ export default function Hero() {
             </motion.button>
           </div>
         </motion.div>
+
+        {/* ── Controles do carrossel ── */}
+
+        {/* Setas prev / next */}
+        {/*<button
+          onClick={prev}
+          aria-label="Slide anterior"
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/60 text-white rounded-full w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center transition-colors backdrop-blur-sm"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+
+        <button
+          onClick={next}
+          aria-label="Próximo slide"
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/60 text-white rounded-full w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center transition-colors backdrop-blur-sm"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+          */}
+          
+        {/* Dots */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+          {CAROUSEL_IMAGES.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => goTo(i)}
+              aria-label={`Ir para slide ${i + 1}`}
+              className="relative w-2.5 h-2.5 rounded-full overflow-hidden transition-all focus:outline-none"
+              style={{ background: i === current ? 'white' : 'rgba(255,255,255,0.4)' }}
+            >
+              {/* barra de progresso animada no dot ativo */}
+              {i === current && !paused && (
+                <motion.span
+                  className="absolute inset-0 rounded-full origin-left"
+                  style={{ background: 'rgba(168, 201, 60, 0.9)' }}
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: SLIDE_DURATION / 1000, ease: "linear" }}
+                  key={current}
+                />
+              )}
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );

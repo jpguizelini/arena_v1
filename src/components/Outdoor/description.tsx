@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion';
+import GradientText from '../ui/GradientText';
 
 export default function OutdoorDescription() {
     return (
@@ -15,18 +16,12 @@ export default function OutdoorDescription() {
             >
                 Em um país como o Brasil, onde o ritmo da vida urbana é frenético e as pessoas<br className="hidden md:inline" /> estão em constante movimento, os outdoors têm um papel crucial na comunicação<br className="hidden md:inline" /> das marcas. Eles estão presentes nas principais avenidas, rodovias e centros urbanos,<br className="hidden md:inline" /> criando uma conexão direta com o público que transita por esses locais diariamente.
             </motion.p>
-
-            <motion.p 
-                className="font-bebas font-regular text-[28px] sm:text-[35px] md:text-[47px] leading-tight mb-12 text-center break-words px-2"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-            >
-                <span className="bg-gradient-to-r from-[#c3d33f] via-[#079c9e] to-[#c3d33f] bg-clip-text text-transparent">
+            <div className="mb-12">
+                <GradientText from="#c3d33f" via="#079c9e" to="#c3d33f">
                     A ALTA VISIBILIDADE DESSES PAINÉIS TRANSFORMA O OUTDOOR EM UM<br className="hidden md:inline" />PONTO DE CONTATO QUASE INEVITÁVEL PARA QUEM CIRCULA PELA CIDADE.
-                </span>
-            </motion.p>
+                </GradientText> 
+            </div>
+
 
             <motion.p 
                 className="font-goldplay text-white text-lg md:text-[19.94px] max-w-5xl lg:max-w-7xl xl:max-w-8xl mx-auto text-center break-words" 
