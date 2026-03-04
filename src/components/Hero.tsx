@@ -100,7 +100,7 @@ export default function Hero() {
         {/* ── Carrossel de imagens ── */}
         <motion.div
           className="w-full relative"
-          style={{ x: imgX, y: imgY, scale: 1.06 }}
+          style={{ x: imgX, y: imgY, scale: 1.15 }}
         >
           {/* imagem fantasma para manter a altura do container */}
           <Image
@@ -130,6 +130,7 @@ export default function Hero() {
                   fill
                   sizes="100vw"
                   className="object-cover md:object-contain"
+                  style={{ objectPosition: 'center 30%' }}
                   priority={current === 0}
                 />
               </motion.div>
