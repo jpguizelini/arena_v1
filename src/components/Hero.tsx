@@ -8,7 +8,6 @@ function useCounter(target: number, duration: number = 2000, startCounting: bool
 
   useEffect(() => {
     if (!startCounting) return;
-
     let startTime: number | null = null;
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
@@ -23,12 +22,15 @@ function useCounter(target: number, duration: number = 2000, startCounting: bool
   return count;
 }
 
-// ⚠️  Adicione aqui os caminhos das suas imagens no carrossel
 const CAROUSEL_IMAGES = [
-  "/images/home/outdoor5.jpg"
+  "/images/home/outdoor5.jpg",
+  "/images/home/painel-digital-bauru3.jpg",
+
+
+  
 ];
 
-const SLIDE_DURATION = 5000; // ms entre cada transição
+const SLIDE_DURATION = 10000;
 
 export default function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -38,10 +40,8 @@ export default function Hero() {
   const numbersRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(numbersRef, { once: true, margin: "-100px" });
 
-  // Carrossel
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const goTo = useCallback((index: number) => {
     setCurrent((index + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length);
@@ -52,10 +52,10 @@ export default function Hero() {
 
   useEffect(() => {
     if (paused) return;
-    intervalRef.current = setInterval(() => {
+    const interval = setInterval(() => {
       setCurrent(c => (c + 1) % CAROUSEL_IMAGES.length);
     }, SLIDE_DURATION);
-    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+    return () => clearInterval(interval);
   }, [paused, current]);
 
   const cidades = useCounter(30, 2800, isInView);
@@ -64,10 +64,9 @@ export default function Hero() {
   useEffect(() => {
     if (window.matchMedia('(hover: none)').matches) return;
     const handleMouseMove = (e: MouseEvent) => {
-      const { innerWidth, innerHeight } = window;
       setMousePos({
-        x: (e.clientX / innerWidth - 0.5) * 2,
-        y: (e.clientY / innerHeight - 0.5) * 2,
+        x: (e.clientX / window.innerWidth - 0.5) * 2,
+        y: (e.clientY / window.innerHeight - 0.5) * 2,
       });
     };
     window.addEventListener("mousemove", handleMouseMove);
@@ -106,26 +105,39 @@ export default function Hero() {
           className="w-full relative"
           style={{ x: imgX, y: imgY, scale: 1.06 }}
         >
-          <AnimatePresence mode="sync">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.9, ease: "easeInOut" }}
-              className="w-full"
-            >
-              <Image
-                src={CAROUSEL_IMAGES[current]}
-                alt={`Outdoor Imídia ${current + 1}`}
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full h-auto min-h-[500px] sm:min-h-[600px] md:min-h-0 object-cover md:object-contain"
-                priority={current === 0}
-              />
-            </motion.div>
-          </AnimatePresence>
+          {/* imagem fantasma para manter a altura do container */}
+          <Image
+            src={CAROUSEL_IMAGES[0]}
+            alt=""
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto min-h-[500px] sm:min-h-[600px] md:min-h-0 object-cover md:object-contain invisible"
+            aria-hidden
+          />
+
+          {/* imagens reais animando por cima */}
+          <div className="absolute inset-0">
+            <AnimatePresence mode="sync">
+              <motion.div
+                key={current}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.9, ease: "easeInOut" }}
+                className="absolute inset-0"
+              >
+                <Image
+                  src={CAROUSEL_IMAGES[current]}
+                  alt={`Outdoor Imídia ${current + 1}`}
+                  fill
+                  sizes="100vw"
+                  className="object-cover md:object-contain"
+                  priority={current === 0}
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </motion.div>
 
         {/* ── Gradiente overlay ── */}
@@ -205,31 +217,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* ── Controles do carrossel ── */}
-
-        {/* Setas prev / next */}
-        {/*<button
-          onClick={prev}
-          aria-label="Slide anterior"
-          className="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/60 text-white rounded-full w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center transition-colors backdrop-blur-sm"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-        </button>
-
-        <button
-          onClick={next}
-          aria-label="Próximo slide"
-          className="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/60 text-white rounded-full w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center transition-colors backdrop-blur-sm"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5">
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
-        </button>
-          */}
-          
-        {/* Dots */}
+        {/* ── Dots ── */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
           {CAROUSEL_IMAGES.map((_, i) => (
             <button
@@ -239,7 +227,6 @@ export default function Hero() {
               className="relative w-2.5 h-2.5 rounded-full overflow-hidden transition-all focus:outline-none"
               style={{ background: i === current ? 'white' : 'rgba(255,255,255,0.4)' }}
             >
-              {/* barra de progresso animada no dot ativo */}
               {i === current && !paused && (
                 <motion.span
                   className="absolute inset-0 rounded-full origin-left"
@@ -253,6 +240,7 @@ export default function Hero() {
             </button>
           ))}
         </div>
+
       </div>
     </section>
   );
