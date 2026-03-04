@@ -1,13 +1,12 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import ParallaxBanner from '@/components/ui/ParallaxBanner';
 import GradientText from '@/components/ui/GradientText';
 
 export default function ImidiaPaineis() {
   return (
     <div>
-        <ParallaxBanner imageSrc="/images/outdoor/bras olaia.png" imageAlt="Outdoor Brasólaia" />
+        <ParallaxBanner imageSrc="/images/outdoor/bras-olaia.png" imageAlt="outdoorbrasolaia" />
         <div className="bg-transparent px-4 sm:px-8 md:px-16 lg:px-[60px] py-16">
           <GradientText from="#c3d33f" via="#079c9e" to="#c3d33f" className="mb-0">
             a maior em número de cidades no interior <br></br>
