@@ -79,7 +79,7 @@ export default function ImpactSection() {
             style={{
               fontSize: 'clamp(24px, 5vw, 38px)',
               lineHeight: '1.2',
-              marginTop: 'clamp(150px, 20vw, 300px)',
+              marginTop: '0',
               marginBottom: '5px'
             }}
             initial={{ opacity: 0, y: 30 }}
@@ -97,6 +97,7 @@ export default function ImpactSection() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
+            {/* +30 CIDADES — bounce contínuo */}
             <motion.div
               className="text-center w-full"
               initial={{ opacity: 0, scale: 0.5 }}
@@ -104,14 +105,22 @@ export default function ImpactSection() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              <p
+              <motion.p
                 className="font-bebas font-normal leading-none"
                 style={{ fontSize: 'clamp(48px, 8vw, 128px)', color: '#C3D33F', marginBottom: '2px' }}
+                animate={{ y: [0, -12, 0] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0,
+                }}
               >
                 +30 CIDADES
-              </p>
+              </motion.p>
             </motion.div>
 
+            {/* +240 MILHÕES — bounce contínuo com delay diferente */}
             <motion.div
               className="text-center w-full"
               style={{ marginBottom: '-10px' }}
@@ -120,12 +129,19 @@ export default function ImpactSection() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 1.0 }}
             >
-              <p
+              <motion.p
                 className="font-bebas font-normal leading-none"
                 style={{ fontSize: 'clamp(48px, 8vw, 128px)', color: '#C3D33F' }}
+                animate={{ y: [0, -12, 0] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.3,
+                }}
               >
                 +240 MILHÕES
-              </p>
+              </motion.p>
             </motion.div>
 
             <motion.div
