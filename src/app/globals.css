@@ -98,15 +98,7 @@ html {
   background-color: #000000;
 }
 
-body {
-  background-color: #000000;
-  background-image: url('/images/bg.jpg');
-  background-size: 100vw auto !important;
-  background-position: top center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  font-family: var(--font-goldplay);
-}
+body { background-image: url('/images/bg.jpg'); background-size: cover; background-position: top center; background-repeat: no-repeat; background-attachment: fixed; background-color: #000; }
 
 footer {
   background-color: #212121;

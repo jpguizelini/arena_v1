@@ -9,12 +9,7 @@ import Footer from '@/components/Footer';
 export default function Outdoor() {
     return (
         <div 
-            className="relative bg-black min-h-screen"
-            style={{
-                backgroundImage: 'url(/images/outdoor/triangulos.png)',
-                backgroundRepeat: 'repeat',
-                backgroundSize: 'auto'
-            }}
+            className="relativ min-h-screen"
         >
 
             <div className="relative z-10">
