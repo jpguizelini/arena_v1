@@ -5,7 +5,7 @@ import ParallaxBanner from '@/components/ui/ParallaxBanner';
 
 export default function Banner() {
   return (
-    <ParallaxBanner imageSrc="/images/outdoor/bras olaia.png" imageAlt="Outdoor Brasólaia">
+    <ParallaxBanner imageSrc="/images/outdoor/bras-olaia.png" imageAlt="butdoorbrasolaia">
       <motion.h1
         className="font-bebas font-bold text-[60px] sm:text-[80px] md:text-[100px] leading-none bg-gradient-to-b from-[#079c9e] to-[#c3d33f] bg-clip-text text-transparent"
         initial={{ opacity: 0, scale: 0.8 }}
