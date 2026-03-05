@@ -71,7 +71,7 @@ export default function Navbar() {
                                 alt="I'mídia Arena" 
                                 width={100}
                                 height={35}
-                                className="h-[35px] md:h-[40px] w-auto object-contain"
+                                className="h-[35px] md:h-[35px] w-auto object-contain"
                                 priority
                             />
                         </div>
