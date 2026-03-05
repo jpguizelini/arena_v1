@@ -14,15 +14,17 @@ export default function ImidiaPaineis() {
       <ParallaxBanner imageSrc="/images/paineis/banner.jpg" imageAlt="banner" />
 
 
-      <div className="bg-transparent px-4 sm:px-8 md:px-16 lg:px-[60px] py-4">
+      <div className="bg-transparent px-4 sm:px-8 md:px-16 lg:px-[60px] pt-[84px]">
         <GradientText size="text-[65px] sm:text-[80px] md:text-[65px]" className="mb-0 text-center leading-tight">
           a maior em número de cidades no interior <br></br>
           e a melhor em versatilidades de ativos.
         </GradientText>
       </div>
 
-
+    <div className="py-[100px]">
       <Coverage description = "Confira nossas cidades de autação"/>
+    </div>
+
 
 
       <div>
@@ -30,13 +32,13 @@ export default function ImidiaPaineis() {
           nossos formatos de mídia
         </GradientText>
       </div>
-
-      
       <ImidiaPaineisGrid />
-      <TextWhitImage 
-        imgSrc="/images/paineis/escolhacerto.png"
-        title={"Escolha certo,\nEscolha I'mídia!"}
-        description={
+
+      <div className="py-[100px] pb-[100px]">
+        <TextWhitImage 
+          imgSrc="/images/paineis/escolhacerto.png"
+          title={"Escolha certo,\nEscolha I'mídia!"}
+          description={
             <span className="flex flex-col gap-4 font-goldplay ">
               <span>· Conhecimento e suporte em todo interior de SP</span>
               <span>· Equipe com Know How de mais de 20 anos em Mídia OOH</span>
@@ -49,6 +51,8 @@ export default function ImidiaPaineis() {
             </span>
           }
         />
+      </div>
+
 
       <div>
         <ParallaxBanner 
@@ -128,7 +132,7 @@ export default function ImidiaPaineis() {
           </motion.div>
         </ParallaxBanner>
       </div>
-      <div className="pt-64">
+      <div className="pt-[180px]">
         <Footer />
       </div>
 
