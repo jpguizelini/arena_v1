@@ -6,6 +6,7 @@ import Coverage from '@/components/Coverage';
 import ImidiaPaineisGrid from '@/components/Outdoor/ImidiaPaineisGrid';
 import TextWhitImage from '@/components/TextWhitImage';
 import { motion } from 'framer-motion';
+import Footer from '@/components/Footer';
 
 export default function ImidiaPaineis() {
   return (
@@ -76,10 +77,11 @@ export default function ImidiaPaineis() {
               <motion.h1
                 className="font-bebas text-white text-[48px] sm:text-[68px] md:text-[89px] leading-none"
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
                 transition={{
                   duration: 0.6,
                   delay: 0.7,
+                  y: { duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0 }
                 }}
               >
                 MAIOR COBERTURA
@@ -88,10 +90,11 @@ export default function ImidiaPaineis() {
               <motion.h1
                 className="font-bebas text-white  text-[48px] sm:text-[68px] md:text-[89px] leading-none"
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
                 transition={{
                   duration: 0.6,
-                  delay: 0.7,
+                  delay: 0.9,
+                  y: { duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }
                 }}
               >
                 MAIOR AUDIÊNCIA
@@ -100,10 +103,11 @@ export default function ImidiaPaineis() {
               <motion.h1
                 className="font-bebas text-white  text-[48px] sm:text-[68px] md:text-[89px] leading-none"
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
                 transition={{
                   duration: 0.6,
-                  delay: 0.7,
+                  delay: 1.1,
+                  y: { duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.6 }
                 }}
               >
                 MAIOR IMPACTO
@@ -112,8 +116,11 @@ export default function ImidiaPaineis() {
               <motion.div
                 className="font-bebas text-accent text-[20px] sm:text-[24px] md:text-[42px] leading-none tracking-tight"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
+                animate={{ opacity: 1, y: [0, -8, 0] }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: 0.9
+                }}
               >
                 <span className="block sm:inline">MÍDIA OOH NO INTERIOR<br />PAULISTA É I'MÍDIA PAINÉIS</span>
               </motion.div>
@@ -121,8 +128,10 @@ export default function ImidiaPaineis() {
           </motion.div>
         </ParallaxBanner>
       </div>
+      <div className="pt-64">
+        <Footer />
+      </div>
 
-        
     </div>
   )
 }
