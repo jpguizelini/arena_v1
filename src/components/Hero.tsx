@@ -27,7 +27,7 @@ const CAROUSEL_IMAGES = [
   "/images/home/painel-digital-bauru3.jpg"
 ];
 
-const SLIDE_DURATION = 7000;
+const SLIDE_DURATION = 70000;
 
 export default function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -100,7 +100,7 @@ export default function Hero() {
         {/* ── Carrossel de imagens ── */}
         <motion.div
           className="w-full relative"
-          style={{ x: imgX, y: imgY, scale: 1.15 }}
+          style={{ x: imgX, y: imgY, scale: 1.3 }}
         >
           {/* imagem fantasma para manter a altura do container */}
           <Image
