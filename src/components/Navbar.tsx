@@ -67,7 +67,7 @@ export default function Navbar() {
                     <Link href="/" className="flex items-center">
                         <div className="bg-white rounded-lg p-1 shadow-md">
                             <Image 
-                                src="/images/logo.png" 
+                                src="/images/icons/logo.png" 
                                 alt="I'mídia Arena" 
                                 width={100}
                                 height={35}
