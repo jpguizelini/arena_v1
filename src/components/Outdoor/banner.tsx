@@ -7,7 +7,7 @@ export default function Banner() {
   return (
     <ParallaxBanner imageSrc="/images/outdoor/bras-olaia.png" imageAlt="butdoorbrasolaia">
       <motion.h1
-        className="font-bebas font-bold text-[60px] sm:text-[80px] md:text-[100px] leading-none bg-gradient-to-b from-[#079c9e] to-[#c3d33f] bg-clip-text text-transparent"
+        className="font-bebas font-bold text-[60px] sm:text-[80px] md:text-[100px] leading-none bg-linear-to-b from-[#079c9e] to-accent bg-clip-text text-transparent"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.5 }}
@@ -16,7 +16,7 @@ export default function Banner() {
       </motion.h1>
 
       <motion.p
-        className="font-goldplay text-white text-[14px] sm:text-[16px] md:text-[19.94px] text-center max-w-[700px] mt-2 sm:mt-3 md:mt-4 leading-relaxed break-words cursor-default"
+        className="font-goldplay text-white text-[14px] sm:text-[16px] md:text-[19.94px] text-center max-w-[700px] mt-2 sm:mt-3 md:mt-4 leading-relaxed wrap-break-word cursor-default"
         style={{ textShadow: '0 2px 20px rgba(0,0,0,0.9), 0 1px 6px rgba(0,0,0,0.8)' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

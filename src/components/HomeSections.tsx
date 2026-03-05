@@ -18,7 +18,12 @@ export default function HomeSections({
   return (
     <div>
       <Hero />
-      <Coverage />
+      <Coverage description={
+        <>
+          A maior em número de cidades atendidas por<br />
+          uma empresa de OOH no interior e litora de São Paulo
+        </>
+      } />
       <Oportunities />
       <GroupCompanies />
       {midiaFormats ?? <MidiaFormats />}

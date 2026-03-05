@@ -1,8 +1,14 @@
 import { Button } from "@/components/ui/button";
 import Card3D from "@/components/ui/Card3D";
 import { motion } from "framer-motion";
+import type { ReactNode } from 'react';
 
-export default function Coverage() {
+interface CoverageProps {
+    description?: ReactNode;
+}
+
+
+export default function Coverage({description}: CoverageProps) {
     return (
         <div className="w-full flex flex-col items-center justify-center">
             <motion.h1 
@@ -22,8 +28,7 @@ export default function Coverage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true, amount: 0.3 }}
             >
-                A maior em número de cidades atendidas por<br />
-                uma empresa de OOH no interior e litora de São Paulo
+                {description}
             </motion.p>
 
             <Card3D className="group relative mx-[57px] mt-[15px]" glowClassName="pointer-events-none absolute inset-0 -z-10 opacity-0">
