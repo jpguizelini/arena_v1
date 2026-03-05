@@ -5,9 +5,9 @@ import ParallaxBanner from '@/components/ui/ParallaxBanner';
 
 export default function Banner() {
   return (
-    <ParallaxBanner imageSrc="/images/outdoor/bras-olaia.png" imageAlt="butdoorbrasolaia">
+    <ParallaxBanner imageSrc="/images/outdoor/banner.png" imageAlt="butdoorbrasolaia">
       <motion.h1
-        className="font-bebas font-bold text-[60px] sm:text-[80px] md:text-[100px] leading-none bg-linear-to-b from-[#079c9e] to-accent bg-clip-text text-transparent"
+        className="font-bebas font-bold text-[60px] sm:text-[80px] md:text-[100px] leading-none bg-linear-to-b from-[#c3d33f] via-[#079c9e] to-accent bg-clip-text text-transparent"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.5 }}

@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 const galleryItems = [
   {
     id: 1,
-    image: '/images/outdoor/caramuru-1.png'
+    image: '/images/outdoor/galeria-outdoor-1.png'
   },
   {
     id: 2,
@@ -14,19 +14,19 @@ const galleryItems = [
   },
   {
     id: 3,
-    image: '/images/outdoor/maurilio-biagi-3.png'
+    image: '/images/outdoor/galeria-outdoor-3.png'
   },
   {
     id: 4,
-    image: '/images/outdoor/maria-de-jesus-4.png'
+    image: '/images/outdoor/galeria-outdoor-2.png'
   },
   {
     id: 5,
-    image: '/images/outdoor/Outdoor-Iluminado-5.png'
+    image: '/images/outdoor/galeria-outdoor-5.png'
   },
   {
     id: 6,
-    image: '/images/outdoor/meira-junior-6.png'
+    image: '/images/outdoor/galeria-outdoor-4.png'
   }
 ]
 
