@@ -17,7 +17,7 @@ export default function OutdoorDescription() {
                 Em um país como o Brasil, onde o ritmo da vida urbana é frenético e as pessoas<br className="hidden md:inline" /> estão em constante movimento, os outdoors têm um papel crucial na comunicação<br className="hidden md:inline" /> das marcas. Eles estão presentes nas principais avenidas, rodovias e centros urbanos,<br className="hidden md:inline" /> criando uma conexão direta com o público que transita por esses locais diariamente.
             </motion.p>
             <div className="mb-12">
-                <GradientText from="#c3d33f" via="#079c9e" to="#c3d33f">
+                <GradientText from="#c3d33f" via="#079c9e" to="#c3d33f" className="text-center">
                     A ALTA VISIBILIDADE DESSES PAINÉIS TRANSFORMA O OUTDOOR EM UM<br className="hidden md:inline" />PONTO DE CONTATO QUASE INEVITÁVEL PARA QUEM CIRCULA PELA CIDADE.
                 </GradientText> 
             </div>

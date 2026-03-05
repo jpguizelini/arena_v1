@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface GradientTextProps {
   children: React.ReactNode;
@@ -6,7 +7,6 @@ interface GradientTextProps {
   via?: string;
   to?: string;
   className?: string;
-  text?: string;
   size?: string;
 }
 
@@ -20,14 +20,18 @@ export default function GradientText({
 }: GradientTextProps) {
   return (
     <motion.p
-        className={`font-bebas font-regular ${size} leading-tight text-center wrap-break-word px-2`}
+        className={cn(
+          "font-bebas leading-tight wrap-break-word",
+          size,
+          className
+        )}
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, delay: 0.4 }}
     >
         <span
-        className={`bg-clip-text text-transparent ${className}`}
+        className="bg-clip-text text-transparent"
         style={{ backgroundImage: `linear-gradient(to right, ${from}, ${via}, ${to})` }}
         >
         {children}

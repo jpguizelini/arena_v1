@@ -6,31 +6,31 @@ import Link from 'next/link'
 const gridItems = [
   {
     id: 1,
-    title: 'PAINEL FRONT LIGHT',
-    image: '/images/outdoor/painel-front-light.png',
-    href: '/frontlight'
+    title: 'OUTDOOR',
+    image: '/images/paineis/outdoor3.png',
+    href: '/outdoor'
   },
   {
     id: 2,
     title: 'PAINEL MEGA LIGHT',
-    image: '/images/outdoor/painel-mega-light.png',
+    image: '/images/paineis/painel-mega-light.jpg',
     href: '/mega-light'
   },
   {
     id: 3,
-    title: 'PAINEL DE RODOVIA',
+    title: 'PAINEL DE FRONT LIGHT',
     image: '/images/outdoor/painel-rodovia.png',
     href: '/rodovia'
   },
   {
     id: 4,
-    title: 'PAINEL DIGITAL',
+    title: 'PAINEL DE RODOVIA',
     image: '/images/outdoor/painel-digital.png',
     href: '/painel-digital'
   },
   {
     id: 5,
-    title: 'MOBILIÁRIO URBANO',
+    title: 'PAINEL DIGITAL',
     image: '/images/outdoor/mobiliario-urbano.png',
     href: '/mobiliario-urbano'
   }
