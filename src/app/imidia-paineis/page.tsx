@@ -3,6 +3,7 @@
 import ParallaxBanner from '@/components/ui/ParallaxBanner';
 import GradientText from '@/components/ui/GradientText';
 import Coverage from '@/components/Coverage';
+import ImidiaPaineisGrid from '@/components/Outdoor/ImidiaPaineisGrid';
 
 export default function ImidiaPaineis() {
   return (
@@ -15,6 +16,12 @@ export default function ImidiaPaineis() {
           </GradientText>
         </div>
         <Coverage description = "Confira nossas cidades de autação"/>
+        <div>
+          <GradientText size="text-[65px] sm:text-[80px] md:text-[65px] pt-[114px]" className="mb-0">
+            nossos formatos de mídia
+          </GradientText>
+        </div>
+        <ImidiaPaineisGrid />
     </div>
   )
 }
