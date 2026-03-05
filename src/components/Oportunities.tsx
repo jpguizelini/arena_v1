@@ -73,8 +73,8 @@ export default function Transformando() {
                 {/* Lado direito - Imagem */}
                 <div className="relative min-h-[400px] w-full h-full md:min-h-full overflow-visible">
                     <Image
-                        src="/images/home/nova-foto-oportunidades.jpeg"
-                        alt="Transformando"
+                        src="/images/home/espacos-oportunidades.jpeg"
+                        alt="Espaços Oportunidades"
                         fill
                         className="object-contain object-center md:object-center md:ml-3"
                     />
@@ -84,7 +84,7 @@ export default function Transformando() {
             <div className="pointer-events-none absolute right-4 md:right-0 bottom-0 z-10 translate-y-[40%] sm:translate-y-[40%] md:translate-y-[82%]">
                 <div className="relative w-[100px] sm:w-[120px] md:w-[134px] h-[280px] sm:h-[330px] md:h-[370px]">
                     <Image
-                        src="/images/home/espacos-oportunidades.jpeg"
+                        src="/images/home/robo1.png"
                         alt="Robo"
                         fill
                         className="object-center"

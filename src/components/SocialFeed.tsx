@@ -47,7 +47,7 @@ export default function SocialFeed() {
           >
             <div className="relative w-[120px] h-[87px] sm:w-[180px] sm:h-[131px] md:w-[210px] md:h-[153px] lg:w-[240px] lg:h-[175px]">
               <Image
-                src="/images/robo2.png"
+                src="/images/home/robo2.png"
                 alt="Robo"
                 fill
                 className="object-contain"
