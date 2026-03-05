@@ -98,7 +98,7 @@ html {
   background-color: #000000;
 }
 
-body { background-image: url('/images/bg.jpg'); background-size: cover; background-position: top center; background-repeat: no-repeat; background-attachment: fixed; background-color: #000; }
+
 
 footer {
   background-color: #212121;
@@ -140,9 +140,10 @@ footer {
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    border-color: var(--border);
+    outline-color: rgb(var(--ring) / 0.5);
   }
   body {
-    @apply text-foreground;
+    color: var(--foreground);
   }
 }

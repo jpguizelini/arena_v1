@@ -27,7 +27,7 @@ const CAROUSEL_IMAGES = [
   "/images/home/painel-digital-bauru3.jpg"
 ];
 
-const SLIDE_DURATION = 5000;
+const SLIDE_DURATION = 7000;
 
 export default function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
