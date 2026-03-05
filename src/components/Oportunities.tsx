@@ -14,10 +14,10 @@ export default function Transformando() {
                         text-[53.09px] 
                         font-bebas
                         font-bold 
-                        leading-[1]
+                        leading-none
                         mb-4
-                        bg-gradient-to-r 
-                        from-[#c3d33f] 
+                        bg-linear-to-r
+                        from-accent
                         to-[#079c9e]
                         bg-clip-text
                         text-transparent
@@ -32,7 +32,7 @@ export default function Transformando() {
                     </motion.h1>
 
                     <motion.p 
-                        className="text-[16px] font-goldplay text-white text-left sm:text-left md:text-left leading-snug pr-0 sm:pr-18 mb-8 text-center sm:text-left"
+                        className="text-[16px] font-goldplay text-white text-center sm:text-left md:text-left leading-snug pr-0 sm:pr-18 mb-8"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}

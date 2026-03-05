@@ -55,7 +55,7 @@ export default function AdminLoginForm() {
           className="object-cover opacity-40"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/30 to-black/60" />
       </div>
 
       {/* Modal de login centralizado */}
@@ -128,7 +128,7 @@ export default function AdminLoginForm() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full mt-8 bg-gradient-to-r from-[#079c9e] to-[#c3d33f] hover:from-[#068a8c] hover:to-[#b0c038] disabled:from-gray-600 disabled:to-gray-700 text-white py-3 px-4 rounded-lg font-medium transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl disabled:shadow-none disabled:cursor-not-allowed"
+              className="w-full mt-8 bg-linear-to-r from-[#079c9e] to-accent hover:from-[#068a8c] hover:to-[#b0c038] disabled:from-gray-600 disabled:to-gray-700 text-white py-3 px-4 rounded-lg font-medium transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl disabled:shadow-none disabled:cursor-not-allowed"
             >
               {loading ? (
                 <span className="flex items-center justify-center">

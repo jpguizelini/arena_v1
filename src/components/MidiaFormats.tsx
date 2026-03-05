@@ -82,7 +82,7 @@ export default function FormatosMidia() {
     return (
         <div className="w-full flex flex-col items-center justify-center">
             <motion.h1 
-                className="text-[40px] sm:text-[60px] md:text-[83.04px] font-bebas font-bold mt-[122px] pb-[-10px] bg-linear-to-r from-[#c3d33f] to-[#079c9e] bg-clip-text text-transparent uppercase text-center"
+                className="text-[40px] sm:text-[60px] md:text-[83.04px] font-bebas font-bold mt-[122px] pb-[-10px] bg-linear-to-r from-accent to-[#079c9e] bg-clip-text text-transparent uppercase text-center"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}

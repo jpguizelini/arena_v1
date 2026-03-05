@@ -130,8 +130,8 @@ export default function MidiaFormatsAdmin() {
             font-bold 
             mt-[122px]
             pb-[-10px]
-            bg-gradient-to-r 
-            from-[#c3d33f] 
+            bg-linear-to-r 
+            from-accent
             to-[#079c9e]
             bg-clip-text
             text-transparent uppercase text-center"

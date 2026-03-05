@@ -20,7 +20,7 @@ export default function GradientText({
 }: GradientTextProps) {
   return (
     <motion.p
-        className={`font-bebas font-regular ${size} leading-tight text-center break-words px-2`}
+        className={`font-bebas font-regular ${size} leading-tight text-center wrap-break-word px-2`}
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.3 }}

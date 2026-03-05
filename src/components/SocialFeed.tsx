@@ -23,8 +23,8 @@ export default function SocialFeed() {
           mt-[8px]
           max-w-[170px] sm:max-w-[520px]
           ml-18 sm:ml-59
-          bg-gradient-to-r
-          from-[#c3d33f]
+          bg-linear-to-r
+          from-accent
           to-[#079c9e]
           bg-clip-text
           text-transparent uppercase text-left

@@ -86,7 +86,7 @@ export default function Footer() {
                     transition={{ duration: 0.6 }}
                     className="absolute -top-8 sm:-top-12 md:-top-16 left-1/2 -translate-x-1/2 z-20"
                 >
-                    <div className="rounded-lg bg-gradient-to-r from-accent to-cyan px-3 sm:px-4 py-1 sm:py-1 font-bebas text-[35px] sm:text-[45px] md:text-[55px] font-regular uppercase tracking-wide text-white shadow-lg leading-tight">
+                    <div className="rounded-lg bg-linear-to-r from-accent to-cyan px-3 sm:px-4 py-1 sm:py-1 font-bebas text-[35px] sm:text-[45px] md:text-[55px] font-regular uppercase tracking-wide text-white shadow-lg leading-tight">
                         CONTATO
                     </div>
                 </motion.div>

@@ -57,7 +57,7 @@ export default function GalleryGrid() {
         transition={{ duration: 0.6 }}
         className="relative z-8 -mb-3 flex items-center justify-center px-4"
       >
-        <div className="rounded-lg bg-gradient-to-r from-accent to-cyan px-3 sm:px-4 py-2 font-bebas text-[35px] sm:text-[45px] md:text-[55px] font-regular uppercase tracking-wide text-white shadow-lg leading-tight">
+        <div className="rounded-lg bg-linear-to-r from-accent to-cyan px-3 sm:px-4 py-2 font-bebas text-[35px] sm:text-[45px] md:text-[55px] font-regular uppercase tracking-wide text-white shadow-lg leading-tight">
           GALERIA
         </div>
       </motion.div>
