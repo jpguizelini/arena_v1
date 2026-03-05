@@ -5,7 +5,7 @@ import GradientText from '@/components/ui/GradientText';
 
 export default function ImidiaPaineis() {
   return (
-    <div>
+    <div className="bg-[url('/images/bg.jpg')] bg-no-repeat bg-center-top bg-cover min-h-screen">
         <ParallaxBanner imageSrc="/images/outdoor/bras-olaia.png" imageAlt="outdoorbrasolaia" />
         <div className="bg-transparent px-4 sm:px-8 md:px-16 lg:px-[60px] py-16">
           <GradientText from="#c3d33f" via="#079c9e" to="#c3d33f" className="mb-0">

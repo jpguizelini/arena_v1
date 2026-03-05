@@ -8,21 +8,19 @@ import Footer from '@/components/Footer';
 
 export default function Outdoor() {
     return (
-        <div 
-            className="relativ min-h-screen"
-        >
-
-            <div className="relative z-10">
-                <Banner />
-                <OutdoorDescription />
-                <ImpactSection />
-                <div className="h-16 md:h-24"></div>
-                <GalleryGrid />
-                <MappingSection />
-                <OutdoorGrid />
-                <div className="h-16 md:h-48"></div>
-                <Footer />
-
+        <div className="bg-[url('/images/bg.jpg')] bg-no-repeat bg-center-top bg-cover min-h-screen">
+            <div className="relativ min-h-screen">
+                <div className="relative z-10">
+                    <Banner />
+                    <OutdoorDescription />
+                    <ImpactSection />
+                    <div className="h-16 md:h-24"></div>
+                    <GalleryGrid />
+                    <MappingSection />
+                    <OutdoorGrid />
+                    <div className="h-16 md:h-48"></div>
+                    <Footer />
+                </div>
             </div>
         </div>
     );
