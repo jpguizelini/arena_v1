@@ -33,7 +33,7 @@ export default function EmpresasGrupo() {
                             </defs>
                             <rect x="1" y="1" width="99%" height="99%" rx="12" ry="12" fill="none" stroke="url(#borderGradient)" strokeWidth="4" strokeDasharray="2 8" strokeLinecap="round" />
                         </svg>
-                        <Image src="/images/imidia-logo.png" alt="logo imidia" width={273} height={91} className="w-full h-full object-contain relative z-10" />
+                        <Image src="/images/icons/imidia-logo.png" alt="logo imidia" width={273} height={91} className="w-full h-full object-contain relative z-10" />
                     </div>
                 </Card3D>
             </motion.div>
@@ -58,7 +58,7 @@ export default function EmpresasGrupo() {
                                 </defs>
                                 <rect x="1" y="1" width="99%" height="99%" rx="12" ry="12" fill="none" stroke="url(#borderGradient1)" strokeWidth="4" strokeDasharray="2 8" strokeLinecap="round" />
                             </svg>
-                            <Image src="/images/imidia-painel-logo.png" alt="logo imidia" width={273} height={91} className="w-full h-full object-contain relative z-10" />
+                            <Image src="/images/icons/imidia-painel-logo.png" alt="logo imidia" width={273} height={91} className="w-full h-full object-contain relative z-10" />
                         </div>
                     </Card3D>
                 </motion.div>
@@ -80,7 +80,7 @@ export default function EmpresasGrupo() {
                                 </defs>
                                 <rect x="1" y="1" width="99%" height="99%" rx="12" ry="12" fill="none" stroke="url(#borderGradient2)" strokeWidth="4" strokeDasharray="2 8" strokeLinecap="round" />
                             </svg>
-                            <Image src="/images/imidia-litoral-logo.png" alt="logo imidia" width={273} height={91} className="w-full h-full object-contain relative z-10" />
+                            <Image src="/images/icons/imidia-litoral-logo.png" alt="logo imidia" width={273} height={91} className="w-full h-full object-contain relative z-10" />
                         </div>
                     </Card3D>
                 </motion.div>
@@ -102,7 +102,7 @@ export default function EmpresasGrupo() {
                                 </defs>
                                 <rect x="1" y="1" width="99%" height="99%" rx="12" ry="12" fill="none" stroke="url(#borderGradient3)" strokeWidth="4" strokeDasharray="2 8" strokeLinecap="round" />
                             </svg>
-                            <Image src="/images/live-led-logo.png" alt="logo imidia" width={273} height={91} className="w-full h-full object-contain relative z-10" />
+                            <Image src="/images/icons/live-led-logo.png" alt="logo imidia" width={273} height={91} className="w-full h-full object-contain relative z-10" />
                         </div>
                     </Card3D>
                 </motion.div>

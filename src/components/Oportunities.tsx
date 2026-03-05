@@ -84,7 +84,7 @@ export default function Transformando() {
             <div className="pointer-events-none absolute right-4 md:right-0 bottom-0 z-10 translate-y-[40%] sm:translate-y-[40%] md:translate-y-[82%]">
                 <div className="relative w-[100px] sm:w-[120px] md:w-[134px] h-[280px] sm:h-[330px] md:h-[370px]">
                     <Image
-                        src="/images/robo1.png"
+                        src="/images/home/espacos-oportunidades.jpeg"
                         alt="Robo"
                         fill
                         className="object-center"

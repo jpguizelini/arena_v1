@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 export default function SocialFeed() {
 
     const formatos = [
-        { img: "/images/instagram1.jpg", title: "OUTDOOR" },
-        { img: "/images/instagram2.jpg", title: "FRONT LIGHT", position: "80% center" },
-        { img: "/images/instagram3.jpg", title: "RODOVIA" },
-        { img: "/images/instagram4.jpg", title: "MOBILIÁRIO URBANO" },
-        { img: "/images/instagram5.jpg", title: "PAINEL DIGITAL" },
-        { img: "/images/instagram6.jpg", title: "MEGA PAINEL" },
+        { img: "/images/home/instagram1.jpg", title: "OUTDOOR" },
+        { img: "/images/home/instagram2.jpg", title: "FRONT LIGHT", position: "80% center" },
+        { img: "/images/home/instagram3.jpg", title: "RODOVIA" },
+        { img: "/images/home/instagram4.jpg", title: "MOBILIÁRIO URBANO" },
+        { img: "/images/home/instagram5.jpg", title: "PAINEL DIGITAL" },
+        { img: "/images/home/instagram6.jpg", title: "MEGA PAINEL" },
     ];
   return (
     <section className="relative w-full max-w-7xl mx-auto px-4 mt-[29px] pb-[180px]">

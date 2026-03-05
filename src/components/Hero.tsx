@@ -23,8 +23,8 @@ function useCounter(target: number, duration: number = 2000, startCounting: bool
 }
 
 const CAROUSEL_IMAGES = [
-  "/images/home/outdoor5.jpg",
-  "/images/home/painel-digital-bauru3.jpg"
+  "/images/home/banner-home-noite.jpg",
+  "/images/home/banner-home-dia.jpg"
 ];
 
 const SLIDE_DURATION = 70000;

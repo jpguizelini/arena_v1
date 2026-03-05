@@ -19,20 +19,20 @@ const gridItems = [
   {
     id: 3,
     title: 'PAINEL DE FRONT LIGHT',
-    image: '/images/outdoor/painel-rodovia.png',
-    href: '/rodovia'
+    image: '/images/paineis/painel-front-light.png',
+    href: '/front-light'
   },
   {
     id: 4,
     title: 'PAINEL DE RODOVIA',
-    image: '/images/outdoor/painel-digital.png',
-    href: '/painel-digital'
+    image: '/images/paineis/painel-rodovia.png',
+    href: '/rodovia'
   },
   {
     id: 5,
     title: 'PAINEL DIGITAL',
-    image: '/images/outdoor/mobiliario-urbano.png',
-    href: '/mobiliario-urbano'
+    image: '/images/paineis/painel-digital.png',
+    href: '/painel-digital'
   }
 ]
 
