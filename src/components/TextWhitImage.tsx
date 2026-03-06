@@ -10,36 +10,37 @@ interface TextWhitImageProps {
 
 export default function TextWhitImage({ title, description, imgSrc }: TextWhitImageProps) {
   return (
-    <section className="relative z-20 w-full mb-20 pt-[110px] min-h-[600px]">
+    <section className="relative z-20 w-full">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 md:grid-cols-2">
+
         {/* Lado esquerdo - Texto */}
-        <div className="flex flex-col justify-center px-14 sm:px-12 md:px-10 lg:pl-10 xl:pl-30 py-[82px] text-left">
+        <div className="flex flex-col justify-center px-6 sm:px-10 lg:pl-16 xl:pl-28 py-12 md:py-20 text-left">
           <GradientText
-            className="text-[53.09px] font-bebas font-bold leading-none mb-4 whitespace-pre-line"
-            size="text-[53.09px]"
+            className="font-bebas font-bold leading-none mb-4 whitespace-pre-line text-[clamp(36px,4vw,64px)]"
+            size="text-[clamp(36px,4vw,64px)]"
             position="text-left"
             from="#c3d33f"
             via="#079c9e"
-            to="#c3d33f" 
+            to="#c3d33f"
           >
             {title}
           </GradientText>
 
-          {/* 👇 Renderiza direto, sem GradientText */}
-          <div className="text-[16px] font-goldplay leading-snug text-white flex flex-col gap-4">
+          <div className="text-[clamp(14px,1.1vw,17px)] font-goldplay leading-snug text-white flex flex-col gap-4">
             {description}
           </div>
         </div>
 
         {/* Lado direito - Imagem */}
-        <div className="relative min-h-[400px] w-full h-full md:min-h-full overflow-visible">
+        <div className="relative min-h-[350px] md:min-h-[500px] w-full overflow-visible">
           <Image
             src={imgSrc}
             alt="Transformando"
             fill
-            className="object-contain object-center md:object-center md:ml-3"
+            className="object-contain object-center"
           />
         </div>
+
       </div>
     </section>
   );

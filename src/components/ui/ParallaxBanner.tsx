@@ -68,15 +68,12 @@ export default function ParallaxBanner({
       {overlay && <div className={`absolute inset-0 ${overlay}`} />}
 
       {children && (
-        <motion.div
+        <div
           className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6"
           style={{ x: smoothPos.x * 6, y: smoothPos.y * 4 }}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
         >
           {children}
-        </motion.div>
+        </div>
       )}
     </div>
   );
