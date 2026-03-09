@@ -15,7 +15,6 @@ export default function ImidiaLitoral() {
             <EscolhaCerto />
             <BannerMeio />
             <Galeria />
-            <Footer />
         </div>
     )
 }

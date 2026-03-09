@@ -19,7 +19,6 @@ export default function Outdoor() {
                     <MappingSection />
                     <OutdoorGrid />
                     <div className="h-16 md:h-48"></div>
-                    <Footer />
                 </div>
             </div>
         </div>

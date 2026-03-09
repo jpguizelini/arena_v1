@@ -7,7 +7,6 @@ import GroupCompanies from "@/components/GroupCompanies"
 import MidiaFormats from "@/components/MidiaFormats"
 import Contact from "@/components/Contact"
 import SocialFeed from "@/components/SocialFeed"
-import Footer from "@/components/Footer"
 import type { ReactNode } from 'react'
 
 export default function HomeSections({
@@ -29,7 +28,6 @@ export default function HomeSections({
       {midiaFormats ?? <MidiaFormats />}
       <Contact />
       <SocialFeed />
-      <Footer />
     </div>
   )
 }

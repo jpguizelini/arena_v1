@@ -133,7 +133,7 @@ export default function ImidiaPaineis() {
         </ParallaxBanner>
       </div>
       <div className="pt-[180px]">
-        <Footer />
+
       </div>
 
     </div>
