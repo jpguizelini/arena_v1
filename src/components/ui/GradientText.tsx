@@ -22,7 +22,7 @@ export default function GradientText({
 }: GradientTextProps) {
   return (
     <motion.p
-        className={`font-bebas font-regular ${size} leading-tight ${position} wrap-break-word px-2`}
+        className={`font-bebas font-regular ${size} leading-tight ${position} wrap-break-word`}
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.3 }}

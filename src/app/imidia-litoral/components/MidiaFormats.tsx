@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const gridItems = [
   {
@@ -79,10 +80,11 @@ export default function MidiaFormats() {
             href={item.href}
             className="relative aspect-[4/4] overflow-hidden group"
           >
-            <img
+            <Image
               src={item.image}
               alt={item.title}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
               onError={e => (e.currentTarget.style.display = 'none')}
             />
             <div className="absolute inset-0 bg-black/60 transition-colors duration-500 group-hover:bg-black/30" />

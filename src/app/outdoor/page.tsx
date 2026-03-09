@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 
 export default function Outdoor() {
     return (
-        <div className="bg-[url('/images/bg.jpg')] bg-no-repeat bg-center-top bg-cover min-h-screen">
+        <div>
             <div className="relative min-h-screen">
                 <div className="relative z-10">
                     <Banner />

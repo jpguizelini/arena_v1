@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 
 export default function ImidiaPaineis() {
   return (
-    <div className="bg-[url('/images/bg.jpg')] bg-no-repeat bg-center-top bg-cover min-h-screen">
+    <div>
       <ParallaxBanner imageSrc="/images/paineis/banner.jpg" imageAlt="banner" />
 
 

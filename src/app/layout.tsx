@@ -3,6 +3,7 @@ import "./globals.css";
 import localFont from 'next/font/local';
 import Navbar from "@/components/Navbar";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Footer from "@/components/Footer";
 
 const bebas = localFont({
   src: '../assets/fonts/BebasNeue-Regular.ttf',
@@ -38,13 +39,14 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${bebas.variable} ${goldplay.variable} antialiased`}
+        className={`${bebas.variable} ${goldplay.variable} antialiased bg-[url('/images/bg.jpg')] bg-no-repeat bg-center bg-cover min-h-screen`}
         suppressHydrationWarning={true}
       >
         <Navbar />
         <main className="pt-[60px]">
           {children}
         </main>
+        <Footer />
         <WhatsAppButton />
       </body>
     </html>

@@ -47,10 +47,10 @@ export default function BannerMeio() {
         style={{ x: imgX, y: imgY }}
       >
         <Image
-          src="/images/litoral/banner-meio.png"
+          src="/images/litoral/banner-cobertura.jpg"
           alt="Sua marca em evidência"
-          width={1920}
-          height={1080}
+          width={1280}
+          height={720}
           sizes="110vw"
           className="w-full h-auto object-cover"
           quality={100}
