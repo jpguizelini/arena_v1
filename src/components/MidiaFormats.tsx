@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 export default function FormatosMidia() {
     const formatos = [
         { img: '/images/home/foto-formato-midia-11.jpg', title: "OUTDOOR", href: "/outdoor" },
-        { img: '/images/home/foto-formato-midia-22.jpg', title: "FRONT LIGHT", href: "/frontlight" },
+        { img: '/images/home/foto-formato-midia-22.jpg', title: "FRONT LIGHT", href: "/front-light" },
         { img: '/images/home/foto-formato-midia-3.jpg', title: "RODOVIA", href: "/rodovia" },
         { img: '/images/home/foto-formato-midia-4.jpg', title: "MOBILIARIO URBANO", href: "/mobiliario-urbano" },
         { img: '/images/home/foto-formato-midia-5.jpg', title: "PAINEL DIGITAL", href: "/painel-digital" },

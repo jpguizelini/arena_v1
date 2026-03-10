@@ -8,6 +8,7 @@ interface ParallaxBannerProps {
   imageSrc: string;
   imageAlt?: string;
   overlay?: string;
+  objectPosition?: string;
   children?: React.ReactNode;
 }
 
@@ -15,6 +16,7 @@ export default function ParallaxBanner({
   imageSrc,
   imageAlt = '',
   overlay,
+  objectPosition,
   children,
 }: ParallaxBannerProps) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -61,6 +63,7 @@ export default function ParallaxBanner({
           height={0}
           sizes="100vw"
           className="w-full h-auto min-h-[500px] sm:min-h-[600px] md:min-h-0 object-cover md:object-contain"
+          style={{ objectPosition }}
           priority
         />
       </motion.div>
