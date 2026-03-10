@@ -27,15 +27,15 @@ export default function MarcaEmMovimento() {
                         POTÊNCIA PARA SUA MARCA EM MOVIMENTO
                     </motion.h2>
                     <motion.p 
-                        className="text-white text-right hidden sm:block sm:text-2xl lg:text-[34px] 2xl:text-5xl 2xl:pl-100 md:pl-2"
+                        className="text-white text-right hidden sm:block sm:text-2xl lg:text-[32px] 2xl:text-4xl max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl lg:mt-6 ml-auto"
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                     >
-                        Com tecnologia DOOH<br/> (Digital Out Of Home),<br/> esses painéis <strong>oferecem soluções 
-                        que vão além da mídia tradicional</strong>, entregando comunicação<br/> dinâmica, atualizável
-                        e<br/> com alta performance visual.
+                        Com tecnologia DOOH (Digital Out Of Home), esses painéis 
+                        <strong> oferecem soluções que vão além da mídia tradicional</strong>, 
+                        entregando comunicação dinâmica, atualizável e com alta performance visual.
                     </motion.p>
                 </div>
             </div>
