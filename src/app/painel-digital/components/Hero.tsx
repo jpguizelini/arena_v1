@@ -24,7 +24,8 @@ export default function Hero() {
                 <p className="text-white max-w-4xl lg:text-2xl">
                     O Painel Digital representa a evolução da mídia OOH e DOOH,<br/>
                     unindo tecnologia, dinamismo e alta definição. Com conteúdos em movimento,<br/>
-                    ele potencializa a atenção e a flexibilidade das campanhas.
+                    ele potencializa a atenção e a flexibilidade das campanhas. 
+                    
                 </p>
             </div>
         </section>
