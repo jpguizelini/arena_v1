@@ -11,7 +11,6 @@ export default function Banner2() {
                     width={4000}
                     height={1868}
                     className="w-full mx-auto"
-                    unoptimized
                 />
             </div>
         </section>
