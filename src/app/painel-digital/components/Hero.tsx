@@ -13,6 +13,7 @@ export default function Hero() {
                     className="object-cover"
                     style={{ objectPosition: "80% 10%" }}
                     priority
+                    unoptimized
                 />
                 <div className="absolute inset-0 bg-black/40" />
             </div>
