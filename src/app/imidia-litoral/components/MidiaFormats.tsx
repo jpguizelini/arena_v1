@@ -14,13 +14,13 @@ const gridItems = [
   {
     id: 2,
     title: 'PAINEL FRONT LIGHT',
-    image: '/images/litoral/painel-front-light.png',
+    image: '/images/litoral/painel-front-light.jpg',
     href: '/mega-light'
   },
   {
     id: 3,
     title: 'PAINEL MEGA LIGHT',
-    image: '/images/litoral/painel-mega-light.png',
+    image: '/images/litoral/painel-mega-light.jpg',
     href: '/front-light'
   },
   {
@@ -38,19 +38,19 @@ const gridItems = [
   {
     id: 6,
     title: 'DUO MUB',
-    image: '/images/litoral/painel-duo-mub.png',
+    image: '/images/litoral/painel-duo-mub.jpg',
     href: '/rodovia'
   },
   {
     id: 7,
     title: 'MOSAICO DIGITAL',
-    image: '/images/litoral/mosaico-digital.png',
+    image: '/images/litoral/mosaico-digital.jpg',
     href: '/mosaico-digital'
   },
   {
     id: 8,
     title: 'MOBILIÁRIO URBANO',
-    image: '/images/litoral/painel-mobiliario-urbano.png',
+    image: '/images/litoral/painel-mobiliario-urbano.jpg',
     href: '/mosaico-digital'
   }
 ]
@@ -62,7 +62,7 @@ export default function MidiaFormats() {
       {/* Título contido com max-w */}
       <div className="w-full max-w-7xl mx-auto px-6">
         <motion.h1
-          className="text-[clamp(36px,6vw,83px)] font-bebas font-bold bg-linear-to-r from-accent to-[#079c9e] bg-clip-text text-transparent uppercase text-center"
+          className="text-[clamp(36px,6vw,83px)] font-bebas font-bold bg-linear-to-r from-[#079c9e] via-accent to-[#079c9e] bg-clip-text text-transparent uppercase text-center"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
@@ -84,7 +84,18 @@ export default function MidiaFormats() {
               src={item.image}
               alt={item.title}
               fill
+              quality={85}
               className="object-cover transition-transform duration-700 group-hover:scale-110"
+              style={{
+                objectPosition: item.id === 1 ? 'center' : 
+                               item.id === 2 ? '70% ' :
+                               item.id === 3 ? '45%' :
+                               item.id === 4 ? 'center' :
+                               item.id === 5 ? '50% 5%' :
+                               item.id === 6 ? '20%' :
+                               item.id === 7 ? '60%' :
+                               item.id === 8 ? '100%' : 'center' 
+              }}
               onError={e => (e.currentTarget.style.display = 'none')}
             />
             <div className="absolute inset-0 bg-black/60 transition-colors duration-500 group-hover:bg-black/30" />

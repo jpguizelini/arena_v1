@@ -9,7 +9,7 @@ const gridItems = [
   {
     id: 1,
     title: 'PAINEL DIGITAL',
-    image: '/images/live-led/formatos-1.jpg',
+    image: '/images/live-led/formatos-11.jpg',
     href: '/painel-digital',
     objectPosition: '60% 35%',
     scale: 'scale-125'
@@ -75,7 +75,7 @@ export default function NossosFormatos() {
           >
             <Link
               href={item.href}
-              className="group relative overflow-hidden block aspect-[4/3] md:aspect-square"
+              className="group relative overflow-hidden block w-full h-[400px] md:h-[500px]"
             >
               {/* Imagem */}
               <Image

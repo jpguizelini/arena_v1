@@ -13,7 +13,7 @@ export default function SocialFeed() {
         { img: "/images/home/instagram6.jpg", title: "MEGA PAINEL" },
     ];
   return (
-    <section className="relative w-full max-w-7xl mx-auto px-4 mt-[29px] pb-[180px]">
+    <section className="relative w-full max-w-7xl mx-auto px-4 mt-[29px] pb-[180px] ">
       <motion.h1
         className="
           text-[40px] sm:text-[76.04px]
@@ -23,8 +23,10 @@ export default function SocialFeed() {
           mt-[8px]
           max-w-[170px] sm:max-w-[520px]
           ml-18 sm:ml-59
+          lg:pl-[80px]
           bg-linear-to-r
-          from-accent
+          from-[#079c9e]
+          via-accent
           to-[#079c9e]
           bg-clip-text
           text-transparent uppercase text-left
@@ -45,7 +47,7 @@ export default function SocialFeed() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="relative w-[120px] h-[87px] sm:w-[180px] sm:h-[131px] md:w-[210px] md:h-[153px] lg:w-[240px] lg:h-[175px]">
+            <div className="relative w-[120px] h-[87px] sm:w-[180px] sm:h-[131px] md:w-[210px] md:h-[153px] lg:w-[240px] lg:h-[175px] lg:mr-[100px]">
               <Image
                 src="/images/home/robo2.png"
                 alt="Robo"

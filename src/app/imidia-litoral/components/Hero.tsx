@@ -41,9 +41,10 @@ export default function Hero() {
   return (
     <div>
       <ParallaxBanner
-        imageSrc="/images/litoral/banner.png"
+        imageSrc="/images/litoral/banner4.jpg"
         imageAlt="banner-bottom"
         overlay=""
+
       >
         <div>
           {/* Gradiente — fixo, não é afetado pelo mouse */}

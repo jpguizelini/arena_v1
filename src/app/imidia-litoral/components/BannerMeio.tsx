@@ -39,21 +39,24 @@ export default function BannerMeio() {
   const imgY = smoothPos.y * -14;
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden">
 
-      {/* Container da imagem com parallax — levemente maior para o efeito não cortar bordas */}
+      {/* Container da imagem com parallax — preenchendo todo o viewport */}
       <motion.div
-        className="relative w-[110%] -left-[5%]"
+        className="absolute inset-0 w-full h-full"
         style={{ x: imgX, y: imgY }}
       >
         <Image
-          src="/images/litoral/banner-cobertura.jpg"
+          src="/images/litoral/banner-cobertura-2.jpg"
           alt="Sua marca em evidência"
-          width={1280}
-          height={720}
-          sizes="110vw"
-          className="w-full h-auto object-cover"
-          quality={100}
+          fill
+          sizes="100vw"
+          className="object-cover"
+          style={{
+            objectPosition: 'center 5%',
+            imageRendering: 'crisp-edges'
+          }}
+          quality={95}
           priority
         />
       </motion.div>

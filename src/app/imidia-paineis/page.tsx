@@ -6,7 +6,6 @@ import Coverage from '@/components/Coverage';
 import ImidiaPaineisGrid from '@/components/Outdoor/ImidiaPaineisGrid';
 import TextWhitImage from '@/components/TextWhitImage';
 import { motion } from 'framer-motion';
-import Footer from '@/components/Footer';
 
 export default function ImidiaPaineis() {
   return (
@@ -15,10 +14,17 @@ export default function ImidiaPaineis() {
 
 
       <div className="bg-transparent px-4 sm:px-8 md:px-16 lg:px-[60px] pt-[84px]">
-        <GradientText size="text-[65px] sm:text-[80px] md:text-[65px]" className="mb-0 text-center leading-tight">
-          a maior em número de cidades no interior <br></br>
-          e a melhor em versatilidades de ativos.
-        </GradientText>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <GradientText size="text-[65px] sm:text-[80px] md:text-[65px]" className="mb-0 text-center leading-tight">
+            a maior em número de cidades no interior <br></br>
+            e a melhor em versatilidades de ativos.
+          </GradientText>
+        </motion.div>
       </div>
 
     <div className="py-[100px]">
@@ -28,9 +34,16 @@ export default function ImidiaPaineis() {
 
 
       <div>
-        <GradientText size="text-[65px] sm:text-[80px] md:text-[65px] pt-[114px]" className="mb-0 text-center leading-tight">
-          nossos formatos de mídia
-        </GradientText>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <GradientText size="text-[65px] sm:text-[80px] md:text-[65px]" className="mb-0 text-center leading-tight pt-[114px]">
+            nossos formatos de mídia
+          </GradientText>
+        </motion.div>
       </div>
       <ImidiaPaineisGrid />
 
@@ -56,7 +69,7 @@ export default function ImidiaPaineis() {
 
       <div>
         <ParallaxBanner 
-          imageSrc="/images/paineis/banner-botton.png" 
+          imageSrc="/images/paineis/banner-botton.jpg" 
           imageAlt="banner-bottom"
           overlay=""
         >

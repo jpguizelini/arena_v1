@@ -11,13 +11,15 @@ export default function Transformando() {
                 <div className="flex flex-col justify-center px-14 sm:px-12 md:px-10 lg:pl-10 xl:pl-30 py-[82px]">
                     <motion.h1
                         className="
-                        text-[53.09px] 
+                        text-[53.09px]
+                        lg:text-[64px]
                         font-bebas
                         font-bold 
                         leading-none
                         mb-4
                         bg-linear-to-r
-                        from-accent
+                        from-[#079c9e]
+                        via-accent  
                         to-[#079c9e]
                         bg-clip-text
                         text-transparent
@@ -32,7 +34,7 @@ export default function Transformando() {
                     </motion.h1>
 
                     <motion.p 
-                        className="text-[16px] font-goldplay text-white text-center sm:text-left md:text-left leading-snug pr-0 sm:pr-18 mb-8"
+                        className="text-[16px] lg:text-[18px] font-goldplay text-white text-center sm:text-left md:text-left leading-snug pr-0 sm:pr-18 mb-8"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
@@ -63,7 +65,7 @@ export default function Transformando() {
                     >
                         <Button
                             variant="outline"
-                            className="text-primary bg-white font-bebas text-[25.55px] hover:bg-accent hover:text-dark px-6 py-6 rounded-lg"
+                            className="text-primary bg-white font-bebas text-[25.55px] lg:text-[30px] hover:bg-accent hover:text-dark px-6 py-6 rounded-lg"
                         >
                             DÚVIDAS E INFORMAÇÕES
                         </Button>

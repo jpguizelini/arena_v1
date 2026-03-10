@@ -24,7 +24,7 @@ function useCounter(target: number, duration: number = 2000, startCounting: bool
 
 const CAROUSEL_IMAGES = [
   "/images/home/banner-home-noite.jpg",
-  "/images/home/banner-home-dia.jpg"
+  "/images/home/banner-home-dia-2.jpg"
 ];
 
 const SLIDE_DURATION = 70000;
@@ -91,7 +91,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-0 overflow-hidden"
+      className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-0 overflow-hidden bg-black"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -158,7 +158,7 @@ export default function Hero() {
         >
           <div className="pl-4 sm:pl-8 md:pl-[76px] flex flex-col gap-1 max-w-[90%] sm:max-w-[80%] md:max-w-none">
             <motion.p
-              className="text-white font-bold text-[18px] sm:text-[22px] md:text-[26px]"
+              className="text-white font-bold text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
@@ -168,7 +168,7 @@ export default function Hero() {
 
             <div ref={numbersRef}>
               <motion.h1
-                className="font-bebas text-accent font-bold text-[48px] sm:text-[68px] md:text-[89px] leading-none"
+                className="font-bebas text-accent font-bold text-[48px] sm:text-[68px] md:text-[89px] lg:text-[110px] leading-none"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
                 transition={{
@@ -180,7 +180,7 @@ export default function Hero() {
                 +{cidades} CIDADES
               </motion.h1>
               <motion.h1
-                className="font-bebas text-accent font-bold text-[48px] sm:text-[68px] md:text-[89px] leading-none"
+                className="font-bebas text-accent font-bold text-[48px] sm:text-[68px] md:text-[89px] lg:text-[110px] leading-none"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
                 transition={{
@@ -194,7 +194,7 @@ export default function Hero() {
             </div>
 
             <motion.p
-              className="font-bebas text-accent text-[20px] sm:text-[24px] md:text-[28px] md:-mt-[25px] md:ml-[36px] md:mr-[100px] md:tracking-[0.4px]"
+              className="font-bebas text-accent text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] md:-mt-[25px] md:ml-[36px] md:mr-[100px] md:tracking-[0.4px]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.1 }}
@@ -203,7 +203,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.button
-              className="mt-2 w-fit border-2 text-primary bg-white font-bebas text-[18px] sm:text-[22px] md:text-[25.55px] px-4 sm:px-5 md:px-6 py-2 hover:bg-accent hover:text-dark rounded-2xl"
+              className="mt-2 w-fit border-2 text-primary bg-white font-bebas text-[18px] sm:text-[22px] md:text-[25.55px] lg:text-[30px] px-4 sm:px-5 md:px-6 py-2 hover:bg-accent hover:text-dark rounded-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.3 }}

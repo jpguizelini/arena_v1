@@ -7,7 +7,7 @@ const gridItems = [
   {
     id: 1,
     title: 'OUTDOOR',
-    image: '/images/paineis/outdoor3.png',
+    image: '/images/paineis/outdoor3.jpg',
     href: '/outdoor'
   },
   {
@@ -19,19 +19,19 @@ const gridItems = [
   {
     id: 3,
     title: 'PAINEL DE FRONT LIGHT',
-    image: '/images/paineis/painel-front-light.png',
+    image: '/images/paineis/painel-front-light.jpg',
     href: '/front-light'
   },
   {
     id: 4,
     title: 'PAINEL DE RODOVIA',
-    image: '/images/paineis/painel-rodovia.png',
+    image: '/images/paineis/painel-rodovia.jpg',
     href: '/rodovia'
   },
   {
     id: 5,
     title: 'PAINEL DIGITAL',
-    image: '/images/paineis/painel-digital.png',
+    image: '/images/paineis/painel-digital.jpg',
     href: '/painel-digital'
   }
 ]
@@ -53,9 +53,10 @@ export default function ImidiaPaineisGrid() {
               width={0}
               height={0}
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="w-full h-auto object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
+              className="w-full h-[400px] md:h-[500px] object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
               style={{
                 objectPosition: item.id === 1 ? '60% 35%' : item.id === 2 ? '50% 10%' : 'center'
+                              
               }}
             />
 
@@ -86,9 +87,9 @@ export default function ImidiaPaineisGrid() {
               width={0}
               height={0}
               sizes="(max-width: 768px) 100vw, 33vw"
-              className="w-full h-auto object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
+              className="w-full h-[400px] md:h-[500px] object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
               style={{
-                objectPosition: item.id === 3 ? '60% 40%' : item.id === 4 ? '50% -60%' : 'center'
+                objectPosition: item.id === 3 ? '50% 30%' : item.id === 4 ? '50% -60%' : 'center'
               }}
             />
 

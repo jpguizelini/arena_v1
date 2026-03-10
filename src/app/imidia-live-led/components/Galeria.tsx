@@ -5,12 +5,12 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 const galleryItems = [
-  { id: 1, image: '/images/live-led/galeria-1.jpg' },
-  { id: 2, image: '/images/live-led/galeria-2.jpg' },
-  { id: 3, image: '/images/outdoor/galeria-outdoor-3.png' },
-  { id: 4, image: '/images/outdoor/galeria-outdoor-2.png' },
-  { id: 5, image: '/images/outdoor/galeria-outdoor-5.png' },
-  { id: 6, image: '/images/outdoor/galeria-outdoor-4.png' }
+  { id: 1, image: '/images/live-led/galeria-1.jpg', objectPosition: 'center' },
+  { id: 2, image: '/images/live-led/galeria-2.jpg', objectPosition: 'center' },
+  { id: 3, image: '/images/live-led/galeria-3.jpg', objectPosition: 'center 0%' },
+  { id: 4, image: '/images/live-led/galeria-4.jpg', objectPosition: 'center' },
+  { id: 5, image: '/images/live-led/galeria-5.jpg', objectPosition: 'center' },
+  { id: 6, image: '/images/live-led/galeria-6.jpg', objectPosition: 'center' }
 ]
 
 export default function Galeria() {
@@ -58,7 +58,7 @@ export default function Galeria() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="group relative overflow-hidden cursor-pointer aspect-[4/3]"
+            className="group relative overflow-hidden cursor-pointer w-full h-[400px] md:h-[500px]"
             onClick={() => setSelected({ img: item.image, title: `Galeria outdoor ${item.id}` })}
             role="button"
             tabIndex={0}
@@ -75,6 +75,7 @@ export default function Galeria() {
               className={`object-cover transition-transform duration-500 ease-in-out
                 group-hover:scale-110
                 ${item.id === 6 ? 'scale-125' : ''}`}
+              style={{ objectPosition: item.objectPosition }}
             />
             <div className="absolute inset-0 bg-black/60 transition-opacity duration-300 group-hover:bg-black/20" />
           </motion.div>
