@@ -52,6 +52,44 @@ export default function MosaicoDigital() {
                         </ul>
                     </div>
                 </div>
+                <div className="grid grid-cols-1 md:grid-cols-[60%_45%] mt-16">
+                    {/* Coluna do texto — esquerda */}
+                    <div className="flex flex-col justify-center gap-6 text-white px-8 md:px-16 py-12">
+                        <p className="font-goldplay lg:text-2xl xl:mr-80">
+                            Os formatos icônicos da I'mídia Painéis <strong>não são apenas "mais um painel"</strong>.{' '}
+                            Eles representam soluções pensadas para campanhas que exigem resultados maiores:
+                        </p>
+                        <ul className="font-goldplay lg:text-xl space-y-3">
+                            <li className="flex items-start gap-2">
+                                <span className="text-[#a8c93c] mt-1">•</span>
+                                Experiência visual superior
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-[#a8c93c] mt-1">•</span>
+                                Altíssimo impacto e lembrança de marca
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-[#a8c93c] mt-1">•</span>
+                                Conteúdos que se destacam no ambiente urbano
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-[#a8c93c] mt-1">•</span>
+                                Flexibilidade para campanhas criativas e inovadoras
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Coluna da imagem — direita */}
+                    <div className="relative min-h-[500px] md:min-h-[600px]">
+                        <Image
+                            src="/images/formatos/imagem-lateral.jpg"
+                            alt="Mosaico Digital em uso"
+                            fill
+                            className="object-cover object-[80%_50%]"
+                        />
+                    </div>
+
+                </div>
             </div>
         )
 }
