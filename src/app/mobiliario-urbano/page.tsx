@@ -1,10 +1,20 @@
-
+import Banner2 from "./components/Banner2";
+import Description from "./components/Description";
+import Galeria from "./components/Galeria";
+import Hero from "./components/Hero";
+import Mapeamento from "./components/Mapeamento";
+import OutrosFormatos from "./components/OutroFormatos";
 
 
 export default function MobiliarioUrbano() {
     return (
-        <div>
-            <h1>Mobiliário Urbano</h1>
-        </div>
+        <>
+            <Hero />
+            <Description />
+            <Banner2 />
+            <OutrosFormatos />
+            <Mapeamento />
+            <Galeria />
+        </>
     )
 }
