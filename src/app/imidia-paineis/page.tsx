@@ -20,7 +20,7 @@ export default function ImidiaPaineis() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <GradientText size="text-[65px] sm:text-[80px] md:text-[65px]" className="mb-0 text-center leading-tight">
+          <GradientText className="mb-0 text-center leading-tight">
             a maior em número de cidades no interior <br></br>
             e a melhor em versatilidades de ativos.
           </GradientText>

@@ -5,27 +5,28 @@ import GradientText from '@/components/ui/GradientText';
 
 export default function Description() {
     return (
-        <div className="bg-transparent py-16">
-            <motion.p 
-                className="font-goldplay text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]" 
+        <div className="bg-transparent px-4 sm:px-8 md:px-16 lg:px-[60px] py-16">
+            <motion.p
+                className="font-goldplay text-white text-base sm:text-lg md:text-[19.94px] xl:text-xl 2xl:text-2xl leading-relaxed tracking-tight max-w-4xl lg:max-w-6xl mx-auto text-center mb-12"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
             >
-                Dentro dessa categoria, a I’mídia Painéis oferece soluções versáteis e diferenciadas<br/>
+                Dentro dessa categoria, a I'mídia Painéis oferece soluções versáteis e diferenciadas<br/>
                 para atender às demandas de cada campanha — seja com comunicação<br/>
                 gráfica que chama atenção no momento da circulação, seja com soluções<br/>
                 digitais dinâmicas <strong>que capturam olhares com movimento e brilho.</strong>
             </motion.p>
-            <div className="pt-3 px-4 sm:px-8 md:px-16 lg:px-[60px]">
+
+            <div className="mb-12">
                 <GradientText from="#c3d33f" via="#079c9e" to="#c3d33f" className="text-center">
                     PRINCIPAIS FORMATOS DISPONÍVEIS:
                 </GradientText>
             </div>
 
-            <motion.h2 
-                className="font-bebas font-regular text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center px-4 sm:px-8 md:px-16 lg:px-[60px] mt-6"
+            <motion.h2
+                className="font-bebas text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mx-auto text-center mb-4"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -34,8 +35,8 @@ export default function Description() {
                 MOBILIÁRIO URBANO ESTÁTICO
             </motion.h2>
 
-            <motion.p 
-                className="font-goldplay text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]"
+            <motion.p
+                className="font-goldplay text-white text-base sm:text-lg md:text-[19.94px] xl:text-xl 2xl:text-2xl leading-relaxed tracking-tight max-w-4xl lg:max-w-6xl mx-auto text-center mb-12"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -44,8 +45,8 @@ export default function Description() {
                 Presença tradicional em pontos de parada e circulação.
             </motion.p>
 
-            <motion.h2 
-                className="font-bebas font-regular text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center px-4 sm:px-8 md:px-16 lg:px-[60px] mt-8"
+            <motion.h2
+                className="font-bebas text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mx-auto text-center mb-4"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -54,8 +55,8 @@ export default function Description() {
                 MOBILIÁRIO URBANO DIGITAL
             </motion.h2>
 
-            <motion.p 
-                className="font-goldplay text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]"
+            <motion.p
+                className="font-goldplay text-white text-base sm:text-lg md:text-[19.94px] xl:text-xl 2xl:text-2xl leading-relaxed tracking-tight max-w-4xl lg:max-w-6xl mx-auto text-center mb-12"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -64,8 +65,8 @@ export default function Description() {
                 Tecnologia que entrega mensagens dinâmicas com alto brilho e definição.
             </motion.p>
 
-            <motion.h2 
-                className="font-bebas font-regular text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center px-4 sm:px-8 md:px-16 lg:px-[60px] mt-8"
+            <motion.h2
+                className="font-bebas text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mx-auto text-center mb-4"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -74,8 +75,8 @@ export default function Description() {
                 DUO MUB
             </motion.h2>
 
-            <motion.p 
-                className="font-goldplay text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]"
+            <motion.p
+                className="font-goldplay text-white text-base sm:text-lg md:text-[19.94px] xl:text-xl 2xl:text-2xl leading-relaxed tracking-tight max-w-4xl lg:max-w-6xl mx-auto text-center mb-12"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -85,14 +86,14 @@ export default function Description() {
                 urbana, combinando presença física com leitura de impacto e versatilidade criativa.
             </motion.p>
 
-            <div className="py-3 px-4 sm:px-8 md:px-16 lg:px-[60px]">
+            <div className="mb-12">
                 <GradientText from="#c3d33f" via="#079c9e" to="#c3d33f" className="text-center">
                     A COMUNICAÇÃO QUE FAZ PARTE DA CIDADE.
                 </GradientText>
             </div>
 
-            <motion.p 
-                className="font-goldplay text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]"
+            <motion.p
+                className="font-goldplay text-white text-base sm:text-lg md:text-[19.94px] xl:text-xl 2xl:text-2xl leading-relaxed tracking-tight max-w-4xl lg:max-w-6xl mx-auto text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -103,4 +104,4 @@ export default function Description() {
             </motion.p>
         </div>
     );
-} 
+}

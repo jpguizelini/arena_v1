@@ -3,34 +3,40 @@
 import GradientText from "@/components/ui/GradientText";
 import Image from "next/image";
 
-
 export default function BancaDigital() {
     return (
-        <div className="py-16">
-            <GradientText className="text-7xl">
-                Banca Digital
-            </GradientText>
-            <p className="text-center text-white font-goldplay mx-auto max-w-4xl lg:text-2xl">
+        <div className="px-4 sm:px-8 md:px-16 lg:px-[60px] py-16">
+            <div className="mb-12">
+                <GradientText className="text-7xl">
+                    Banca Digital
+                </GradientText>
+            </div>
+
+            <p className="text-center text-white font-goldplay text-base sm:text-lg md:text-[19.94px] xl:text-xl 2xl:text-2xl leading-relaxed tracking-tight mx-auto max-w-4xl lg:max-w-6xl mb-12">
                 A Banca Digital 3D é um formato inovador que combina tecnologia
                 gráfica em 2D e 3D em um mesmo painel, criando uma
                 experiência visual que chama atenção não apenas pela mensagem,
-                mas pela forma como ela é exibida. 
+                mas pela forma como ela é exibida.
             </p>
+
             <Image
                 src="/images/formatos/banca-digital.jpg"
                 alt="Banca Digital"
                 width={4000}
                 height={1868}
-                className="w-full mx-auto  mt-16"
+                className="w-full mx-auto mb-12"
             />
-            <h2 className="text-7xl text-white font-bebas font-bold text-center mt-16">Como funciona ?</h2>
-            <p className="font-goldplay text-white text-center mx-auto max-w-4xl lg:text-2xl">
+
+            <h2 className="text-7xl text-white font-bebas font-bold text-center mb-12">Como funciona?</h2>
+
+            <p className="font-goldplay text-white text-base sm:text-lg md:text-[19.94px] xl:text-xl 2xl:text-2xl leading-relaxed tracking-tight text-center mx-auto max-w-4xl lg:max-w-6xl mb-12">
                 Ao integrar elementos tridimensionais com conteúdo digital, a Banca Digital 3D
                 entrega movimentos fluidos, profundidade visual e presença que se destaca
                 no ambiente urbano. Isso faz com que a comunicação não seja
                 apenas vista, mas sentida pelo público.
             </p>
-            <div className="relative mt-16 h-[450px] w-full">
+
+            <div className="relative h-[450px] w-full">
                 <Image
                     src="/images/formatos/iconico-1.jpg"
                     alt="Banca Digital"
@@ -44,8 +50,8 @@ export default function BancaDigital() {
                     }}
                 />
                 <div className="absolute inset-0 flex flex-col items-start justify-start px-16 py-12">
-                    <h2 className="text-7xl text-white font-bebas font-bold">POR QUE É ICÔNICO?</h2>
-                    <ul className="list-disc list-inside text-white font-goldplay space-y-2">
+                    <h2 className="text-7xl text-white font-bebas font-bold mb-4">POR QUE É ICÔNICO?</h2>
+                    <ul className="list-disc list-inside text-white font-goldplay text-base sm:text-lg md:text-[19.94px] xl:text-xl 2xl:text-2xl leading-relaxed space-y-2">
                         <li>Tecnologia híbrida 2D + 3D</li>
                         <li>Impacto visual diferenciado</li>
                         <li>Possibilita conteúdos criativos e interativos</li>
