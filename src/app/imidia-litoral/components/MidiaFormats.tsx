@@ -15,13 +15,13 @@ const gridItems = [
     id: 2,
     title: 'PAINEL FRONT LIGHT',
     image: '/images/litoral/painel-front-light.jpg',
-    href: '/mega-light'
+    href: '/front-light'
   },
   {
     id: 3,
     title: 'PAINEL MEGA LIGHT',
     image: '/images/litoral/painel-mega-light.jpg',
-    href: '/front-light'
+    href: '/mega-light'
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const gridItems = [
     id: 6,
     title: 'DUO MUB',
     image: '/images/litoral/painel-duo-mub.jpg',
-    href: '/rodovia'
+    href: '/duo-mub'
   },
   {
     id: 7,
@@ -51,7 +51,7 @@ const gridItems = [
     id: 8,
     title: 'MOBILIÁRIO URBANO',
     image: '/images/litoral/painel-mobiliario-urbano.jpg',
-    href: '/mosaico-digital'
+    href: '/mobiliario-urbano'
   }
 ]
 

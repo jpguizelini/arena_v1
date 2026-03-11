@@ -7,7 +7,7 @@ export default function Description() {
     return (
         <div className="bg-transparent py-16">
             <motion.p 
-                className="font-goldplay text-white text-lg md:text-[15px] max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]" 
+                className="font-goldplay text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]" 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -25,7 +25,7 @@ export default function Description() {
             </div>
 
             <motion.h2 
-                className="font-bebas font-regular text-white text-3xl md:text-4xl lg:text-5xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center px-4 sm:px-8 md:px-16 lg:px-[60px] mt-6"
+                className="font-bebas font-regular text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center px-4 sm:px-8 md:px-16 lg:px-[60px] mt-6"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -35,7 +35,7 @@ export default function Description() {
             </motion.h2>
 
             <motion.p 
-                className="font-goldplay text-white text-lg md:text-[15px] max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]"
+                className="font-goldplay text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -45,7 +45,7 @@ export default function Description() {
             </motion.p>
 
             <motion.h2 
-                className="font-bebas font-regular text-white text-3xl md:text-4xl lg:text-5xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center px-4 sm:px-8 md:px-16 lg:px-[60px] mt-8"
+                className="font-bebas font-regular text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center px-4 sm:px-8 md:px-16 lg:px-[60px] mt-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -55,7 +55,7 @@ export default function Description() {
             </motion.h2>
 
             <motion.p 
-                className="font-goldplay text-white text-lg md:text-[15px] max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]"
+                className="font-goldplay text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -65,7 +65,7 @@ export default function Description() {
             </motion.p>
 
             <motion.h2 
-                className="font-bebas font-regular text-white text-3xl md:text-4xl lg:text-5xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center px-4 sm:px-8 md:px-16 lg:px-[60px] mt-8"
+                className="font-bebas font-regular text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center px-4 sm:px-8 md:px-16 lg:px-[60px] mt-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -75,7 +75,7 @@ export default function Description() {
             </motion.h2>
 
             <motion.p 
-                className="font-goldplay text-white text-lg md:text-[15px] max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]"
+                className="font-goldplay text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -92,7 +92,7 @@ export default function Description() {
             </div>
 
             <motion.p 
-                className="font-goldplay text-white text-lg md:text-[15px] max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]"
+                className="font-goldplay text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center wrap-break-word px-4 sm:px-8 md:px-16 lg:px-[60px] leading-tight tracking-[-0.025em]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
