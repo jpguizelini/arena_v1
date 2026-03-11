@@ -1,9 +1,13 @@
 import HeroBanner from '@/components/HeroBanner';
+import ParallaxBanner from '@/components/ui/ParallaxBanner';
 
 export default function Banner() {
     return (
-        <div className="max-w-[1920px] mx-auto">
-            <HeroBanner src="/images/live-led/banner.jpg" alt="Hero Banner" />
-        </div>
+        <ParallaxBanner
+            imageSrc="images/live-led/banner.jpg"
+            imageAlt="Hero Banner"
+        >
+
+        </ParallaxBanner>
     )
 }

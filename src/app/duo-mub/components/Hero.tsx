@@ -18,7 +18,7 @@ export default function Hero() {
             </div>
             
             <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 h-[600px]">
-                <GradientText size="md:text-[60px] lg:text-[80px] xl:text-[100px] pt-40">
+                <GradientText size="text-[60px] sm:text-[80px] md:text-[100px] pt-40">
                         DUO MUB
                 </GradientText>
                 <p className="text-white max-w-4xl lg:text-2xl">

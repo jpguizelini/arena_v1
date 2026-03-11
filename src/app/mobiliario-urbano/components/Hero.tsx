@@ -1,34 +1,36 @@
-import Image from "next/image"
-import GradientText from "@/components/ui/GradientText"
+'use client'
+
+import { motion } from 'framer-motion';
+import ParallaxBanner from '@/components/ui/ParallaxBanner';
+import GradientText from '@/components/ui/GradientText';
 
 export default function Hero() {
     return (
-        <section className="relative w-full h-[600px] overflow-hidden">
-            {/* Imagem de fundo */}
-            <div className="absolute inset-0">
-                <Image
-                    src="/images/mobiliario-urbano/banner.jpg"
-                    alt="banner"
-                    fill
-                    sizes="100vw"
-                    className="object-cover"
-                    style={{ objectPosition: "80% 50%" }}
-                    priority
-                />
-                <div className="absolute inset-0 bg-black/40" />
-            </div>
+        <ParallaxBanner
+            imageSrc="/images/mobiliario-urbano/banner.jpg"
+            imageAlt="Mobiliário Urbano"
+            overlay="bg-black/30"
+            objectPosition="80% 50%"
+        >
+            <GradientText
+                size="text-[60px] sm:text-[80px] md:text-[100px]"
+                className="font-bold"
+                position="text-center"
+            >
+                MOBILIÁRIO URBANO
+            </GradientText>
 
-            {/* Conteúdo centralizado — pt-[44px] compensa a navbar fixa */}
-            <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 h-full pt-[44px]">
-                <GradientText size="text-[48px] md:text-[60px] lg:text-[80px] xl:text-[110px]">
-                    MOBILIÁRIO URBANO
-                </GradientText>
-                <p className="text-white max-w-2xl text-base lg:text-2xl mt-4">
-                    O mobiliário urbano conecta marcas à rotina das pessoas.
-                    Presente em pontos de convivência, circulação e espera, ele transforma o
-                    espaço público em um canal direto de comunicação.
-                </p>
-            </div>
-        </section>
-    )
+            <motion.p
+                className="text-white font-goldplay text-center max-w-4xl lg:text-2xl mt-2 sm:mt-3 md:mt-4 leading-relaxed"
+                style={{ textShadow: '0 2px 20px rgba(0,0,0,0.9), 0 1px 6px rgba(0,0,0,0.8)' }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+            >
+                O mobiliário urbano conecta marcas à rotina das pessoas.
+                Presente em pontos de convivência, circulação e espera, ele transforma o
+                espaço público em um canal direto de comunicação.
+            </motion.p>
+        </ParallaxBanner>
+    );
 }

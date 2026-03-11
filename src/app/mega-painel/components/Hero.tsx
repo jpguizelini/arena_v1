@@ -1,32 +1,38 @@
-import Image from "next/image"
-import GradientText from "@/components/ui/GradientText"
+'use client'
+
+import { motion } from 'framer-motion'
+import ParallaxBanner from '@/components/ui/ParallaxBanner'
+import GradientText from '@/components/ui/GradientText'
 
 export default function Hero() {
     return (
-        <section className="relative w-full min-h-[600px] overflow-hidden py-16">
-            <div className="absolute inset-0">
-                <Image
-                    src="/images/mega-painel/banner.jpg"
-                    alt="banner"
-                    fill
-                    sizes="100vw"
-                    className="object-cover"
-                    style={{ objectPosition: "80% 50%" }}
-                    priority
-                />
-                <div className="absolute inset-0 bg-black/40" />
-            </div>
-            
-            <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 h-[600px]">
-                <GradientText size="lg:text-[80px] xl:text-[100px] pt-40">
+        <ParallaxBanner
+            imageSrc="/images/mega-painel/banner.jpg"
+            imageAlt="Mega Painel"
+            overlay="bg-black/40"
+            objectPosition="80% 55%"
+        >
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+            >
+                <GradientText size="text-[60px] sm:text-[80px] md:text-[100px] mt-8">
                     MEGA PAINEL
                 </GradientText>
-                <p className="text-white max-w-4xl lg:text-2xl">
-                   O Mega Painel é um ativo de grande porte que entrega máximo impacto visual.<br/>
-                   Projetado para dominar a paisagem, ele é ideal para campanhas que<br/>
-                   precisam ser vistas, lembradas e reconhecidas.
-                </p>
-            </div>
-        </section>
+            </motion.div>
+
+            <motion.p
+                className="text-white font-goldplay text-center max-w-4xl lg:text-2xl mt-2 sm:mt-3 md:mt-4"
+                style={{ textShadow: '0 2px 20px rgba(0,0,0,0.9), 0 1px 6px rgba(0,0,0,0.8)' }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+            >
+                O Mega Painel é um ativo de grande porte que entrega <strong>máximo impacto visual.</strong>{' '}
+                Projetado para dominar a paisagem, ele é ideal para campanhas que
+                precisam ser vistas, lembradas e reconhecidas.
+            </motion.p>
+        </ParallaxBanner>
     )
 }
