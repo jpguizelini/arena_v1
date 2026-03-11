@@ -26,6 +26,7 @@ export default function Hero() {
                     unindo tecnologia, dinamismo e alta definição. Com conteúdos em movimento,<br/>
                     ele potencializa a atenção e a flexibilidade das campanhas. 
                     
+                    
                 </p>
             </div>
         </section>
