@@ -57,7 +57,7 @@ export default function Navbar() {
         { label: 'Imídia Litoral', href: '/admin/imidia-litoral' },
         { label: 'Imídia Live LED', href: '/admin/imidia-live-led' },
         { label: 'Formatos de Mídia', href: '/admin/formatos-de-midia' },
-        { label: 'Nossos Materiais', href: '/admin/nossos-materiais' },   
+        { label: 'Nossos Materiais', href: '/admin/nossos-materiais' },
     ]
 
     return (
@@ -66,9 +66,9 @@ export default function Navbar() {
                 <div className="flex items-center pl-[20px] md:pl-[40px]">
                     <Link href="/" className="flex items-center">
                         <div className="bg-white rounded-lg p-1 shadow-md">
-                            <Image 
-                                src="/images/icons/logo.png" 
-                                alt="I'mídia Arena" 
+                            <Image
+                                src="/images/icons/logo.png"
+                                alt="I'mídia Arena"
                                 width={100}
                                 height={35}
                                 className="h-[35px] md:h-[35px] w-auto object-contain"

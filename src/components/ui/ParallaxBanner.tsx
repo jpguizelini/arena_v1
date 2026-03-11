@@ -51,18 +51,17 @@ export default function ParallaxBanner({
   }, [mousePos]);
 
   return (
-    <div className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-0 overflow-hidden">
+    <div className="relative w-full min-h-[500px] sm:min-h-[600px] overflow-hidden">
       <motion.div
-        className="w-full"
+        className="absolute inset-0"
         style={{ x: smoothPos.x * -20, y: smoothPos.y * -14, scale: 1.06 }}
       >
         <Image
           src={imageSrc}
           alt={imageAlt}
-          width={0}
-          height={0}
+          fill
           sizes="100vw"
-          className="w-full h-auto min-h-[500px] sm:min-h-[600px] md:min-h-0 object-cover md:object-contain"
+          className="object-cover"
           style={{ objectPosition }}
           priority
         />
@@ -71,12 +70,12 @@ export default function ParallaxBanner({
       {overlay && <div className={`absolute inset-0 ${overlay}`} />}
 
       {children && (
-        <div
-          className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6"
+        <motion.div
+          className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-[44px]"
           style={{ x: smoothPos.x * 6, y: smoothPos.y * 4 }}
         >
           {children}
-        </div>
+        </motion.div>
       )}
     </div>
   );

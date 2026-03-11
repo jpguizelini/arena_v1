@@ -12,7 +12,7 @@ export default function Coverage({description}: CoverageProps) {
     return (
         <div className="w-full flex flex-col items-center justify-center">
             <motion.h1 
-                className="text-[45.07px] lg:text-[60px] font-bebas font-bold leading-none m-0 p-0 mt-[68px] bg-linear-to-r from-accent via-[#079c9e] to-accent bg-clip-text text-transparent"
+                className="text-[45px] sm:text-[47px] md:text-[52px] lg:text-[60px] xl:text-[65px] 2xl:text-[70px] font-bebas font-bold leading-none m-0 p-0 mt-[68px] bg-gradient-to-r from-accent via-[#079c9e] to-accent bg-clip-text text-transparent"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
@@ -22,7 +22,7 @@ export default function Coverage({description}: CoverageProps) {
             </motion.h1>
 
             <motion.p 
-                className="text-[19.94px] lg:text-[24px] font-goldplay text-white text-center px-4 sm:px-0"
+                className="text-[20px] sm:text-[21px] md:text-[22px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px] font-goldplay text-white text-center px-4 sm:px-0"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -56,7 +56,7 @@ export default function Coverage({description}: CoverageProps) {
                         />
                     </svg>
 
-                    <div className="relative z-10 mt-[13px] mb-[2px] flex flex-col text-[15px] lg:text-[18px]">
+                    <div className="relative z-10 mt-[13px] mb-[2px] flex flex-col text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] 2xl:text-[20px]">
                         <motion.p
                             className="text-white leading-8"
                             initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ export default function Coverage({description}: CoverageProps) {
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.5, delay: 0, ease: "easeOut" }}
                         >
-                            Araçatuba  ·  Aramina  ·  <b className="text-[20px] lg:text-[24px]">Araraquara</b>  ·  Barretos  ·  Batatais  ·  <b className="text-[20px] lg:text-[24px]">Bauru</b>  ·  Birigui  ·  Brodowski  ·  Buritizal
+                            Araçatuba  ·  Aramina  ·  <b className="text-[20px] sm:text-[21px] md:text-[22px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]">Araraquara</b>  ·  Barretos  ·  Batatais  ·  <b className="text-[20px] sm:text-[21px] md:text-[22px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]">Bauru</b>  ·  Birigui  ·  Brodowski  ·  Buritizal
                         </motion.p>
                         <motion.p
                             className="text-white leading-8"
@@ -73,7 +73,7 @@ export default function Coverage({description}: CoverageProps) {
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
                         >
-                            Campinas  ·  <b className="text-[20px] lg:text-[24px]">Franca</b>  ·  Guará  ·  Iguarapava  ·  Ipuã  ·  Ituverava  ·  Jardinópolis  ·  Jeriquara  ·  Jundiaí  ·  Miguelópolis
+                            Campinas  ·  <b className="text-[20px] sm:text-[21px] md:text-[22px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]">Franca</b>  ·  Guará  ·  Iguarapava  ·  Ipuã  ·  Ituverava  ·  Jardinópolis  ·  Jeriquara  ·  Jundiaí  ·  Miguelópolis
                         </motion.p>
                         <motion.p
                             className="text-white leading-8"
@@ -82,7 +82,7 @@ export default function Coverage({description}: CoverageProps) {
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.5, delay: 0.30, ease: "easeOut" }}
                         >
-                            Monte Azul Paulista  ·  Morro Agudo  ·  Nuporanga  ·  Orlândia  ·  Osasco  ·  Pedregulho  ·  <b className="text-[20px] lg:text-[24px]">Ribeirão Preto</b>
+                            Monte Azul Paulista  ·  Morro Agudo  ·  Nuporanga  ·  Orlândia  ·  Osasco  ·  Pedregulho  ·  <b className="text-[20px] sm:text-[21px] md:text-[22px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]">Ribeirão Preto</b>
                         </motion.p>
                         <motion.p
                             className="text-white leading-8 "
@@ -91,7 +91,7 @@ export default function Coverage({description}: CoverageProps) {
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.5, delay: 0.45, ease: "easeOut" }}
                         >
-                            Sales Oliveira  ·  <b className="text-[20px] lg:text-[24px]">São Carlos</b>  ·  São Joaquim da Barra  ·  São José do Rio Preto  ·  Sertãozinho  ·  Sumaré
+                            Sales Oliveira  ·  <b className="text-[20px] sm:text-[21px] md:text-[22px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]">São Carlos</b>  ·  São Joaquim da Barra  ·  São José do Rio Preto  ·  Sertãozinho  ·  Sumaré
                         </motion.p>
                         <motion.p
                             className="text-white leading-8"
@@ -100,14 +100,14 @@ export default function Coverage({description}: CoverageProps) {
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.5, delay: 0.60, ease: "easeOut" }}
                         >
-                            <b className="text-[20px] lg:text-[24px]">Guarujá</b>  ·  <b className="text-[20px] lg:text-[24px]">Santos</b>  ·  <b className="text-[20px] lg:text-[24px]">São Vicente</b>  ·  <b className="text-[20px] lg:text-[24px]">Praia Grande</b>
+                            <b className="text-[20px] sm:text-[21px] md:text-[22px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]">Guarujá</b>  ·  <b className="text-[20px] sm:text-[21px] md:text-[22px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]">Santos</b>  ·  <b className="text-[20px] sm:text-[21px] md:text-[22px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]">São Vicente</b>  ·  <b className="text-[20px] sm:text-[21px] md:text-[22px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]">Praia Grande</b>
                         </motion.p>
                     </div>
 
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-20 bg-dark">
                         <Button
                             variant="outline"
-                            className="text-primary bg-white font-bebas text-[25.55px] lg:text-[32px] py-6 hover:bg-accent hover:text-dark rounded-lg"
+                            className="text-primary bg-white font-bebas text-[25.55px] sm:text-[27px] md:text-[29px] lg:text-[32px] xl:text-[34px] 2xl:text-[36px] py-6 hover:bg-accent hover:text-dark rounded-lg"
                         >
                             OPÇÕES NA MINHA CIDADE
                         </Button>

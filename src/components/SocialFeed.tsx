@@ -24,7 +24,7 @@ export default function SocialFeed() {
           max-w-[170px] sm:max-w-[520px]
           ml-18 sm:ml-59
           lg:pl-[80px]
-          bg-linear-to-r
+          bg-gradient-to-r
           from-[#079c9e]
           via-accent
           to-[#079c9e]
@@ -52,6 +52,7 @@ export default function SocialFeed() {
                 src="/images/home/robo2.png"
                 alt="Robo"
                 fill
+                sizes="(max-width: 768px) 120px, 240px"
                 className="object-contain"
                 priority
               />
@@ -63,6 +64,7 @@ export default function SocialFeed() {
                                     src={formato.img}
                                     alt={formato.title}
                                     fill
+                                    sizes="(max-width: 768px) 251px, (max-width: 1024px) 502px, 753px"
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                             </div>

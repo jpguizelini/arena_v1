@@ -11,13 +11,13 @@ export default function Transformando() {
                 <div className="flex flex-col justify-center px-14 sm:px-12 md:px-10 lg:pl-10 xl:pl-30 py-[82px]">
                     <motion.h1
                         className="
-                        text-[53.09px]
+                        text-[53px]
                         lg:text-[64px]
                         font-bebas
                         font-bold 
                         leading-none
                         mb-4
-                        bg-linear-to-r
+                        bg-gradient-to-r
                         from-[#079c9e]
                         via-accent  
                         to-[#079c9e]
@@ -78,6 +78,7 @@ export default function Transformando() {
                         src="/images/home/espacos-oportunidades.jpeg"
                         alt="Espaços Oportunidades"
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-contain object-center md:object-center md:ml-3"
                     />
                 </div>
@@ -89,6 +90,7 @@ export default function Transformando() {
                         src="/images/home/robo1.png"
                         alt="Robo"
                         fill
+                        sizes="(max-width: 768px) 100px, 134px"
                         className="object-center"
                         priority
                     />
