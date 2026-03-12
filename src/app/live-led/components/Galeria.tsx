@@ -13,7 +13,7 @@ const items = [
 export default function GaleriaLiveLed() {
   return (
     <div>
-      <Galeria items={items} sectionClassName="w-full py-16" />
+      <Galeria items={items} className="w-full py-16" />
       {/* Robô decorativo */}
       <div className="flex justify-center pb-16">
         <Image
