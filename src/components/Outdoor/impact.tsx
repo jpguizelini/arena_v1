@@ -10,11 +10,11 @@ export default function ImpactSection() {
   const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
+    if (window.matchMedia('(hover: none)').matches) return;
     const handleMouseMove = (e: MouseEvent) => {
-      const { innerWidth, innerHeight } = window;
       setMousePos({
-        x: (e.clientX / innerWidth - 0.5) * 2,
-        y: (e.clientY / innerHeight - 0.5) * 2,
+        x: (e.clientX / window.innerWidth - 0.5) * 2,
+        y: (e.clientY / window.innerHeight - 0.5) * 2,
       });
     };
     window.addEventListener("mousemove", handleMouseMove);
@@ -34,133 +34,111 @@ export default function ImpactSection() {
     return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
   }, [mousePos]);
 
-  const imgX = smoothPos.x * -20;
-  const imgY = smoothPos.y * -14;
-  const contentX = smoothPos.x * 6;
-  const contentY = smoothPos.y * 4;
-
   return (
-    <div className="relative w-full min-h-[600px] sm:min-h-[700px] md:min-h-0 overflow-hidden">
+    <div className="px-4 sm:px-8 md:px-16 lg:px-[60px] py-16">
+      <div className="relative w-full overflow-hidden">
 
-      {/* Imagem com parallax */}
-      <motion.div
-        className="w-full"
-        style={{ x: imgX, y: imgY, scale: 1.06 }}
-      >
-        <Image
-          src="/images/outdoor/marca-evidencia.jpg"
-          alt="Sua marca em evidência"
-          width={0}
-          height={0}
-          sizes="100vw"
-          className="w-full h-auto min-h-[600px] sm:min-h-[700px] md:min-h-0 object-cover md:object-contain"
-          priority
-        />
-      </motion.div>
-
-      {/* Content Overlay com parallax inverso */}
-      <motion.div
-        className="absolute inset-0 z-10 flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-16"
-        style={{ x: contentX, y: contentY }}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
-      >
-        <motion.section
-          className="w-full max-w-4xl mx-auto flex flex-col items-center px-2"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        {/* Imagem com parallax */}
+        <motion.div
+          style={{ x: smoothPos.x * -20, y: smoothPos.y * -14, scale: 1.06 }}
         >
-          <motion.h2
-            className="font-goldplay font-bold text-white text-center"
-            style={{
-              fontSize: 'clamp(24px, 5vw, 38px)',
-              lineHeight: '1.2',
-              marginTop: '0',
-              marginBottom: '5px'
-            }}
-            initial={{ opacity: 0, y: 30 }}
+          <Image
+            src="/images/outdoor/marca-evidencia.jpg"
+            alt="Sua marca em evidência"
+            width={1920}
+            height={1080}
+            sizes="100vw"
+            className="w-full h-auto"
+            priority
+          />
+        </motion.div>
+
+        {/* Content Overlay com parallax inverso */}
+        <motion.div
+          className="absolute inset-0 z-10 flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-16"
+          style={{ x: smoothPos.x * 6, y: smoothPos.y * 4 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.section
+            className="w-full max-w-4xl mx-auto flex flex-col items-center px-2"
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Sua marca em evidência
-          </motion.h2>
-
-          <motion.div
-            className="flex flex-col items-center w-full"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            {/* +30 CIDADES — bounce contínuo */}
-            <motion.div
-              className="text-center w-full"
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
-              <motion.p
-                className="font-bebas font-normal leading-none"
-                style={{ fontSize: 'clamp(48px, 8vw, 128px)', color: '#C3D33F', marginBottom: '2px' }}
-                animate={{ y: [0, -12, 0] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0,
-                }}
-              >
-                +30 CIDADES
-              </motion.p>
-            </motion.div>
-
-            {/* +240 MILHÕES — bounce contínuo com delay diferente */}
-            <motion.div
-              className="text-center w-full"
-              style={{ marginBottom: '-10px' }}
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
-            >
-              <motion.p
-                className="font-bebas font-normal leading-none"
-                style={{ fontSize: 'clamp(48px, 8vw, 128px)', color: '#C3D33F' }}
-                animate={{ y: [0, -12, 0] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.3,
-                }}
-              >
-                +240 MILHÕES
-              </motion.p>
-            </motion.div>
-
-            <motion.div
-              className="text-center w-full"
-              initial={{ opacity: 0, y: 20 }}
+            <motion.h2
+              className="font-goldplay font-bold text-white text-center mb-1"
+              style={{ fontSize: 'clamp(24px, 5vw, 38px)', lineHeight: '1.2' }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: 1.2 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <p
-                className="font-bebas font-normal uppercase"
-                style={{ fontSize: 'clamp(16px, 3vw, 30px)', color: '#C3D33F' }}
+              Sua marca em evidência
+            </motion.h2>
+
+            <motion.div
+              className="flex flex-col items-center w-full"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <motion.div
+                className="text-center w-full"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
               >
-                de pessoas impactadas mensalmente
-              </p>
+                <motion.p
+                  className="font-bebas font-normal leading-none"
+                  style={{ fontSize: 'clamp(48px, 8vw, 128px)', color: '#C3D33F', marginBottom: '2px' }}
+                  animate={{ y: [0, -12, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0 }}
+                >
+                  +30 CIDADES
+                </motion.p>
+              </motion.div>
+
+              <motion.div
+                className="text-center w-full"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, delay: 1.0 }}
+              >
+                <motion.p
+                  className="font-bebas font-normal leading-none"
+                  style={{ fontSize: 'clamp(48px, 8vw, 128px)', color: '#C3D33F' }}
+                  animate={{ y: [0, -12, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                >
+                  +240 MILHÕES
+                </motion.p>
+              </motion.div>
+
+              <motion.div
+                className="text-center w-full"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, delay: 1.2 }}
+              >
+                <p
+                  className="font-bebas font-normal uppercase"
+                  style={{ fontSize: 'clamp(16px, 3vw, 30px)', color: '#C3D33F' }}
+                >
+                  de pessoas impactadas mensalmente
+                </p>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        </motion.section>
-      </motion.div>
+          </motion.section>
+        </motion.div>
+      </div>
     </div>
   );
 }

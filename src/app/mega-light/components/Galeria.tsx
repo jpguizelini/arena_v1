@@ -31,7 +31,7 @@ export default function Galeria() {
   }, [selected])
 
   return (
-    <section className="w-full py-16 mb-32">
+    <section className="w-full py-16">
 
       {/* Título */}
       <motion.div
@@ -59,22 +59,20 @@ export default function Galeria() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
             className="group relative overflow-hidden cursor-pointer w-full h-[400px] md:h-[500px]"
-            onClick={() => setSelected({ img: item.image, title: `Galeria outdoor ${item.id}` })}
+            onClick={() => setSelected({ img: item.image, title: `Galeria ${item.id}` })}
             role="button"
             tabIndex={0}
             onKeyDown={(e) => {
               if (e.key === 'Enter' || e.key === ' ')
-                setSelected({ img: item.image, title: `Galeria outdoor ${item.id}` })
+                setSelected({ img: item.image, title: `Galeria ${item.id}` })
             }}
           >
             <Image
               src={item.image}
-              alt={`Galeria outdoor ${item.id}`}
+              alt={`Galeria ${item.id}`}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className={`object-cover transition-transform duration-500 ease-in-out
-                group-hover:scale-110
-                ${item.id === 6 ? 'scale-125' : ''}`}
+              className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
               style={{ objectPosition: item.objectPosition }}
             />
             <div className="absolute inset-0 bg-black/60 transition-opacity duration-300 group-hover:bg-black/20" />
@@ -112,7 +110,6 @@ export default function Galeria() {
           </div>
         </div>
       )}
-
     </section>
   )
 }

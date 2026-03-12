@@ -26,19 +26,21 @@ export default function TextWhitImage({ title, description, imgSrc }: TextWhitIm
             {title}
           </GradientText>
 
-          <div className="text-[clamp(14px,1.1vw,17px)] font-goldplay leading-snug text-white flex flex-col gap-4">
+          <div className="font-goldplay text-white text-sm sm:text-base md:text-[16px] xl:text-[17px] 2xl:text-lg leading-relaxed tracking-tight flex flex-col gap-4">
             {description}
           </div>
         </div>
 
         {/* Lado direito - Imagem */}
-        <div className="relative min-h-[350px] md:min-h-[500px] w-full overflow-visible">
-          <Image
-            src={imgSrc}
-            alt="Transformando"
-            fill
-            className="object-contain object-center"
-          />
+        <div className="flex items-center justify-center py-12 md:py-0">
+          <div className="relative w-[350px] h-[500px] md:w-[400px] md:h-[600px] ">
+            <Image
+              src={imgSrc}
+              alt="Transformando"
+              fill
+              className="object-cover object-top"
+            />
+          </div>
         </div>
 
       </div>
