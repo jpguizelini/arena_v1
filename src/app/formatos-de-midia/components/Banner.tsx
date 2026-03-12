@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 export default function Banner() {
     return (
-        <section className="relative w-full h-[60vh] min-h-[400px] max-h-[700px] grid grid-cols-2 overflow-hidden">
+        <section className="relative w-full min-h-[500px] sm:min-h-[600px] grid grid-cols-2 overflow-hidden">
             <div className="relative">
                 <Image 
                     src="/images/formatos/banner-1.jpg" 
