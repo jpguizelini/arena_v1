@@ -1,7 +1,4 @@
-'use client'
-
-import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import Galeria from '@/components/shared/Galeria'
 
 const galleryItems = [
   {
@@ -30,94 +27,6 @@ const galleryItems = [
   }
 ]
 
-export default function Galeria() {
-  const [selected, setSelected] = useState<{ img: string; title: string } | null>(null)
-
-  useEffect(() => {
-    function onKeyDown(e: KeyboardEvent) {
-      if (e.key === 'Escape') setSelected(null)
-    }
-
-    if (selected) {
-      window.addEventListener('keydown', onKeyDown)
-      document.body.style.overflow = 'hidden'
-    }
-
-    return () => {
-      window.removeEventListener('keydown', onKeyDown)
-      document.body.style.overflow = ''
-    }
-  }, [selected])
-
-  return (
-    <section className="w-full pt-[160px] pb-60">
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.6 }}
-        className="relative z-8 -mb-3 flex items-center justify-center px-4"
-      >
-        <div className="rounded-lg bg-linear-to-r from-accent to-cyan px-3 sm:px-4 py-2 font-bebas text-[35px] sm:text-[45px] md:text-[55px] font-regular uppercase tracking-wide text-white shadow-lg leading-tight">
-          GALERIA
-        </div>
-      </motion.div>
-
-      <div className="grid w-full grid-cols-1 overflow-hidden md:grid-cols-2">
-        {galleryItems.map((item, index) => (
-          <motion.div
-            key={item.id}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{
-              duration: 0.6,
-              delay: index * 0.1
-            }}
-            className="group relative overflow-hidden aspect-video cursor-pointer"
-            onClick={() => setSelected({ img: item.image, title: `Galeria outdoor ${item.id}` })}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') setSelected({ img: item.image, title: `Galeria outdoor ${item.id}` })
-            }}
-          >
-            <img
-              src={item.image}
-              alt={`Galeria outdoor ${item.id}`}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-black/60 transition-opacity duration-300 ease-in-out group-hover:bg-black/20" />
-          </motion.div>
-        ))}
-      </div>
-
-      {selected ? (
-        <div
-          className="fixed inset-0 z-9999 bg-black/70 flex items-center justify-center p-4"
-          onClick={() => setSelected(null)}
-        >
-          <div
-            className="relative w-full max-w-5xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              type="button"
-              aria-label="Fechar"
-              onClick={() => setSelected(null)}
-              className="absolute -top-3 -right-3 w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center shadow"
-            >
-              ×
-            </button>
-
-            <img
-              src={selected.img}
-              alt={selected.title}
-              className="w-full h-auto max-h-[80vh] object-contain"
-            />
-          </div>
-        </div>
-      ) : null}
-    </section>
-  )
+export default function GaleriaPage() {
+  return <Galeria items={galleryItems} columns={2} />
 }

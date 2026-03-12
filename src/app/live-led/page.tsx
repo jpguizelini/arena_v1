@@ -4,23 +4,18 @@ import LiveLedDestaque from "./components/LiveLedDestaque";
 import Cobertura from "./components/Cobertura";
 import NossosFormatos from "./components/NossosFormatos";
 import PorqueEscolher from "./components/PorqueEscolher";
-import GaleriaPage from "./components/Galeria";
-
+import Galeria from "./components/Galeria";
 
 export default function ImidiaLiveLed() {
     return (
         <div>
             <Banner />
-            <div className="">
-                <MarcaEmMovimento />
-                <LiveLedDestaque />
-                <Cobertura />
-                <NossosFormatos />
-                <PorqueEscolher />
-                <GaleriaPage />
-            </div>
-
-            
+            <MarcaEmMovimento />
+            <LiveLedDestaque />
+            <Cobertura />
+            <NossosFormatos />
+            <PorqueEscolher />
+            <Galeria />
         </div>
     )
 }
