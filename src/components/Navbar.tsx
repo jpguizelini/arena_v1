@@ -92,7 +92,7 @@ export default function Navbar() {
                         <li key={link.href} className="whitespace-nowrap">
                             <Link
                                 href={link.href}
-                                className="text-[5px] xl:text-2xl uppercase font-bold tracking-wider text-white hover:text-dark transition-colors duration-200"
+                                className="text-[11px] xl:text-2xl uppercase font-bold tracking-wider text-white hover:text-dark transition-colors duration-200"
                             >
                                 {link.label}
                             </Link>
