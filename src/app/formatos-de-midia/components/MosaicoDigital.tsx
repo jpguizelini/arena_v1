@@ -21,9 +21,10 @@ export default function MosaicoDigital() {
 
             <Image
                 src="/images/formatos/mosaico-digital.jpg"
-                alt="Mosaico Digital"
+                alt="Mosaico Digital I'mídia em ambiente urbano"
                 width={1600}
                 height={900}
+                sizes="100vw"
                 className="w-full mx-auto mb-12"
             />
 
@@ -38,8 +39,9 @@ export default function MosaicoDigital() {
             <div className="relative h-[450px] w-full mb-12">
                 <Image
                     src="/images/formatos/iconico-2.jpg"
-                    alt="Mosaico Digital"
+                    alt="Mosaico Digital em ponto estratégico"
                     fill
+                    sizes="100vw"
                     className="object-cover"
                 />
                 <div
@@ -88,8 +90,9 @@ export default function MosaicoDigital() {
                 <div className="relative min-h-[500px] md:min-h-[600px]">
                     <Image
                         src="/images/formatos/imagem-lateral.jpg"
-                        alt="Mosaico Digital em uso"
+                        alt="Mosaico Digital instalado em via urbana"
                         fill
+                        sizes="(max-width: 768px) 100vw, 60vw"
                         className="object-cover object-[80%_50%]"
                     />
                 </div>

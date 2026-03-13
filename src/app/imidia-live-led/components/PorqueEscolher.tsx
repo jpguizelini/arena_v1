@@ -39,10 +39,12 @@ export default function PorqueEscolher() {
                         <div className="robot-container w-full h-full flex items-end justify-start">
                             <Image
                                 src="/images/live-led/robo-2.png"
-                                alt="Live LED Destaque"
+                                alt=""
+                                aria-hidden="true"
                                 width={443}
                                 height={660}
-                                className="robot-image max-w-full h-auto"
+                                sizes="(max-width: 1080px) 33vw, 443px"
+                                className="max-w-full h-auto object-contain"
                             />
                         </div>
                     </div>

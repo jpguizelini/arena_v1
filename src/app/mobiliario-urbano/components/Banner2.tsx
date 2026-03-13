@@ -5,9 +5,10 @@ export default function Banner2() {
         <section className="px-4 sm:px-8 md:px-16 lg:px-[60px] py-16">
             <Image
                 src="/images/mobiliario-urbano/banner2.jpg"
-                alt="Mobiliário Urbano"
+                alt="Mobiliário urbano I'mídia em ponto de circulação de pedestres"
                 width={4000}
                 height={1868}
+                sizes="100vw"
                 className="w-full mx-auto"
             />
         </section>

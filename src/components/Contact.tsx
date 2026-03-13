@@ -90,6 +90,8 @@ export default function Contact() {
             {/* Side Buttons */}
             <div className="flex flex-col gap-8 w-full md:w-1/2 lg:w-1/3 pt-15">
                 <motion.button
+                    type="button"
+                    onClick={() => alert('Em breve!')}
                     className="flex items-center justify-center w-full max-w-[300px] mx-auto md:w-full md:max-w-none md:mx-0 px-10 py-5 rounded-2xl bg-gradient-to-r from-[#079c9e] via-accent to-[#079c9e] hover:scale-105 transition-transform duration-300 shadow-lg group"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -101,6 +103,8 @@ export default function Contact() {
                     </span>
                 </motion.button>
                 <motion.button
+                    type="button"
+                    onClick={() => alert('Em breve!')}
                     className="flex items-center justify-center w-full max-w-[300px] mx-auto md:w-full md:max-w-none md:mx-0 px-10 py-5 mt-[-4px] rounded-2xl bg-gradient-to-r from-[#079c9e] via-accent to-[#079c9e] hover:scale-105 transition-transform duration-300 shadow-lg group"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

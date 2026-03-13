@@ -7,7 +7,7 @@ export default function Banner2() {
             <div className="relative h-screen max-h-screen w-auto mx-auto mt-16">
                 <Image
                     src="/images/duo-mub/banner2.jpg"
-                    alt="Mobiliário Urbano"
+                    alt="Painel Duo MUB dupla-face instalado em via urbana"
                     fill
                     className="object-cover"
                     sizes="100vw"

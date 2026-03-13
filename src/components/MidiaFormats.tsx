@@ -14,7 +14,7 @@ export default function FormatosMidia() {
         { img: '/images/home/foto-formato-midia-5.jpg', title: "PAINEL DIGITAL", href: "/painel-digital" },
         { img: '/images/home/foto-formato-midia-6.jpg', title: "MEGA PAINEL", href: "/mega-painel" },
         { img: '/images/home/foto-formato-midia-7.jpg', title: "MEGA LIGHT", href: "/mega-light" },
-        { img: '/images/home/foto-formato-midia-8.jpg', title: "BANCA 3D", href: "/banca-3d" },
+        { img: '/images/home/foto-formato-midia-8.jpg', title: "BANCA 3D", href: "/formatos-de-midia" },
     ]
 
     return (

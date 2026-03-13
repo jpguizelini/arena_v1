@@ -26,7 +26,7 @@ const gridItems = [
     id: 3,
     title: 'MOSAICO',
     image: '/images/live-led/mosaico-2.jpg',
-    href: '/mosaico',
+    href: '/formatos-de-midia',
     objectPosition: '60% 40%',
     scale: ''
   },
@@ -52,10 +52,12 @@ export default function NossosFormatos() {
         transition={{ duration: 0.6 }}
         className="relative flex items-center justify-center pb-5 px-4"
       >
-        <img
+        <Image
           src="/images/outdoor/triangulos.png"
           alt=""
           aria-hidden="true"
+          width={56}
+          height={56}
           className="pointer-events-none absolute left-4 top-1/2 hidden h-14 w-auto -translate-y-1/2 opacity-80 md:block"
         />
         <GradientText className="text-[48px] sm:text-[60px] md:text-[76px] uppercase tracking-wide font-bold">

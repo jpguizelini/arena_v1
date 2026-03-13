@@ -36,8 +36,9 @@ export default function TextWhitImage({ title, description, imgSrc }: TextWhitIm
           <div className="relative w-[350px] h-[500px] md:w-[400px] md:h-[600px] ">
             <Image
               src={imgSrc}
-              alt="Transformando"
+              alt={title}
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-top"
             />
           </div>

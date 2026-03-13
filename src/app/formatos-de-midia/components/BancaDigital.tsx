@@ -21,9 +21,10 @@ export default function BancaDigital() {
 
             <Image
                 src="/images/formatos/banca-digital.jpg"
-                alt="Banca Digital"
+                alt="Banca Digital 3D da I'mídia em ambiente urbano"
                 width={4000}
                 height={1868}
+                sizes="100vw"
                 className="w-full mx-auto mb-12"
             />
 
@@ -39,8 +40,9 @@ export default function BancaDigital() {
             <div className="relative h-[450px] w-full">
                 <Image
                     src="/images/formatos/iconico-1.jpg"
-                    alt="Banca Digital"
+                    alt="Banca Digital em ponto de alta circulação"
                     fill
+                    sizes="100vw"
                     className="object-cover object-[0%_center]"
                 />
                 <div

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const gridItems = [
   {
@@ -45,15 +46,14 @@ export default function ImidiaPaineisGrid() {
           <Link
             key={item.id}
             href={item.href}
-            className="group relative overflow-hidden transition-all duration-300 ease-in-out"
+            className="group relative overflow-hidden block h-[400px] md:h-[500px]"
           >
-            <img
+            <Image
               src={item.image}
               alt={item.title}
-              width={0}
-              height={0}
+              fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="w-full h-[400px] md:h-[500px] object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
+              className="object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
               style={{
                 objectPosition: item.id === 1 ? '60% 35%' : item.id === 2 ? '50% 10%' : 'center'
                               
@@ -79,15 +79,14 @@ export default function ImidiaPaineisGrid() {
           <Link
             key={item.id}
             href={item.href}
-            className="group relative overflow-hidden transition-all duration-300 ease-in-out"
+            className="group relative overflow-hidden block h-[400px] md:h-[500px]"
           >
-            <img
+            <Image
               src={item.image}
               alt={item.title}
-              width={0}
-              height={0}
+              fill
               sizes="(max-width: 768px) 100vw, 33vw"
-              className="w-full h-[400px] md:h-[500px] object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
+              className="object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
               style={{
                 objectPosition: item.id === 3 ? '50% 30%' : item.id === 4 ? '50% -60%' : 'center'
               }}

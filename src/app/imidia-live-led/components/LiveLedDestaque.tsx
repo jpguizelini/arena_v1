@@ -33,8 +33,9 @@ export default function LiveLedDestaque() {
                 <div className="flex-1 min-h-[300px] lg:min-h-full relative overflow-hidden">
                     <Image
                         src="/images/live-led/imagem-lateral.jpg"
-                        alt="Live LED Destaque"
+                        alt="Painel Live LED instalado em ambiente urbano"
                         fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
                         className="object-cover object-center"
                     />
                 </div>

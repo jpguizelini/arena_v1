@@ -4,7 +4,6 @@ import MidiaFormats from "./components/MidiaFormats";
 import EscolhaCerto from './components/EscolhaCerto';
 import BannerMeio from './components/BannerMeio';
 import Galeria from './components/Galeria';
-import Footer from '@/components/Footer';
 
 export default function ImidiaLitoral() {
     return (

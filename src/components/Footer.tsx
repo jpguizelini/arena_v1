@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 type FooterColumn = {
     title: string;
@@ -57,22 +58,22 @@ export default function Footer() {
 
                     <div className="mt-8 sm:mt-10 flex justify-center gap-4">
                         <Link
-                            href="https://www.linkedin.com"
+                            href="https://www.linkedin.com/company/SLUG-REAL"
                             target="_blank"
                             rel="noreferrer"
                             className="group inline-flex items-center gap-2 sm:gap-3 rounded-md border-2 border-white/60 px-4 sm:px-5 py-2 sm:py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                         >
-                            <img src="/images/icons/linkedin.png" alt="LinkedIn" className="h-6 w-6 sm:h-7 sm:w-7" />
+                            <Image src="/images/icons/linkedin.png" alt="" aria-hidden="true" width={28} height={28} className="h-6 w-6 sm:h-7 sm:w-7" />
                             <span className="tracking-wide font-bebas text-[20px] sm:text-[28px]">SIGA NOSSO LINKEDIN</span>
                         </Link>
                         {!isHome && (
                             <Link
-                                href="https://www.instagram.com"
+                                href="https://www.instagram.com/PERFIL-REAL"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="group inline-flex items-center gap-2 sm:gap-3 rounded-md border-2 border-white/60 px-4 sm:px-5 py-2 sm:py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                             >
-                                <img src="/images/icons/instagram.png" alt="Instagram" className="h-6 w-6 sm:h-7 sm:w-7" />
+                                <Image src="/images/icons/instagram.png" alt="" aria-hidden="true" width={28} height={28} className="h-6 w-6 sm:h-7 sm:w-7" />
                                 <span className="tracking-wide font-bebas text-[20px] sm:text-[28px]">SIGA NOSSO INSTAGRAM</span>
                             </Link>
                         )}

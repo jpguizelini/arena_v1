@@ -5,9 +5,10 @@ export default function Banner2() {
         <section className="px-4 sm:px-8 md:px-16 lg:px-[60px] py-16">
             <Image
                 src="/images/front-light/banner2.jpg"
-                alt="Front Light"
+                alt="Painel Front Light iluminado em via do interior paulista"
                 width={4000}
                 height={1868}
+                sizes="100vw"
                 className="w-full mx-auto"
             />
         </section>

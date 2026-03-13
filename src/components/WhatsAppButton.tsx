@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function WhatsAppButton() {
@@ -12,14 +13,15 @@ export default function WhatsAppButton() {
             className="fixed bottom-6 right-6 z-50 lg:bottom-8 lg:right-8"
         >
             <Link 
-                href="https://wa.me/" 
-                target="_blank" 
-                rel="noreferrer"
+                href="#" 
+                title="WhatsApp em breve"
                 className="block hover:scale-110 transition-transform duration-300"
             >
-                <img 
+                <Image 
                     src="/images/icons/wpp.png" 
-                    alt="WhatsApp" 
+                    alt="Falar pelo WhatsApp" 
+                    width={96}
+                    height={96}
                     className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 drop-shadow-lg hover:drop-shadow-xl"
                 />
             </Link>

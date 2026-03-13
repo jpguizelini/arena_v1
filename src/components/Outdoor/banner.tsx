@@ -8,7 +8,7 @@ export default function Banner() {
   return (
     <ParallaxBanner 
       imageSrc="/images/outdoor/banner.png" 
-      imageAlt="butdoorbrasolaia" 
+      imageAlt="Painel outdoor I'mídia em avenida do interior paulista" 
       overlay="bg-black/30"
       objectPosition="80% 30%"
     >

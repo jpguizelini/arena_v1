@@ -4,7 +4,6 @@ import ImpactSection from '@/components/Outdoor/impact';
 import OutdoorGrid from '@/components/Outdoor/grid';
 import MappingSection from '@/components/Outdoor/mapping';
 import GalleryGrid from '@/components/Outdoor/gallery-grid';
-import Footer from '@/components/Footer';
 
 export default function Outdoor() {
     return (

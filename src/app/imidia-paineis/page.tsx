@@ -28,7 +28,7 @@ export default function ImidiaPaineis() {
       </div>
 
     <div className="py-[50px]">
-      <Coverage description = "Confira nossas cidades de autação"/>
+      <Coverage description="Confira nossas cidades de atuação"/>
     </div>
 
 
@@ -85,7 +85,6 @@ export default function ImidiaPaineis() {
           {/* Conteúdo com efeito parallax */}
           <motion.div
             className="absolute inset-0 flex items-center"
-            style={{ x: 6, y: 4 }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}

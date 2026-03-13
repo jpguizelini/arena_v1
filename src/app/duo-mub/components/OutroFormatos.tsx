@@ -8,7 +8,7 @@ const gridItems = [
     id: 1,
     title: 'PAINEL FRONT LIGHT',
     image: '/images/outdoor/painel-front-light.png',
-    href: '/frontlight'
+    href: '/front-light'
   },
   {
     id: 2,

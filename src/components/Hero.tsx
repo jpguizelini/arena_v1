@@ -202,6 +202,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.button
+              type="button"
               className="mt-2 w-fit border-2 text-primary bg-white font-bebas text-[18px] sm:text-[22px] md:text-[25.55px] lg:text-[30px] xl:text-[34px] 2xl:text-[38px] px-4 sm:px-5 md:px-6 py-2 hover:bg-accent hover:text-dark rounded-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

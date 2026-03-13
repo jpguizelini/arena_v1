@@ -52,15 +52,22 @@ export default function SocialFeed() {
 
                 {formatos.map((formato, index) => (
                     <FadeIn key={index} delay={index * 0.1}>
-                        <div className="relative overflow-hidden w-[251px] h-[313px] group cursor-pointer">
-                            <Image
-                                src={formato.img}
-                                alt={formato.title}
-                                fill
-                                sizes="(max-width: 768px) 251px, (max-width: 1024px) 502px, 753px"
-                                className="object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
-                        </div>
+                        <a
+                            href="https://www.instagram.com/PERFIL-REAL"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            aria-label="Ver publicação no Instagram"
+                        >
+                            <div className="relative overflow-hidden w-[251px] h-[313px] group cursor-pointer">
+                                <Image
+                                    src={formato.img}
+                                    alt={formato.title}
+                                    fill
+                                    sizes="(max-width: 768px) 251px, (max-width: 1024px) 502px, 753px"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                            </div>
+                        </a>
                     </FadeIn>
                 ))}
             </div>
