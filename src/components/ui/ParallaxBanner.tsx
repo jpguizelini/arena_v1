@@ -9,6 +9,7 @@ interface ParallaxBannerProps {
   imageAlt?: string;
   overlay?: string;
   objectPosition?: string;
+  className?: string;
   children?: React.ReactNode;
 }
 
@@ -17,6 +18,7 @@ export default function ParallaxBanner({
   imageAlt = '',
   overlay,
   objectPosition,
+  className,
   children,
 }: ParallaxBannerProps) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -61,7 +63,7 @@ export default function ParallaxBanner({
           alt={imageAlt}
           fill
           sizes="100vw"
-          className="object-cover"
+          className={`object-cover ${className || ''}`}
           style={{ objectPosition }}
           priority
         />

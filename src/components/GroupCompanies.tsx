@@ -39,7 +39,7 @@ export default function EmpresasGrupo() {
             </motion.div>
 
             {/* 3 logos secundários com stagger */}
-            <div className="flex flex-wrap items-center mt-[28px] justify-center gap-15">
+            <div className="flex flex-wrap items-center mt-[50px] lg:mt-[28px] justify-center gap-15">
 
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

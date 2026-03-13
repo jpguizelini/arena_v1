@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function MappingSection() {
     return (
-        <div className="w-full flex flex-col py-16">
+        <div className="w-full flex flex-col py-8 md:py-16">
             <Card3D
                 className="group relative mx-4 sm:mx-8 md:mx-16 lg:mx-[200px] mt-6"
                 glowClassName="pointer-events-none absolute inset-0 -z-10 opacity-0"

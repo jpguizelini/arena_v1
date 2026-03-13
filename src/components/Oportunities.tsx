@@ -7,11 +7,11 @@ export default function Transformando() {
     return (
         <section className="relative z-20 w-full mb-20 pt-[110px] min-h-[600px]">
 
-            <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 md:grid-cols-2">
+            <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
                 {/* Lado esquerdo - Texto */}
-                <div className="flex flex-col justify-center px-14 sm:px-12 md:px-10 lg:pl-10 xl:pl-30 py-[82px]">
+                <div className="flex flex-col justify-center px-14 sm:px-12 md:px-10 lg:pl-10 xl:pl-30 py-[40px]">
                     <motion.h1
-                        className="text-[53px] lg:text-[64px] font-bebas font-bold leading-none mb-4 bg-gradient-to-r from-[#079c9e] via-accent to-[#079c9e] bg-clip-text text-transparent text-center sm:text-left"
+                        className="text-[50px] sm:text-[53px] lg:text-[64px] font-bebas font-bold leading-none mb-4 bg-gradient-to-r from-[#079c9e] via-accent to-[#079c9e] bg-clip-text text-transparent text-left  sm:text-center lg:text-left"
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6 }}
@@ -21,7 +21,7 @@ export default function Transformando() {
                     </motion.h1>
 
                     <motion.p
-                        className="text-[16px] lg:text-[18px] font-goldplay text-white text-center sm:text-left md:text-left leading-snug pr-0 sm:pr-18 mb-8"
+                        className="text-[16px] lg:text-[18px] font-goldplay text-white text-left sm:text-center lg:text-left leading-snug pr-0 lg:pr-18 mb-8 sm:mb-6"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
@@ -44,7 +44,7 @@ export default function Transformando() {
                     </motion.p>
 
                     <motion.div
-                        className="text-center sm:text-left"
+                        className="text-center lg:text-left"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
@@ -60,7 +60,7 @@ export default function Transformando() {
                 </div>
 
                 {/* Lado direito - Imagem EDITÁVEL */}
-                <div className="relative min-h-[400px] w-full h-full md:min-h-full overflow-visible">
+                <div className="relative min-h-[200px] sm:min-h-[400px] w-full h-full overflow-visible">
                     <EditableImage
                         slotId="home-espacos-oportunidades"
                         src="/images/home/espacos-oportunidades.jpeg"
@@ -73,7 +73,7 @@ export default function Transformando() {
             </div>
 
             {/* Robô — decorativo, usa Image normal */}
-            <div className="pointer-events-none absolute right-4 md:right-0 bottom-0 z-10 translate-y-[40%] sm:translate-y-[40%] md:translate-y-[82%]">
+            <div className="pointer-events-none absolute right-0 bottom-0 z-10 translate-y-[40%] sm:translate-y-[40%] md:translate-y-[82%]">
                 <div className="relative w-[100px] sm:w-[120px] md:w-[134px] h-[280px] sm:h-[330px] md:h-[370px]">
                     <Image
                         src="/images/home/robo1.png"

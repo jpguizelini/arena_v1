@@ -12,7 +12,7 @@ export default function Contact() {
     };
 
     return (
-        <section className="w-full flex flex-col md:flex-row items-start justify-center gap-12 py-24 px-4 max-w-7xl mx-auto mt-6">
+        <section className="w-full flex flex-col md:flex-row items-start justify-center gap-12 py-12 px-4 max-w-7xl mx-auto ">
             {/* Form Container */}
             {/*
                 <div className="relative w-full md:w-1/2 border-2 border-white rounded-[2.5rem] pl-0 pr-0 pb-0 pt-10 mr-12">
@@ -88,7 +88,7 @@ export default function Contact() {
             */}
 
             {/* Side Buttons */}
-            <div className="flex flex-col gap-8 w-full md:w-1/3 pt-15">
+            <div className="flex flex-col gap-8 w-full md:w-1/2 lg:w-1/3 pt-15">
                 <motion.button
                     className="flex items-center justify-center w-full max-w-[300px] mx-auto md:w-full md:max-w-none md:mx-0 px-10 py-5 rounded-2xl bg-gradient-to-r from-[#079c9e] via-accent to-[#079c9e] hover:scale-105 transition-transform duration-300 shadow-lg group"
                     initial={{ opacity: 0, y: 20 }}
@@ -107,8 +107,8 @@ export default function Contact() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     viewport={{ once: true, amount: 0.3 }}
                 >
-                    <span className="font-bebas text-2xl leading-none text-white sm:text-[35.04px] uppercase tracking-tight">
-                        Calendário de Bi-semana
+                    <span className="font-bebas text-4xl leading-none text-white sm:text-[35.04px] uppercase tracking-tight">
+                        Calendário de <br className="block sm:hidden" />Bi-semana
                     </span>
                 </motion.button>
             </div>

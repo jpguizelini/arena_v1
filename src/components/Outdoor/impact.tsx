@@ -35,7 +35,7 @@ export default function ImpactSection() {
   }, [mousePos]);
 
   return (
-    <div className="px-4 sm:px-8 md:px-16 lg:px-[60px] py-16">
+    <div className="px-2 sm:px-8 md:px-16 lg:px-[60px] md:py-16">
       <div className="relative w-full overflow-hidden">
 
         {/* Imagem com parallax */}

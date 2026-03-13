@@ -10,10 +10,10 @@ import { motion } from 'framer-motion';
 export default function ImidiaPaineis() {
   return (
     <div>
-      <ParallaxBanner imageSrc="/images/paineis/banner.jpg" imageAlt="banner" overlay="bg-black/10" />
+      <ParallaxBanner imageSrc="/images/paineis/banner.jpg" imageAlt="banner" overlay="bg-black/10" className="object-[55.5%_top] sm:object-position-[30%_30%]"/>
 
 
-      <div className="bg-transparent px-4 sm:px-8 md:px-16 lg:px-[60px] pt-[84px]">
+      <div className="bg-transparent px-4 sm:px-8 md:px-16 lg:px-[60px] pt-[50px]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -21,13 +21,13 @@ export default function ImidiaPaineis() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <GradientText className="mb-0 text-center leading-tight">
-            a maior em número de cidades no interior <br></br>
+            a maior em número de cidades no interior <br className="hidden sm:block"/>
             e a melhor em versatilidades de ativos.
           </GradientText>
         </motion.div>
       </div>
 
-    <div className="py-[100px]">
+    <div className="py-[50px]">
       <Coverage description = "Confira nossas cidades de autação"/>
     </div>
 
@@ -40,14 +40,14 @@ export default function ImidiaPaineis() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <GradientText size="text-[65px] sm:text-[80px] md:text-[65px]" className="mb-0 text-center leading-tight pt-[114px]">
-            nossos formatos de mídia
+          <GradientText size="text-[55px] sm:text-[80px] " className="mb-0 text-center leading-tight pt-[114px]">
+            nossos formatos <br className="block sm:hidden"/>de mídia
           </GradientText>
         </motion.div>
       </div>
       <ImidiaPaineisGrid />
 
-      <div className="py-[100px] pb-[100px]">
+      <div className="py-[50px] pb-[100px]">
         <TextWhitImage 
           imgSrc="/images/paineis/escolhacerto.png"
           title={"Escolha certo,\nEscolha I'mídia!"}

@@ -19,7 +19,7 @@ export default function HomeSections({
       <Hero />
       <Coverage description={
         <>
-          A maior em número de cidades atendidas por<br />
+          A maior em número de cidades atendidas por<br className="hidden sm:block" />
           uma empresa de OOH no interior e litora de São Paulo
         </>
       } />
