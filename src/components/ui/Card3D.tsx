@@ -58,7 +58,7 @@ export default function Card3D({
           aria-hidden="true"
           className={
             glowClassName ??
-            'pointer-events-none absolute inset-0 -z-10 opacity-70 blur-2xl bg-gradient-to-r from-[#c3d33f]/25 to-[#079c9e]/25'
+            'pointer-events-none absolute inset-0 -z-10 opacity-70 blur-2xl bg-linear-to-r from-accent/25 to-[#079c9e]/25'
           }
         />
 

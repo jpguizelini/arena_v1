@@ -30,7 +30,7 @@ export default function Coverage({ description }: CoverageProps) {
     return (
         <div className="w-full flex flex-col items-center justify-center">
             <motion.h1
-                className="text-[45px] sm:text-[47px] md:text-[52px] lg:text-[60px] xl:text-[65px] 2xl:text-[70px] font-bebas font-bold leading-none m-0 p-0 mt-[68px] bg-gradient-to-r from-accent via-[#079c9e] to-accent bg-clip-text text-transparent"
+                className="text-[45px] sm:text-[47px] md:text-[52px] lg:text-[60px] xl:text-[65px] 2xl:text-[70px] font-bebas font-bold leading-none m-0 p-0 mt-[68px] bg-linear-to-r from-accent via-[#079c9e] to-accent bg-clip-text text-transparent"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}

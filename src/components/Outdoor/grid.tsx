@@ -47,7 +47,7 @@ export default function OutdoorGrid() {
                 className="pointer-events-none absolute left-4 top-1/2 hidden h-14 w-auto -translate-y-1/2 opacity-80 md:block"
                 />
 
-                <h2 className="font-bebas bg-gradient-to-r from-accent to-cyan bg-clip-text text-[48px] sm:text-[60px] md:text-[76px] font-bold uppercase tracking-wide text-transparent">
+                <h2 className="font-bebas bg-linear-to-r from-accent to-cyan bg-clip-text text-[48px] sm:text-[60px] md:text-[76px] font-bold uppercase tracking-wide text-transparent">
                 Outros formatos
                 </h2>
             </motion.div>

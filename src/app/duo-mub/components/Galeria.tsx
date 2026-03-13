@@ -41,7 +41,7 @@ export default function Galeria() {
         transition={{ duration: 0.6 }}
         className="relative z-10 -mb-3 flex items-center justify-center px-4"
       >
-        <div className="rounded-lg bg-gradient-to-r from-accent to-cyan
+        <div className="rounded-lg bg-linear-to-r from-accent to-cyan
           px-3 sm:px-4 py-2 font-bebas font-normal uppercase tracking-wide
           text-[35px] sm:text-[45px] md:text-[55px]
           text-white shadow-lg leading-tight">

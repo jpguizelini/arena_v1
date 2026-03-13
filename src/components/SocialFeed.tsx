@@ -20,7 +20,7 @@ export default function SocialFeed() {
             <motion.h1
                 className="text-[40px] sm:text-[76.04px] leading-none font-bebas font-bold mt-[8px]
                 max-w-[170px] sm:max-w-[520px] ml-10 sm:ml-25 md:ml-30 lg:ml-39 lg:pl-[80px] xl:
-                bg-gradient-to-r from-[#079c9e] via-accent to-[#079c9e]
+                bg-linear-to-r from-[#079c9e] via-accent to-[#079c9e]
                 bg-clip-text text-transparent uppercase text-left"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}

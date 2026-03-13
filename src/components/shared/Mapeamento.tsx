@@ -34,7 +34,7 @@ export default function Mapeamento() {
                             font-regular 
                             mb-2
                             
-                            bg-gradient-to-r 
+                            bg-linear-to-r 
                             from-[#c3d33f] 
                             to-[#079c9e]
                             bg-clip-text

@@ -8,7 +8,7 @@ export default function EmpresasGrupo() {
     return (
         <div className="w-full flex flex-col items-center justify-center">
             <motion.h1 
-                className="text-[53px] lg:text-[64px] font-bebas font-bold mt-[58px] bg-gradient-to-r from-[#079c9e] via-accent to-[#079c9e] bg-clip-text text-transparent"
+                className="text-[53px] lg:text-[64px] font-bebas font-bold mt-[58px] bg-linear-to-r from-[#079c9e] via-accent to-[#079c9e] bg-clip-text text-transparent"
                 variants={scaleFade}
                 initial="hidden"
                 whileInView="show"

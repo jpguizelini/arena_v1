@@ -11,7 +11,7 @@ export default function Transformando() {
                 {/* Lado esquerdo - Texto */}
                 <div className="flex flex-col justify-center px-14 sm:px-12 md:px-10 lg:pl-10 xl:pl-30 py-[40px]">
                     <motion.h1
-                        className="text-[50px] sm:text-[53px] lg:text-[64px] font-bebas font-bold leading-none mb-4 bg-gradient-to-r from-[#079c9e] via-accent to-[#079c9e] bg-clip-text text-transparent text-left  sm:text-center lg:text-left"
+                        className="text-[50px] sm:text-[53px] lg:text-[64px] font-bebas font-bold leading-none mb-4 bg-linear-to-r from-[#079c9e] via-accent to-[#079c9e] bg-clip-text text-transparent text-left  sm:text-center lg:text-left"
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6 }}

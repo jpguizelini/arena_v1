@@ -18,7 +18,7 @@ export default function Contact() {
                 <div className="relative w-full md:w-1/2 border-2 border-white rounded-[2.5rem] pl-0 pr-0 pb-0 pt-10 mr-12">
                     
                     <div className="absolute -top-8 left-5 sm:left-10">
-                        <div className="flex items-center gap-2 px-4 py-2 sm:gap-4 sm:px-8 sm:py-3 rounded-2xl bg-gradient-to-tr from-[#c3d33f] to-[#079c9e] shadow-lg">
+                        <div className="flex items-center gap-2 px-4 py-2 sm:gap-4 sm:px-8 sm:py-3 rounded-2xl bg-linear-to-tr from-[#c3d33f] to-[#079c9e] shadow-lg">
                             <Image src="/images/icone-menssagem.png" alt="WhatsApp" width={20} height={21} className="sm:w-[37px] sm:h-[38px]" />
                             <span className="font-bebas text-[30px] sm:text-[52px] leading-none text-white uppercase tracking-tight">
                                 Fale com a I'mídia.
@@ -67,7 +67,7 @@ export default function Contact() {
                                     className="overflow-hidden"
                                 >
                                     <motion.button
-                                        className="relative w-full py-4 bg-gradient-to-tr from-[#c3d33f] to-[#079c9e] font-bebas text-[28px] uppercase tracking-wider text-white overflow-hidden"
+                                        className="relative w-full py-4 bg-linear-to-tr from-[#c3d33f] to-[#079c9e] font-bebas text-[28px] uppercase tracking-wider text-white overflow-hidden"
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
                                         transition={{ duration: 0.2 }}
@@ -92,7 +92,7 @@ export default function Contact() {
                 <motion.button
                     type="button"
                     onClick={() => alert('Em breve!')}
-                    className="flex items-center justify-center w-full max-w-[300px] mx-auto md:w-full md:max-w-none md:mx-0 px-10 py-5 rounded-2xl bg-gradient-to-r from-[#079c9e] via-accent to-[#079c9e] hover:scale-105 transition-transform duration-300 shadow-lg group"
+                    className="flex items-center justify-center w-full max-w-[300px] mx-auto md:w-full md:max-w-none md:mx-0 px-10 py-5 rounded-2xl bg-linear-to-r from-[#079c9e] via-accent to-[#079c9e] hover:scale-105 transition-transform duration-300 shadow-lg group"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
@@ -105,7 +105,7 @@ export default function Contact() {
                 <motion.button
                     type="button"
                     onClick={() => alert('Em breve!')}
-                    className="flex items-center justify-center w-full max-w-[300px] mx-auto md:w-full md:max-w-none md:mx-0 px-10 py-5 mt-[-4px] rounded-2xl bg-gradient-to-r from-[#079c9e] via-accent to-[#079c9e] hover:scale-105 transition-transform duration-300 shadow-lg group"
+                    className="flex items-center justify-center w-full max-w-[300px] mx-auto md:w-full md:max-w-none md:mx-0 px-10 py-5 mt-[-4px] rounded-2xl bg-linear-to-r from-[#079c9e] via-accent to-[#079c9e] hover:scale-105 transition-transform duration-300 shadow-lg group"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}

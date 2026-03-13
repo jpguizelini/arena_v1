@@ -43,7 +43,7 @@ export default function FormatosMidia({
           />
         )}
 
-        <h2 className="font-bebas bg-gradient-to-r from-accent to-cyan bg-clip-text text-[48px] sm:text-[60px] md:text-[76px] font-bold uppercase tracking-wide text-transparent">
+        <h2 className="font-bebas bg-linear-to-r from-accent to-cyan bg-clip-text text-[48px] sm:text-[60px] md:text-[76px] font-bold uppercase tracking-wide text-transparent">
           {title}
         </h2>
       </motion.div>
