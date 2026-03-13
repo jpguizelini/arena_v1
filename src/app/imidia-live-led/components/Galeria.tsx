@@ -10,5 +10,5 @@ const galleryItems = [
 ]
 
 export default function GaleriaPage() {
-  return <Galeria items={galleryItems} columns={2} />
+  return <Galeria items={galleryItems} columns={2} className="pt-2" />
 }

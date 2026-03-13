@@ -114,7 +114,7 @@ export default function Navbar() {
                     className={`md:hidden fixed top-[60px] left-0 w-full bg-primary transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
                     aria-hidden={!isMenuOpen}
                     // @ts-expect-error — inert é HTML5 válido sem typing nativo no React ainda
-                    inert={!isMenuOpen ? '' : undefined}
+                    inert={!isMenuOpen}
                 >
                     <ul className="flex flex-col items-center py-4 font-bebas">
                         {isAuthenticated ? (
