@@ -26,11 +26,21 @@ const goldplay = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "I´mídia",
-  description: "",
-  icons: {
-    icon: '/images/logo.png',
-  }
+  title: {
+    default: "I'mídia | Mídia OOH no Interior e Litoral Paulista",
+    template: "%s | I'mídia"
+  },
+  description: "A maior empresa de mídia OOH em número de cidades no interior e litoral paulista. Outdoors, painéis digitais, front light, live LED e muito mais.",
+  keywords: ["mídia OOH", "outdoor", "painel digital", "interior paulista", "litoral paulista", "publicidade externa", "DOOH"],
+  openGraph: {
+    title: "I'mídia | Mídia OOH",
+    description: "A maior cobertura OOH do interior e litoral paulista. +30 cidades, +240 milhões de impactos mensais.",
+    url: "https://arena-v1.vercel.app",
+    siteName: "I'mídia",
+    locale: "pt_BR",
+    type: "website",
+  },
+  icons: { icon: '/images/logo.png' }
 };
 
 export default async function RootLayout({
