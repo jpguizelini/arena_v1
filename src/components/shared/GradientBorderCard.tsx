@@ -32,7 +32,7 @@ export default function GradientBorderCard({
           </linearGradient>
         </defs>
         <rect
-          x="1" y="1" width="99%" height="99%"
+          x="1.5" y="1.5" width="calc(100% - 3px)" height="calc(100% - 3px)"
           rx="12" ry="12" fill="none"
           stroke={`url(#${gId})`}
           strokeWidth={strokeWidth}

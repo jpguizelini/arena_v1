@@ -147,3 +147,9 @@ footer {
     color: var(--foreground);
   }
 }
+
+@layer utilities {
+  .footer-spacing {
+    @apply pb-[180px] sm:pb-[200px] md:pb-[220px] lg:pb-[240px];
+  }
+}

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Outdoor() {
     return (
         <div>
-            <div className="relative min-h-screen">
+            <div className="relative min-h-screen pb-64">
                 <div className="relative z-10">
                     <Banner />
                     <OutdoorDescription />
@@ -23,7 +23,6 @@ export default function Outdoor() {
                     <GalleryGrid />
                     <MappingSection />
                     <OutdoorGrid />
-                    <div className="h-16 md:h-48"></div>
                 </div>
             </div>
         </div>

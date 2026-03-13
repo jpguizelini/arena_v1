@@ -31,7 +31,7 @@ export default function Galeria() {
   }, [selected])
 
   return (
-    <section className="w-full py-16 mb-32">
+    <section className="w-full pt-16 pb-64">
 
       {/* Título */}
       <motion.div

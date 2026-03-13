@@ -13,10 +13,10 @@ export default function MarcaEmMovimento() {
             whileInView="show"
             viewport={vp}
         >
-            <div className="relative z-10 w-full max-w-[1920px] mx-auto mt-[-6px] flex flex-row items-start px-6 2xl:px-10 ">
+            <div className="relative z-10 w-full max-w-[1920px] mx-auto mt-[-6px] flex flex-row items-start px-6 lg:px-10 2xl:px-30 ">
                 <motion.div
                     variants={fadeLeft}
-                    className="w-1/3 md:w-2/5 lg:w-[433px] 2xl:w-[500px]  lg:mt-[-20px] shrink-0"
+                    className="w-1/2 md:w-2/5 lg:w-[433px] 2xl:w-[500px]  lg:mt-[-20px] shrink-0"
                 >
                     <Image
                         src="/images/live-led/robo-1.png"
@@ -28,7 +28,7 @@ export default function MarcaEmMovimento() {
                 </motion.div>
                 <motion.div variants={fadeRight}>
                     <motion.h2 
-                        className="text-white text-5xl sm:text-6xl lg:text-[77px] xl:text-8xl 2xl:text-9xl lg:pt-10 font-bold font-bebas leading-none text-right mt-4 2xl:ml-100"
+                        className="text-white text-5xl sm:text-6xl lg:text-[77px] xl:text-8xl 2xl:text-9xl lg:pt-10 font-bold font-bebas leading-none text-right mt-4 2xl:ml-0"
                         variants={fadeRight}
                     >
                         POTÊNCIA PARA SUA MARCA EM MOVIMENTO

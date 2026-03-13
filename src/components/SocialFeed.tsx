@@ -16,7 +16,7 @@ export default function SocialFeed() {
     ];
 
     return (
-        <section className="relative w-full max-w-7xl mx-auto px-4 mt-[29px] pb-[180px]">
+        <section className="relative w-full max-w-7xl mx-auto px-4 mt-[29px]">
             <motion.h1
                 className="text-[40px] sm:text-[76.04px] leading-none font-bebas font-bold mt-[8px]
                 max-w-[170px] sm:max-w-[520px] ml-10 sm:ml-25 md:ml-30 lg:ml-39 lg:pl-[80px] xl:

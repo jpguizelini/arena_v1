@@ -20,7 +20,6 @@ export default function MegaLight() {
             <OutroFormatos />
             <Mapeamento />
             <Galeria />
-
         </>
     )
 }

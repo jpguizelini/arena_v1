@@ -77,10 +77,10 @@ export default function BancaDigital() {
                     alt="Banca Digital em ponto de alta circulação"
                     fill
                     sizes="100vw"
-                    className="object-cover object-[0%_center]"
+                    className="object-cover object-[50%_80%] lg:object-[0%_center]"
                 />
                 <div
-                    className="absolute left-0 top-0 w-full md:w-3/4 h-full"
+                    className=" absolute left-0 top-0 w-full md:w-3/4 h-full"
                     style={{
                         background: 'radial-gradient(ellipse 100% 300% at -10% 50%, rgba(168, 201, 60, 1) 0%, rgba(61, 151, 98, 0.95) 60%, rgba(0, 104, 105, 0.7) 80%, rgba(0, 0, 0, 0) 100%)'
                     }}
@@ -94,7 +94,7 @@ export default function BancaDigital() {
                 >
                     <motion.h2 
                         variants={fadeLeft} 
-                        className="text-7xl text-white font-bebas font-bold mb-4"
+                        className="text-5xl lg:text-7xl text-white font-bebas font-bold mb-4"
                     >
                         POR QUE É ICÔNICO?
                     </motion.h2>

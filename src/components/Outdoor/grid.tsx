@@ -32,7 +32,7 @@ const gridItems = [
 
 export default function OutdoorGrid() {
     return (
-        <section className="w-full py-16">
+        <section className="w-full pt-16">
             <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}

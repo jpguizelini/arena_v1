@@ -16,7 +16,7 @@ export default function PorqueEscolher() {
 
                 <div className="text-white px-4 lg:ml-[70px] lg:max-w-[50%] 2xl:pl-50">
 
-                    <GradientText size="lg:text-[64px] 2xl:text-7xl" position="text-left" >
+                    <GradientText size=" text-4xl lg:text-[64px] 2xl:text-7xl" position="text-left" >
 
                         PORQUE ESCOLHER A I'MÍDIA
 
@@ -40,7 +40,7 @@ export default function PorqueEscolher() {
 
                 </div>
 
-                <div className="flex-1 h-auto lg:h-[660px] overflow-visible relative flex items-end justify-start lg:-translate-x-5">
+                <div className="flex-1 h-autolg:h-[660px] overflow-visible relative flex md:items-end justify-center md:justify-start lg:-translate-x-5">
 
                     <Image
 
@@ -56,7 +56,7 @@ export default function PorqueEscolher() {
 
                         sizes="(max-width: 1080px) 33vw, 443px"
 
-                        className="max-w-full h-auto object-contain relative z-10 lg:-mb-20"
+                        className="max-w-[200px] sm:max-w-[250px] lg:max-w-full h-auto object-contain relative z-10 lg:-mb-20"
 
                     />
 

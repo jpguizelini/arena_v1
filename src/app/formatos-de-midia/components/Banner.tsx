@@ -13,9 +13,9 @@ export default function Banner() {
                     alt="Formatos de Mídia" 
                     fill 
                     priority
-                    className="object-cover object-[80%_center]"
+                    className="object-cover object-[70%_center] lg:object-[80%_center]"
                 />
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/40" />
             </div>
             <div className="relative">
                 <Image 
@@ -23,9 +23,9 @@ export default function Banner() {
                     alt="Formatos de Mídia" 
                     fill 
                     priority
-                    className="object-cover object-[10%_center]"
+                    className="object-cover object-[60%_center] lg:object-[10%_center]"
                 />
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/40" />
             </div>
             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pt-[44px] px-4 text-center col-span-2">
                 <motion.div

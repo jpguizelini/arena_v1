@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 
 export default function ImidiaPaineis() {
   return (
-    <div>
+    <div className="pb-64">
       <ParallaxBanner imageSrc="/images/paineis/banner.jpg" imageAlt="banner" overlay="bg-black/10" className="object-[55.5%_top] sm:object-position-[30%_30%]"/>
 
 
@@ -144,10 +144,6 @@ export default function ImidiaPaineis() {
           </motion.div>
         </ParallaxBanner>
       </div>
-      <div className="pt-[180px]">
-
-      </div>
-
     </div>
   )
 }

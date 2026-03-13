@@ -31,9 +31,8 @@ export default function Cobertura() {
                     >
                         <motion.h2
                             className="font-goldplay font-bold uppercase
-                                text-transparent bg-clip-text
                                 text-white
-                                text-3xl sm:text-4xl md:text-5xl lg:text-[42px] 2xl:text-[52px]"
+                                text-3xl sm:text-4xl md:text-5xl lg:text-[32px] 2xl:text-[42px]"
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true, amount: 0.3 }}

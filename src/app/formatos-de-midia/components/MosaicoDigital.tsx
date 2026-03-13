@@ -76,7 +76,7 @@ export default function MosaicoDigital() {
                     alt="Mosaico Digital em ponto estratégico"
                     fill
                     sizes="100vw"
-                    className="object-cover"
+                    className="object-cover object-[62%_center] lg:object-[50%_10%]"
                 />
                 <div
                     className="absolute left-0 top-0 w-full md:w-3/4 h-full"
@@ -93,7 +93,7 @@ export default function MosaicoDigital() {
                 >
                     <motion.h2 
                         variants={fadeLeft} 
-                        className="text-7xl text-white font-bebas font-bold mb-4"
+                        className="text-5xl lg:text-7xl text-white font-bebas font-bold mb-4"
                     >
                         POR QUE É ICÔNICO?
                     </motion.h2>
