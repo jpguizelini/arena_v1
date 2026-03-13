@@ -32,7 +32,7 @@ export default function MappingSection() {
                         mb-2
                         
                         bg-linear-to-r 
-                        from-[#c3d33f] 
+                        from-accent
                         to-[#079c9e]
                         bg-clip-text
                         text-transparent uppercase"
@@ -43,7 +43,7 @@ export default function MappingSection() {
                     >Conheça nosso estudo de geomarketing</motion.h1>
 
                     <motion.p 
-                        className="font-goldplay text-white text-[18px] sm:text-[22px] md:text-[28px] leading-relaxed mb-8 break-words"
+                        className="font-goldplay text-white text-[18px] sm:text-[22px] md:text-[28px] leading-relaxed mb-8 wrap-break-word"
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
@@ -53,7 +53,7 @@ export default function MappingSection() {
                     </motion.p>
                     
                     <motion.p 
-                        className="font-goldplay text-white text-[18px] sm:text-[22px] md:text-[28px] leading-relaxed mb-8 break-words"
+                        className="font-goldplay text-white text-[18px] sm:text-[22px] md:text-[28px] leading-relaxed mb-8 wrap-break-word"
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}

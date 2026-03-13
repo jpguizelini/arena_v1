@@ -62,7 +62,7 @@ export default function ImidiaPaineisGrid() {
 
             <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 ease-in-out group-hover:bg-black/20" />
 
-            <div className="absolute inset-0 flex items-center justify-center p-8 transition-all duration-300 ease-in-out group-hover:translate-y-[-100%]">
+            <div className="absolute inset-0 flex items-center justify-center p-8 transition-all duration-300 ease-in-out group-hover:translate-y-full">
               <div className="border-2 border-white/80 px-6 py-3 text-center md:px-8 md:py-4 transition-all duration-300 ease-in-out group-hover:scale-95 group-hover:opacity-0">
                 <h3 className="text-lg font-bold uppercase tracking-wide text-white md:text-3xl">
                   {item.title}
@@ -94,7 +94,7 @@ export default function ImidiaPaineisGrid() {
 
             <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 ease-in-out group-hover:bg-black/20" />
 
-            <div className="absolute inset-0 flex items-center justify-center p-6 transition-all duration-300 ease-in-out group-hover:translate-y-[-100%]">
+            <div className="absolute inset-0 flex items-center justify-center p-6 transition-all duration-300 ease-in-out group-hover:translate-y-full">
               <div className="border-2 border-white/80 px-4 py-2 text-center md:px-6 md:py-3 transition-all duration-300 ease-in-out group-hover:scale-95 group-hover:opacity-0">
                 <h3 className="text-sm font-bold uppercase tracking-wide text-white md:text-xl">
                   {item.title}
