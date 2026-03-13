@@ -129,8 +129,7 @@ export default function Hero() {
                   alt={`Outdoor Imídia ${current + 1}`}
                   fill
                   sizes="100vw"
-                  className="object-cover md:object-contain"
-                  style={{ objectPosition: 'center 30%' }}
+                  className="object-cover md:object-contain object-[68%_30%] sm:object-[57%_30%] md:ml-20 md:object-[50%_30%]"
                   priority={current === 0}
                 />
               </motion.div>
@@ -139,7 +138,7 @@ export default function Hero() {
         </motion.div>
 
         {/* ── Gradiente overlay ── */}
-        <div className="absolute inset-0">
+        <div className="hidden sm:block absolute inset-0">
           <div
             className="absolute left-0 top-0 w-full md:w-3/4 h-full"
             style={{
@@ -150,25 +149,25 @@ export default function Hero() {
 
         {/* ── Conteúdo ── */}
         <motion.div
-          className="absolute inset-0 flex items-center"
+          className="absolute inset-0 flex items-center justify-center sm:justify-start"
           style={{ x: contentX, y: contentY }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="pl-4 sm:pl-8 md:pl-[76px] flex flex-col gap-1 max-w-[90%] sm:max-w-[80%] md:max-w-none">
+          <div className="pl-4 pt-45 sm:pt-0 sm:pl-8 md:pl-[76px] flex flex-col gap-1 max-w-[90%] sm:max-w-[80%] md:max-w-none sm:items-start items-center justify-center text-center sm:text-left">
             <motion.p
               className="text-white font-bold text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] xl:text-[34px] 2xl:text-[38px]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              Sua empresa em <span className="block sm:inline">evidência</span>
+              Sua empresa em <span className="inline">evidência</span>
             </motion.p>
 
             <div ref={numbersRef}>
               <motion.h1
-                className="font-bebas text-accent font-bold text-[48px] sm:text-[68px] md:text-[89px] lg:text-[110px] xl:text-[120px] 2xl:text-[130px] leading-none"
+                className="font-bebas text-accent font-bold text-[50px] sm:text-[68px] md:text-[89px] lg:text-[110px] xl:text-[120px] 2xl:text-[130px] leading-none"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
                 transition={{
@@ -180,7 +179,7 @@ export default function Hero() {
                 +{cidades} CIDADES
               </motion.h1>
               <motion.h1
-                className="font-bebas text-accent font-bold text-[48px] sm:text-[68px] md:text-[89px] lg:text-[110px] xl:text-[120px] 2xl:text-[130px] leading-none"
+                className="font-bebas text-accent font-bold text-[50px] sm:text-[68px] md:text-[89px] lg:text-[110px] xl:text-[120px] 2xl:text-[130px] leading-none"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
                 transition={{
@@ -199,7 +198,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.1 }}
             >
-              DE PESSOAS IMPACTADAS <span className="block sm:inline">MENSALMENTE</span>
+              DE PESSOAS IMPACTADAS <span className="inline">MENSALMENTE</span>
             </motion.p>
 
             <motion.button
