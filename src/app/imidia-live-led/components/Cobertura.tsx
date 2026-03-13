@@ -43,7 +43,7 @@ export default function Cobertura() {
                         </motion.h2>
                     </motion.div>
 
-                </div>
+                </GradientBorderCard>
             </Card3D>
 
         </section>
