@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Card3D from "@/components/ui/Card3D";
+import GradientBorderCard from "@/components/shared/GradientBorderCard";
 import { motion } from 'framer-motion';
 
 export default function MappingSection() {
@@ -11,30 +12,10 @@ export default function MappingSection() {
                 className="group relative mx-4 sm:mx-8 md:mx-16 lg:mx-[200px] mt-6"
                 glowClassName="pointer-events-none absolute inset-0 -z-10 opacity-0"
             >
-                <div className="relative px-4 sm:px-6 md:px-8 pt-8 pb-10 text-center bg-black rounded-xl transition-shadow duration-200 group-hover:shadow-[0_0_28px_rgba(195,211,63,0.28),0_0_28px_rgba(7,156,158,0.22)]">
-                {/* Borda SVG - sempre acompanha o tamanho do container */}
-                <svg
-                    className="absolute inset-0 w-full h-full"
-                    xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="none"
+                <GradientBorderCard
+                    className="bg-black rounded-xl transition-shadow duration-200 group-hover:shadow-[0_0_28px_rgba(195,211,63,0.28),0_0_28px_rgba(7,156,158,0.22)]"
+                    innerClassName="px-4 sm:px-6 md:px-8 pt-8 pb-10 text-center"
                 >
-                    <defs>
-                        <linearGradient id="mappingBorderGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                            <stop offset="0%" stopColor="#c3d33f" />
-                            <stop offset="100%" stopColor="#079c9e" />
-                        </linearGradient>
-                    </defs>
-                    <rect
-                        x="1" y="1"
-                        width="99%" height="99%"
-                        rx="12" ry="12"
-                        fill="none"
-                        stroke="url(#mappingBorderGradient)"
-                        strokeWidth="3"
-                        strokeDasharray="2 8"
-                        strokeLinecap="round"
-                    />
-                </svg>
 
                 <motion.div 
                 className="relative z-10"
@@ -96,7 +77,7 @@ export default function MappingSection() {
                         BAIXE AQUI!
                     </Button>
                 </motion.div>
-            </div>
+                </GradientBorderCard>
             </Card3D>
         </div>
     );

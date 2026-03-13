@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Card3D from "@/components/ui/Card3D";
+import GradientBorderCard from "@/components/shared/GradientBorderCard";
 import { motion } from "framer-motion";
 import type { ReactNode } from 'react';
 
@@ -49,29 +50,11 @@ export default function Coverage({ description }: CoverageProps) {
             </motion.p>
 
             <Card3D className="group relative mx-[57px] mt-[15px]" glowClassName="pointer-events-none absolute inset-0 -z-10 opacity-0">
-                <div className="relative px-8 pt-8 pb-10 text-center transition-shadow duration-200 group-hover:shadow-[0_0_28px_rgba(195,211,63,0.28),0_0_28px_rgba(7,156,158,0.22)] bg-black rounded-xl">
-                    <svg
-                        className="pointer-events-none absolute inset-0 w-full h-full"
-                        xmlns="http://www.w3.org/2000/svg"
-                        preserveAspectRatio="none"
-                    >
-                        <defs>
-                            <linearGradient id="borderGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                                <stop offset="0%" stopColor="#c3d33f" />
-                                <stop offset="100%" stopColor="#079c9e" />
-                            </linearGradient>
-                        </defs>
-                        <rect
-                            x="2" y="2"
-                            width="calc(100% - 4px)" height="calc(100% - 4px)"
-                            rx="12" ry="12"
-                            fill="none"
-                            stroke="url(#borderGradient)"
-                            strokeWidth="3"
-                            strokeDasharray="2 8"
-                            strokeLinecap="round"
-                        />
-                    </svg>
+                <GradientBorderCard
+                    className="bg-black rounded-xl transition-shadow duration-200 group-hover:shadow-[0_0_28px_rgba(195,211,63,0.28),0_0_28px_rgba(7,156,158,0.22)]"
+                    innerClassName="px-8 pt-8 pb-10 text-center"
+                    strokeWidth={3}
+                >
 
                     <div className="relative z-10 mt-[13px] mb-[2px] text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] 2xl:text-[20px]">
 
@@ -125,7 +108,7 @@ export default function Coverage({ description }: CoverageProps) {
                             OPÇÕES NA MINHA CIDADE
                         </Button>
                     </div>
-                </div>
+                </GradientBorderCard>
             </Card3D>
         </div>
     );
