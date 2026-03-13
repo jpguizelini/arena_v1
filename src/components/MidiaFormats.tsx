@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import FadeIn from '@/components/ui/FadeIn'
+import { stagger, fadeUp, scaleFade, vp } from '@/lib/animations'
 
 export default function FormatosMidia() {
     const formatos = [
@@ -21,17 +21,23 @@ export default function FormatosMidia() {
         <div className="w-full flex flex-col items-center justify-center">
             <motion.h1
                 className="text-[40px] sm:text-[60px] md:text-[73px] ld:text-[83px] lg:text-8xl font-bebas font-bold mt-[122px] pb-[-10px] bg-linear-to-r from-[#079c9e] via-accent to-[#079c9e] bg-clip-text text-transparent uppercase text-center"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true, amount: 0.3 }}
+                variants={scaleFade}
+                initial="hidden"
+                whileInView="show"
+                viewport={vp}
             >
                 Nossos Formatos de Midia
             </motion.h1>
 
-            <div className="w-fit mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+            <motion.div
+                className="w-fit mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0"
+                variants={stagger(0, 0.07)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.1 }}
+            >
                 {formatos.map((formato, index) => (
-                    <FadeIn key={index} delay={index * 0.1}>
+                    <motion.div key={index} variants={fadeUp}>
                         <Link
                             href={formato.href}
                             className="relative w-[271.25px] h-[297px] overflow-hidden group block"
@@ -58,9 +64,9 @@ export default function FormatosMidia() {
                                 </div>
                             </div>
                         </Link>
-                    </FadeIn>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
     )
 }

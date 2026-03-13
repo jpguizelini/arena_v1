@@ -110,7 +110,12 @@ export default function Navbar() {
                     <span className={`block w-6 h-0.5 bg-white transition-transform duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
                 </button>
 
-                <div className={`md:hidden fixed top-[60px] left-0 w-full bg-primary transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+                <div 
+                    className={`md:hidden fixed top-[60px] left-0 w-full bg-primary transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
+                    aria-hidden={!isMenuOpen}
+                    // @ts-expect-error — inert é HTML5 válido sem typing nativo no React ainda
+                    inert={!isMenuOpen ? '' : undefined}
+                >
                     <ul className="flex flex-col items-center py-4 font-bebas">
                         {isAuthenticated ? (
                             <li className="w-full text-center border-b border-white/10 py-3 flex justify-center gap-2">

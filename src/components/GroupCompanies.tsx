@@ -2,27 +2,23 @@ import Image from "next/image"
 import Card3D from "@/components/ui/Card3D"
 import GradientBorderCard from "@/components/shared/GradientBorderCard"
 import { motion } from "framer-motion"
+import { stagger, fadeUp, scaleFade, vp } from '@/lib/animations'
 
 export default function EmpresasGrupo() {
     return (
         <div className="w-full flex flex-col items-center justify-center">
             <motion.h1 
                 className="text-[53px] lg:text-[64px] font-bebas font-bold mt-[58px] bg-gradient-to-r from-[#079c9e] via-accent to-[#079c9e] bg-clip-text text-transparent"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true, amount: 0.3 }}
+                variants={scaleFade}
+                initial="hidden"
+                whileInView="show"
+                viewport={vp}
             >
                 EMPRESAS DO GRUPO
             </motion.h1>
 
             {/* Logo principal */}
-            <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-            >
+            <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={vp}>
                 <Card3D className="group mt-10" glowClassName="pointer-events-none absolute inset-0 -z-10 opacity-0">
                     <GradientBorderCard
                         className="w-[353px] h-[143px]"
@@ -35,14 +31,15 @@ export default function EmpresasGrupo() {
             </motion.div>
 
             {/* 3 logos secundários com stagger */}
-            <div className="flex flex-wrap items-center mt-[50px] lg:mt-[28px] justify-center gap-15">
+            <motion.div
+                className="flex flex-wrap items-center mt-[50px] lg:mt-[28px] justify-center gap-15"
+                variants={stagger(0.1, 0.15)}
+                initial="hidden"
+                whileInView="show"
+                viewport={vp}
+            >
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
-                >
+                <motion.div variants={fadeUp}>
                     <Card3D className="group" glowClassName="pointer-events-none absolute inset-0 -z-10 opacity-0">
                         <div className="relative w-[262px] h-[143px] px-[40px] py-[26px] flex items-center justify-center bg-black rounded-[12px] transition-shadow duration-200 group-hover:shadow-[0_0_28px_rgba(195,211,63,0.28),0_0_28px_rgba(7,156,158,0.22)]">
                             <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -59,12 +56,7 @@ export default function EmpresasGrupo() {
                     </Card3D>
                 </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-                >
+                <motion.div variants={fadeUp}>
                     <Card3D className="group" glowClassName="pointer-events-none absolute inset-0 -z-10 opacity-0">
                         <div className="relative w-[262px] h-[143px] px-[40px] py-[26px] flex items-center justify-center bg-black rounded-[12px] transition-shadow duration-200 group-hover:shadow-[0_0_28px_rgba(195,211,63,0.28),0_0_28px_rgba(7,156,158,0.22)]">
                             <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -81,12 +73,7 @@ export default function EmpresasGrupo() {
                     </Card3D>
                 </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.5, delay: 0.55, ease: "easeOut" }}
-                >
+                <motion.div variants={fadeUp}>
                     <Card3D className="group" glowClassName="pointer-events-none absolute inset-0 -z-10 opacity-0">
                         <div className="relative w-[262px] h-[143px] px-[40px] py-[26px] flex items-center justify-center bg-black rounded-[12px] transition-shadow duration-200 group-hover:shadow-[0_0_28px_rgba(195,211,63,0.28),0_0_28px_rgba(7,156,158,0.22)]">
                             <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -103,7 +90,7 @@ export default function EmpresasGrupo() {
                     </Card3D>
                 </motion.div>
 
-            </div>
+            </motion.div>
         </div>
     )
 }

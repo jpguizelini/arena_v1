@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { stagger, scaleFade, vp } from '@/lib/animations'
 
 interface GalleryItem {
   id: number
@@ -53,10 +54,10 @@ export default function Galeria({
 
       {/* Título */}
       <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.6 }}
+        variants={scaleFade}
+        initial="hidden"
+        whileInView="show"
+        viewport={vp}
         className="relative z-10 -mb-3 flex items-center justify-center px-4"
       >
         <div className="rounded-lg bg-linear-to-r from-accent to-cyan
@@ -68,15 +69,18 @@ export default function Galeria({
       </motion.div>
 
       {/* Grid */}
-      <div className={`grid w-full overflow-hidden ${gridClasses[columns]}`}>
+      <motion.div
+        className={`grid w-full overflow-hidden ${gridClasses[columns]}`}
+        variants={stagger(0, 0.07)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.05 }}
+      >
         {items.length > 0 ? (
           items.map((item, index) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              variants={scaleFade}
               className="group relative overflow-hidden cursor-pointer w-full h-[400px] md:h-[500px]"
               onClick={() => setSelected({ img: item.image, title: `${title.toLowerCase()} ${item.id}` })}
               role="button"
@@ -108,7 +112,7 @@ export default function Galeria({
             />
           ))
         )}
-      </div>
+      </motion.div>
 
       {/* Modal lightbox */}
       {selected && (
