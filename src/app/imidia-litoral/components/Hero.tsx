@@ -33,38 +33,40 @@ export default function Hero() {
       <ParallaxBanner
         imageSrc="/images/litoral/banner4.jpg"
         imageAlt="banner-bottom"
-        objectPosition="80% 75%"
+        className="object-[10%_75%] "
       >
         <div className="absolute inset-0">
 
-          {/* Gradiente — mais largo no mobile para cobrir o texto à direita */}
+          {/* Gradiente*/}
           <div
-            className="absolute right-0 top-0 h-full w-full md:w-3/4"
+            className="absolute right-0 top-0 h-full w-full md:w-3/4  hidden md:block"
             style={{
               background: 'radial-gradient(ellipse 100% 300% at 110% 50%, rgba(168, 201, 60, 1) 0%, rgba(61, 151, 98, 0.95) 60%, rgba(0, 104, 105, 0.7) 80%, rgba(0, 0, 0, 0) 100%)'
             }}
           />
 
-          {/* Texto colado à direita em todos os tamanhos */}
-          <motion.div
+          {/* Mobile background escuro */}
+          <div className="absolute inset-0 bg-black/40 md:hidden" />
+
+          <div
             className="absolute right-0 top-0 h-full flex items-center justify-end px-4 sm:px-8 md:px-12 lg:px-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
           >
             <motion.h1
               className="
-                font-bebas-neue font-bold text-white text-right
+                font-bebas-neue font-bold text-white  text-right
                 leading-none tracking-tighter
                 text-[clamp(28px,8vw,90px)]
                 sm:text-[clamp(36px,7vw,90px)]
                 md:text-[clamp(40px,5.5vw,90px)]
               "
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               style={isTouchDevice ? {} : { x: smoothX, y: smoothY }}
             >
               A MAIOR COBERTURA<br />DO LITORAL PAULISTA
             </motion.h1>
-          </motion.div>
+          </div>
 
         </div>
       </ParallaxBanner>

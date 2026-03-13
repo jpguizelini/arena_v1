@@ -51,9 +51,8 @@ export default function BannerMeio() {
           alt="Sua marca em evidência"
           fill
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-[90%_20%] lg:object-[center_5%]"
           style={{
-            objectPosition: 'center 5%',
             imageRendering: 'crisp-edges'
           }}
           quality={95}

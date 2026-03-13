@@ -7,7 +7,7 @@ export default function RegioesAtendidas() {
     return (
         <div className="px-4 sm:px-8 md:px-16 lg:px-[60px] py-16">
             <div className="mb-12">
-                <GradientText size="text-[65px]">
+                <GradientText size="text-[60px] sm:text-[65px]">
                     SANTOS - GUARUJÁ - PRAIA GRANDE - São Vicente
                 </GradientText>
             </div>
