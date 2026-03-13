@@ -40,9 +40,9 @@ export default function Footer() {
         <>
             <footer className="relative">
                 <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 py-10 sm:py-10">
-                    <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-5">
-                        {columns.map((col) => (
-                            <div key={col.title} className="space-y-0 text-center sm:text-left">
+                    <div className="grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-5">
+                        {columns.map((col, index) => (
+                            <div key={col.title} className={`space-y-0 text-center ${index === 4 ? 'col-span-2 lg:col-span-1' : ''}`}>
                                 <p className="font-bebas text-[20px] sm:text-[25px] font-bold leading-none tracking-wide text-white">
                                     {col.title}
                                 </p>
